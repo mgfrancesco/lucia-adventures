@@ -730,7 +730,7 @@ function noniSVG(){ const sk='#f9e0d0'; return `<svg viewBox="0 0 100 160">
 <circle cx="45" cy="84" r="1.6" fill="#fff"/><circle cx="44" cy="96" r="1.6" fill="#fff"/><circle cx="43" cy="108" r="1.6" fill="#fff"/>
 <path d="M39 70 Q26 84 26 102" stroke="${sk}" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M61 70 Q74 84 74 102" stroke="${sk}" stroke-width="6" fill="none" stroke-linecap="round"/>
 <rect x="45" y="52" width="10" height="13" fill="${sk}"/>
-<g fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.2">${[[31,33,8],[32,23,8],[40,16,8],[50,14,8],[60,16,8],[68,23,8],[69,33,8],[50,6,7]].map(c=>`<circle cx="${c[0]}" cy="${c[1]}" r="${c[2]}"/>`).join('')}</g>
+<g fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.2">${[[31,33,8],[32,23,8],[40,16,8],[50,14,8],[60,16,8],[68,23,8],[69,33,8],[50,8.5,6.5]].map(c=>`<circle cx="${c[0]}" cy="${c[1]}" r="${c[2]}"/>`).join('')}</g>
 <circle cx="50" cy="38" r="17" fill="${sk}"/>
 <path d="M34 34 Q38 22 50 23 Q62 22 66 34 Q60 28 50 29 Q40 28 34 34Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1"/>
 <circle cx="43.5" cy="37" r="2.3" fill="#3a2a3a"/><circle cx="56.5" cy="37" r="2.3" fill="#3a2a3a"/>
@@ -812,7 +812,7 @@ function eleSVG(){ const c='#a8e4e0', d='#79cdc7'; return `<svg viewBox="0 0 100
 <path d="M31 46.5 Q34 49.5 37.5 46.5" stroke="#1e293b" stroke-width="1.6" fill="none" stroke-linecap="round"/>
 </svg>`; }
 
-function emmeGirlSVG(){ const sk='#e9bf9b', hc='#4a2c18'; return `<svg viewBox="0 0 100 140">
+function emmeGirlSVG(){ const sk='#e9bf9b', hc='#4a2c18'; return `<svg viewBox="0 0 100 140"><g transform="translate(14 39.2) scale(.72)">
 <path d="M43 110 L41 129" stroke="${sk}" stroke-width="6" stroke-linecap="round"/><path d="M57 110 L59 129" stroke="${sk}" stroke-width="6" stroke-linecap="round"/>
 <ellipse cx="40" cy="132" rx="7" ry="4" fill="#f472b6"/><ellipse cx="60" cy="132" rx="7" ry="4" fill="#f472b6"/>
 <path d="M40 68 Q26 60 21 48" stroke="${sk}" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M60 68 Q74 60 79 48" stroke="${sk}" stroke-width="6" fill="none" stroke-linecap="round"/>
@@ -829,7 +829,7 @@ function emmeGirlSVG(){ const sk='#e9bf9b', hc='#4a2c18'; return `<svg viewBox="
 <circle cx="43" cy="37.8" r="1" fill="#fff"/><circle cx="59" cy="37.8" r="1" fill="#fff"/>
 <circle cx="35" cy="47" r="3.5" fill="#ffadc8" opacity=".85"/><circle cx="65" cy="47" r="3.5" fill="#ffadc8" opacity=".85"/>
 <path d="M39 46 Q50 62 61 46 Z" fill="#7a2e2e"/><path d="M41 46.6 Q50 49 59 46.6 L58 49 Q50 51 42 49 Z" fill="#fff"/><path d="M45 54 Q50 51 55 54 Q50 57 45 54Z" fill="#fb7185"/>
-</svg>`; }
+</g></svg>`; }
 
 function remoteSVG(){ return `<svg viewBox="0 0 30 64" style="height:1em;width:auto;display:inline-block;vertical-align:-0.1em"><rect x="3" y="2" width="24" height="60" rx="9" fill="#374151"/><circle cx="15" cy="13" r="4.5" fill="#ef4444"/>${[0,1,2].map(r=>[0,1].map(c=>`<rect x="${7+c*10}" y="${26+r*10}" width="6" height="5" rx="1.5" fill="#9ca3af"/>`).join('')).join('')}</svg>`; }
 function pillowSVG(c){ return `<svg viewBox="0 0 100 60"><rect x="6" y="10" width="88" height="44" rx="18" fill="${c}" stroke="#fff" stroke-width="3"/><path d="M20 22 q30 8 60 0" stroke="#fff" opacity=".6" fill="none" stroke-width="3"/></svg>`; }
