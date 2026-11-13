@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lucia">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#ec4899">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>Lucia's Adventures</title>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
@@ -430,6 +436,39 @@ svg{display:block}
 .elebtn.taken{animation:glow 1.2s infinite,bob 2s infinite}
 .eleside{font-size:min(14vmin,96px);line-height:1}
 .eleparty{font-size:min(8vmin,56px);line-height:1}
+
+/* sticker book */
+.shelfbtns{display:flex;gap:2vmin;flex-wrap:wrap;justify-content:center}
+.stickerscr{background:radial-gradient(circle at 50% 20%,#fffbeb,#fde68a 55%,#fca5a5)}
+.ib.cnt{font-size:clamp(14px,2.8vmin,22px);font-weight:800;width:auto;min-width:min(13vmin,72px);padding:0 1.5vmin;border-radius:999px}
+.sbook{display:flex;flex-direction:column;gap:2.5vmin;width:100%;align-items:center}
+.srow{display:flex;flex-direction:column;align-items:center;gap:1vmin}
+.srow b{font-size:clamp(15px,3vmin,24px)}
+.stks{display:flex;gap:2vmin;flex-wrap:wrap;justify-content:center}
+.stk{width:min(15vmin,104px);height:min(15vmin,104px);border-radius:50%;background:#fff;border:5px solid #fff;box-shadow:0 5px 0 #0002,0 0 0 3px #f59e0b inset;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:min(1.2vmin,8px)}
+.stk svg{width:100%;height:100%}
+.stk.locked{background:#e5e7eb;box-shadow:0 5px 0 #0001;border-style:dashed;border-color:#cbd5e1}
+.stk.locked span{font-size:min(7vmin,44px);font-weight:800;color:#94a3b8}
+.newstk{display:flex;align-items:center;gap:2vmin;background:#fef3c7;border-radius:999px;padding:1vmin 3vmin 1vmin 1vmin;animation:popin .5s}
+.newstk .stk{width:min(11vmin,76px);height:min(11vmin,76px)}
+.newstk span{font-weight:800;font-size:clamp(15px,3vmin,24px);color:#92400e}
+.stktoast{position:absolute;top:calc(min(13vmin,72px) + 14px);right:2vmin;z-index:30}
+/* bedtime */
+.night{background:linear-gradient(#0f172a,#1e3a8a 70%,#312e81);color:#fff}
+.moon{position:absolute;top:4vmin;right:8vmin;font-size:min(16vmin,110px);filter:drop-shadow(0 0 20px #fde68a)}
+.nstars i{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 6px #fff;animation:twinkle 3s infinite}
+@keyframes twinkle{0%,100%{opacity:.25}50%{opacity:1}}
+.sleepers{display:flex;align-items:flex-end;gap:2vmin}
+.sl{position:relative;width:min(14vmin,104px);animation:sleepy 4s ease-in-out infinite}
+.sl.wide{width:min(19vmin,140px)}
+@keyframes sleepy{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg) translateY(2px)}}
+.zz{position:absolute;top:-6%;right:-4%;font-weight:800;font-size:min(5vmin,30px);color:#bfdbfe;animation:zz 2.5s infinite}
+@keyframes zz{0%{opacity:0;transform:translate(0,0)}30%{opacity:1}100%{opacity:0;transform:translate(10px,-24px) scale(1.4)}}
+.nighttxt{font-size:min(8vmin,56px);font-weight:800;text-shadow:0 3px 0 #1e1b4b}
+.guhold{position:absolute;left:50%;bottom:3vmin;transform:translateX(-50%);z-index:5;background:#ffffff22;color:#c7d2fe;border:2px solid #ffffff44;border-radius:999px;padding:.4em 1.2em;font-size:clamp(12px,2.2vmin,16px);font-weight:700}
+.guhold.holding{background:#ffffff55;transition:background 2s}
+.dim{position:absolute;inset:0;background:#000;pointer-events:none;animation:dimdown 14s forwards}
+@keyframes dimdown{from{opacity:0}to{opacity:.55}}
 </style>
 </head>
 <body>
@@ -456,7 +495,7 @@ const SAYOPTS={
   'Jame':['Jaym','Jame','Jaim','Jay m'],
   'Baboj':['Bah-bodge','Bah-boshe','Bah-bohzh','Bah-boge']
 };
-let S={ mathMax:10, voice:true, says:{}, prog:{} };
+let S={ mathMax:10, voice:true, says:{}, prog:{}, stickers:{}, bedMin:0 };
 try{ const d=JSON.parse(localStorage.getItem('luciaAdventures')||'null'); if(d) S=Object.assign(S,d); }catch(e){}
 Object.keys(SAYOPTS).forEach(k=>{ if(!S.says[k]) S.says[k]=SAYOPTS[k][0]; });
 function save(){ try{ localStorage.setItem('luciaAdventures',JSON.stringify(S)); }catch(e){} }
@@ -486,8 +525,8 @@ const sfx={
   chime(){ tone(1568,0.25,0,'sine',0.1); tone(2093,0.3,0.06,'sine',0.07); },
   sparkle(){ for(let i=0;i<6;i++) tone(1200+Math.random()*900,0.12,i*0.05,'sine',0.06); }
 };
-const TUNES={ice:[659,587,523,587,659,659,659,0,587,587,587,0,659,784,784],jewel:[523,523,784,784,880,880,784,0,698,698,659,659,587,587,523],noni:[523,523,523,587,659,0,659,587,659,698,784]};
-function music(name){ const m=TUNES[name]||TUNES.ice; m.forEach((f,i)=>{ if(f){ tone(f,0.3,i*0.28,'triangle',0.14); if(i%2===0) tone(f/2,0.3,i*0.28,'sine',0.08); } }); }
+const TUNES={ice:[659,587,523,587,659,659,659,0,587,587,587,0,659,784,784],jewel:[523,523,784,784,880,880,784,0,698,698,659,659,587,587,523],noni:[523,523,523,587,659,0,659,587,659,698,784],lullaby:[392,392,587,587,659,659,587,0,523,523,494,494,440,440,392]};
+function music(name){ const m=TUNES[name]||TUNES.ice, gap=name==='lullaby'?0.6:0.28, len=name==='lullaby'?0.55:0.3, vol=name==='lullaby'?0.08:0.14; m.forEach((f,i)=>{ if(f){ tone(f,len,i*gap,name==='lullaby'?'sine':'triangle',vol); if(i%2===0) tone(f/2,len,i*gap,'sine',vol*0.6); } }); }
 
 /* ---------- voice ---------- */
 // How names are spoken (the screen still shows the normal spelling).
@@ -496,11 +535,12 @@ let voiceObj=null, sayId=0, capTimer=null, instr='';
 // Pick one good English voice and stick with it, so the voice never switches mid-game.
 const NOVELTY=/Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Deranged|Good News|Hysterical|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Fred|Junior|Ralph|Kathy|Grandma|Grandpa|Eddy|Flo|Reed|Rocko|Sandy|Shelley|Novelty/i;
 function englishVoices(){ try{ return speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang)&&!NOVELTY.test(v.name)); }catch(e){ return []; } }
+const FEMALE=/Samantha|Ava|Allison|Susan|Zoe|Nicky|Karen|Moira|Tessa|Fiona|Veena|Serena|Kate|Stephanie|Martha|Catherine|Joelle|Noelle|Victoria|Vicki|Zira|Hazel|Aria|Jenny|Female|Google US English/i;
+const MALE=/Aaron|Daniel|Fred|Alex\b|Tom\b|Arthur|Gordon|Oliver|Rishi|Nathan|Evan|Lee\b|Ralph|David|Mark\b|George|Guy\b|\bMale\b|Albert|Junior|Reed|Rocko|Eddy|Grandpa/i;
 function voiceScore(v){ let s=0, n=v.name;
+  if(MALE.test(n)) s-=20; if(FEMALE.test(n)) s+=10; if(/^Samantha/i.test(n)) s+=3;
   if(/en[-_]US/i.test(v.lang)) s+=3;
-  if(/Premium/i.test(n)) s+=8; else if(/Enhanced/i.test(n)) s+=6;
-  if(/Samantha|Ava|Zoe|Allison|Susan|Nicky|Evan/i.test(n)) s+=3;
-  if(/Karen|Moira|Tessa|Serena|Google US English/i.test(n)) s+=2;
+  if(/Premium/i.test(n)) s+=4; else if(/Enhanced/i.test(n)) s+=3;
   if(v.localService) s+=1;
   return s; }
 function pickVoice(){
@@ -1225,37 +1265,41 @@ function shell(cls,title){
   el.querySelector('.helpb').onclick=()=>{ sfx.tap(); if(currentHint) currentHint(); else say(instr); };
   return el;
 }
-function complete(i){ if(FREE) freeDone(); else if(i===ST().worlds.length-1) ST().finale(); else winItem(i); }
-function freeDone(){
+let pendingSticker=null;
+function complete(i){ const stk=award(i); if(FREE) freeDone(stk); else if(i===ST().worlds.length-1){ pendingSticker=stk; ST().finale(); } else winItem(i,stk); }
+function stickerRow(stk){ return stk?`<div class="newstk"><div class="stk">${stk.a()}</div><span>New sticker: ${stk.n}!</span></div>`:''; }
+function freeDone(stk){
   confetti(); sfx.yay();
-  const ov=h(`<div class="overlay"><div class="wincard"><h3>You did it!</h3><div class="row"><div class="md" style="width:min(16vmin,110px)">${spiderSVG('#ec4899',true)}</div></div><button class="big again">Play again</button><button class="pill gr">🎮 Game Room</button></div></div>`);
+  const ov=h(`<div class="overlay"><div class="wincard"><h3>You did it!</h3>${stk?stickerRow(stk):`<div class="row"><div class="md" style="width:min(16vmin,110px)">${spiderSVG('#ec4899',true)}</div></div>`}<button class="big again">Play again</button><button class="pill gr">🎮 Game Room</button></div></div>`);
   app.appendChild(ov);
-  say('You did it! Play again, or pick another game.');
-  ov.querySelector('.again').onclick=()=>{ sfx.tap(); freeGame.go(); };
+  say('You did it!'+(stk?` You got a new sticker: ${stk.n}!`:'')+' Play again, or pick another game.');
+  ov.querySelector('.again').onclick=()=>{ sfx.tap(); if(bedtimeDue()) goodnight(); else freeGame.go(); };
   ov.querySelector('.gr').onclick=()=>{ sfx.tap(); showGameRoom(); };
 }
-function winItem(i){
+function winItem(i,stk){
   const st=ST(), p=P(); p.items[i]=true; save(); confetti(); sfx.yay();
   const all=p.items.every(Boolean), it=st.items[i];
-  const ov=h(`<div class="overlay"><div class="wincard"><h3>${it.n}!</h3><div class="row"><div class="itemBig">${it.e}</div><div class="md">${st.bagSVG()}</div></div><button class="big go">Back to the map</button></div></div>`);
+  const ov=h(`<div class="overlay"><div class="wincard"><h3>${it.n}!</h3><div class="row"><div class="itemBig">${it.e}</div><div class="md">${st.bagSVG()}</div></div>${stickerRow(stk)}<button class="big go">Back to the map</button></div></div>`);
   app.appendChild(ov);
-  say(it.say+(all?' '+st.allSay:''));
+  say(it.say+(stk?` And a new sticker: ${stk.n}!`:'')+(all?' '+st.allSay:''));
   ov.querySelector('.go').onclick=()=>{ sfx.tap(); showMap(); };
 }
 
 /* ---------- bookshelf (main menu) ---------- */
 function showTitle(){
+  if(bedtimeDue()){ goodnight(); return; }
   FREE=false;
   const covers=STORY_IDS.map(id=>{ const s=STORIES[id], p=P(id);
     const status=p.won?'⭐ Finished! Play again':p.seenIntro?'▶ Keep playing':'✨ New story';
     return `<button class="cover ${id}c" data-id="${id}"><div class="cart">${s.coverArt()}</div><b>${s.title}</b><span>${status}</span></button>`; }).join('');
   const el=h(`<div class="screen shelf"><button class="ib gear" aria-label="Grown-ups">⚙️</button><div class="stage">
-<h1><span>Lucia's</span><small>Adventures</small></h1><div class="covers">${covers}</div><button class="pill groom">🎮 Game Room</button></div></div>`);
+<h1><span>Lucia's</span><small>Adventures</small></h1><div class="covers">${covers}</div><div class="shelfbtns"><button class="pill groom">🎮 Game Room</button><button class="pill stkbtn">⭐ Sticker Book</button></div></div></div>`);
   show(el);
   el.querySelector('.gear').onclick=grownups;
-  el.querySelector('.groom').onclick=()=>{ ac(); sfx.tap(); showGameRoom(); };
+  el.querySelector('.groom').onclick=()=>{ ac(); startClock(); sfx.tap(); showGameRoom(); };
+  el.querySelector('.stkbtn').onclick=()=>{ ac(); sfx.tap(); showStickers(); };
   el.querySelectorAll('.cover').forEach(b=>b.onclick=()=>{
-    ac(); sfx.yay(); CUR=b.dataset.id;
+    ac(); startClock(); sfx.yay(); CUR=b.dataset.id;
     if(P().won) resetStory(CUR);
     if(!P().seenIntro) ST().intro(); else showMap();
   });
@@ -1263,6 +1307,7 @@ function showTitle(){
 
 /* ---------- story map (moves forward only) ---------- */
 function showMap(){
+  if(bedtimeDue()){ goodnight(); return; }
   FREE=false;
   const st=ST(), p=P(), W=st.worlds, last=W.length-1;
   const isOpen=i=>i===0||(i<last?p.items[i-1]:p.items.every(Boolean));
@@ -1299,6 +1344,7 @@ function finaleScreen(cls,center,cast,text,tune){
 <div class="party">${cast.map((c,i)=>`<div class="pc2 ${c[1]||''}" style="animation-delay:${i*0.15}s">${c[0]}</div>`).join('')}</div>
 <div class="btns"><button class="big dp">💃 Dance party!</button><button class="pill again">Play again</button><button class="pill gr">🎮 Game Room</button><button class="pill bk">📚 Stories</button></div></div></div>`);
   FREE=false; show(el); confetti(); T(()=>music(tune),400);
+  if(pendingSticker){ const st2=pendingSticker; pendingSticker=null; el.appendChild(h(`<div class="stktoast">${stickerRow(st2)}</div>`)); text+=` You got a new sticker: ${st2.n}!`; }
   say(text);
   el.querySelector('.dp').onclick=()=>{ confetti(); music(tune); };
   el.querySelector('.again').onclick=()=>{ sfx.tap(); resetStory(); ST().intro(); };
@@ -1751,6 +1797,7 @@ const GAMES={
 };
 let roomTab='jewel';
 function showGameRoom(tab){
+  if(bedtimeDue()){ goodnight(); return; }
   const first=!document.querySelector('.groomscr');
   if(tab) roomTab=tab; FREE=false;
   const el=h(`<div class="screen groomscr"><div class="topbar"><button class="ib home" aria-label="Stories">📚</button><div class="ttl">Princess Emmeline's Game Room</div><button class="ib again" aria-label="Hear again">🔊</button></div>
@@ -1772,15 +1819,19 @@ function grownups(){
 <label><input type="checkbox" class="vo">Read everything out loud</label>
 <div><b>Voice</b><div class="sayrow"><select class="vsel" style="max-width:230px"></select><button class="pill vhear">🔊</button></div></div>
 <div><b>How the voice says names</b>${Object.keys(SAYOPTS).map(k=>`<div class="sayrow"><span>${k}</span><select data-k="${k}">${SAYOPTS[k].map(o=>`<option>${o}</option>`).join('')}</select><button class="pill hear" data-k="${k}">🔊</button></div>`).join('')}</div>
+<label>Bedtime timer <select class="bed"><option value="0">Off</option><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="20">20 minutes</option><option value="30">30 minutes</option></select><br><small>Counts from when she starts playing. When time is up, the game she's on finishes, then everyone says goodnight.</small></label>
 <div><b>Start a story over</b><div class="resets">${STORY_IDS.map(id=>`<button class="pill rs" data-id="${id}">${STORIES[id].short}</button>`).join('')}</div></div>
+<button class="pill clrstk">Clear sticker book</button>
 <button class="big close">Done</button></div></div>`);
   document.body.appendChild(ov);
+  const bed=ov.querySelector('.bed'); bed.value=String(S.bedMin||0); bed.onchange=()=>{ S.bedMin=+bed.value; save(); sessionStart=S.bedMin?Date.now():0; bedDone=false; };
+  { const cs=ov.querySelector('.clrstk'); let armed=false; cs.onclick=()=>{ if(!armed){ armed=true; cs.textContent='Tap again to clear'; return; } S.stickers={}; save(); cs.textContent='✓ Cleared'; }; }
   const mm=ov.querySelector('.mm'), vo=ov.querySelector('.vo');
   mm.value=String(S.mathMax); mm.onchange=()=>{ S.mathMax=+mm.value; save(); };
   vo.checked=S.voice; vo.onchange=()=>{ S.voice=vo.checked; save(); };
   const vsel=ov.querySelector('.vsel');
   const fillVoices=()=>{ const vs=englishVoices().sort((a,b)=>voiceScore(b)-voiceScore(a));
-    vsel.innerHTML='<option value="auto">Automatic (best available)</option>'+vs.map(v=>`<option value="${v.name.replace(/"/g,'&quot;')}">${v.name} (${v.lang})</option>`).join('');
+    vsel.innerHTML='<option value="auto">Automatic (best female voice)</option>'+vs.map(v=>`<option value="${v.name.replace(/"/g,'&quot;')}">${v.name} (${v.lang})</option>`).join('');
     vsel.value=S.voiceName&&vs.some(v=>v.name===S.voiceName)?S.voiceName:'auto'; };
   fillVoices(); if(!englishVoices().length) setTimeout(fillVoices,600);
   vsel.onchange=()=>{ S.voiceName=vsel.value; save(); voiceObj=null; loadVoices(); say("Hi Lucia! Do you like my voice?"); };
@@ -1793,11 +1844,56 @@ function grownups(){
   ov.querySelector('.close').onclick=()=>{ ov.remove(); showTitle(); };
 }
 
-showTitle();
 
 /* little sound effects for the Baboj scene */
 function growl(){ tone(85,0.7,0,'sawtooth',0.10); tone(65,0.9,0.3,'sawtooth',0.09); }
 function giggle(){ [660,880,740,990,820,1100].forEach((f,i)=>tone(f,0.09,i*0.09,'triangle',0.1)); }
+
+
+/* ---------- sticker book ---------- */
+const STICKERS={
+  jewel:[{n:'Ballerina Lucia',a:luciaSVG},{n:'Elias',a:()=>kidSVG('elias')},{n:'Spider Friend',a:()=>spiderSVG()},{n:'Abby',a:abbySVG},{n:'The Magic Jewel',a:jewelSVG}],
+  ice:[{n:'Ms. Anwar',a:anwarSVG},{n:'JJ',a:()=>kidSVG('jj')},{n:'Maddie',a:maddieSVG},{n:'Grammy',a:()=>kidSVG('grammy')},{n:'Fah-fah',a:()=>fahSVG(false)}],
+  noni:[{n:'Grumpa',a:()=>grumpaSVG(false)},{n:'Uncle Purr',a:purrSVG},{n:'Noni',a:noniSVG},{n:'Emmeline',a:emmeGirlSVG}]
+};
+function award(i){ if(!S.stickers) S.stickers={}; const list=STICKERS[CUR]; if(!list||!list[i]) return null; const k=CUR+':'+i; if(S.stickers[k]) return null; S.stickers[k]=Date.now(); save(); return list[i]; }
+function showStickers(){
+  if(bedtimeDue()){ goodnight(); return; }
+  FREE=false;
+  const total=STORY_IDS.reduce((a,id)=>a+STICKERS[id].length,0), got=STORY_IDS.reduce((a,id)=>a+STICKERS[id].filter((x,i)=>S.stickers&&S.stickers[id+':'+i]).length,0);
+  const el=h(`<div class="screen stickerscr"><div class="topbar"><button class="ib home" aria-label="Stories">📚</button><div class="ttl">Sticker Book</div><div class="ib cnt">${got}/${total}</div></div>
+<div class="stage"><div class="sbook">${STORY_IDS.map(id=>`<div class="srow"><b>${STORIES[id].short}</b><div class="stks">${STICKERS[id].map((x,i)=>{ const have=S.stickers&&S.stickers[id+':'+i]; return `<button class="stk ${have?'':'locked'}" data-id="${id}" data-i="${i}">${have?x.a():'<span>?</span>'}</button>`; }).join('')}</div></div>`).join('')}</div></div></div>`);
+  show(el);
+  el.querySelector('.home').onclick=()=>{ sfx.tap(); showTitle(); };
+  el.querySelectorAll('.stk').forEach(b=>b.onclick=()=>{ const x=STICKERS[b.dataset.id][+b.dataset.i];
+    if(b.classList.contains('locked')){ sfx.tap(); say('Keep playing to find this sticker!'); return; }
+    sfx.sparkle(); b.classList.remove('wiggle'); void b.offsetWidth; b.classList.add('wiggle'); say(x.n+'!'); });
+  instruct(got?`You have ${got} stickers! Tap one to say hello.`:'Your sticker book is empty. Play games to collect stickers!');
+}
+
+/* ---------- bedtime ending ---------- */
+let sessionStart=0, bedDone=false;
+function startClock(){ if(!sessionStart) sessionStart=Date.now(); }
+function bedtimeDue(){ return S.bedMin>0 && sessionStart>0 && !bedDone && Date.now()-sessionStart>=S.bedMin*60000; }
+function goodnight(){
+  bedDone=true; FREE=false;
+  const cast=[[luciaSVG()],[abbySVG(),'wide'],[emmySVG()],[maddieSVG()],[purrSVG()]];
+  const el=h(`<div class="screen night"><div class="moon">🌙</div><div class="nstars">${[...Array(18)].map(()=>`<i style="left:${Math.random()*96}%;top:${Math.random()*45}%;animation-delay:${(Math.random()*3).toFixed(1)}s"></i>`).join('')}</div>
+<div class="stage"><div class="sleepers">${cast.map((c,i)=>`<div class="sl ${c[1]||''}" style="animation-delay:${i*0.4}s">${c[0]}<span class="zz">z</span></div>`).join('')}</div><div class="nighttxt">Goodnight, Lucia!</div></div>
+<button class="guhold">Grown-ups: press and hold to keep playing</button><div class="dim"></div></div>`);
+  show(el);
+  try{ music('lullaby'); }catch(e){}
+  say("What a great adventure today! Everyone is getting sleepy. Abby, Emmy, Maddie, and Uncle Purr say goodnight. Sweet dreams, Lucia!");
+  const g=el.querySelector('.guhold'); let ht=null;
+  const start=e=>{ e.preventDefault(); g.classList.add('holding'); ht=setTimeout(()=>{ bedDone=false; sessionStart=Date.now(); showTitle(); },2000); };
+  const stop=()=>{ g.classList.remove('holding'); clearTimeout(ht); };
+  g.addEventListener('pointerdown',start); g.addEventListener('pointerup',stop); g.addEventListener('pointerleave',stop); g.addEventListener('pointercancel',stop);
+}
+
+/* ---------- home-screen app (works on the GitHub Pages copy) ---------- */
+try{ if('serviceWorker' in navigator && /github\.io$/.test(location.hostname)) navigator.serviceWorker.register('sw.js'); }catch(e){}
+
+showTitle();
 </script>
 </body>
 </html>
