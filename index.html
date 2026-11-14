@@ -588,6 +588,60 @@ svg{display:block}
 .slot2 small{font-size:min(5vmin,30px);font-weight:800}
 .cl{font-size:min(6vmin,38px)}.cl b{font-size:min(5vmin,30px)}
 .pan::before{content:'';position:absolute;top:-4px;left:12%;right:12%;bottom:10px;border-left:2px solid #78350f;border-right:2px solid #78350f;pointer-events:none}
+
+/* ===== story 4 backdrops ===== */
+.scene{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.scene~.topbar,.scene~.stage{position:relative;z-index:1}
+.sk{position:absolute;left:0;right:0;background-repeat:repeat-x;background-size:auto 100%}
+.sk-top{top:0;background-position:left top}.sk-far{bottom:0;background-position:left bottom}.sk-near{bottom:0;background-position:left bottom}
+.prop{position:absolute;bottom:0;line-height:0}.prop svg{width:100%;height:auto;display:block;overflow:visible}
+.pL{left:0}.pR{right:0}
+.crit{position:absolute;font-size:min(7vmin,46px);line-height:1}
+.jungle{background:linear-gradient(#f7fee7,#d9f99d 45%,#bbf7d0)}
+.fmeadow{background:linear-gradient(#bae6fd,#e0f2fe 55%,#f0fdf4)}
+.glen{background:linear-gradient(#ccfbf1,#a7f3d0 50%,#6ee7b7)}
+.icecastle{background:linear-gradient(#c7d2fe,#e0f2fe 45%,#f0f9ff)}
+.desertw{background:linear-gradient(#fef3c7,#fde68a 45%,#fdba74)}
+.spaceship{background:linear-gradient(#312e81,#1e1b4b 60%,#0f172a);color:#fff}
+.swing{top:0;transform-origin:50% 0;animation:swing 3.2s ease-in-out infinite alternate;display:flex;flex-direction:column;align-items:center}
+.swing .vine{display:block;width:4px;height:min(22vh,150px);background:#3f6212;border-radius:2px}.swing span{margin-top:-6px}
+@keyframes swing{from{transform:rotate(14deg)}to{transform:rotate(-14deg)}}
+.flyl{left:0;animation:flyl 20s linear infinite}.flyr{left:0;animation:flyr 22s linear infinite}
+@keyframes flyl{from{transform:translateX(110vw)}to{transform:translateX(-15vw)}}
+@keyframes flyr{from{transform:translateX(-15vw)}to{transform:translateX(110vw)}}
+.flutter{animation:flutter 7s ease-in-out infinite}.flutter.f2{animation-duration:9s;animation-direction:reverse}
+@keyframes flutter{0%{transform:translate(0,0) rotate(-10deg)}25%{transform:translate(6vmin,-4vmin) rotate(10deg)}50%{transform:translate(10vmin,2vmin) rotate(-6deg)}75%{transform:translate(3vmin,5vmin) rotate(8deg)}100%{transform:translate(0,0) rotate(-10deg)}}
+.prop .sway,.prop .hop,.prop .bob,.prop .inch,.prop .hiss,.prop .rays,.prop .smoke,.prop .zzz,.prop .tigerbreath,.prop .twk{transform-box:fill-box}
+.sway{transform-origin:50% 100%;animation:sway 4s ease-in-out infinite alternate}.sway.s2{animation-duration:5s;animation-delay:-1s}.sway.s3{animation-duration:3.5s;animation-delay:-2s}
+@keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+.hop{transform-origin:50% 100%;animation:hop 2.6s ease-in-out infinite}
+@keyframes hop{0%,70%,100%{transform:translateY(0)}80%{transform:translateY(-14px)}90%{transform:translateY(0)}}
+.inch{animation:inch 3s ease-in-out infinite}@keyframes inch{0%,100%{transform:translateX(0)}50%{transform:translateX(6px) scaleX(.94)}}
+.tigerbreath{transform-origin:50% 100%;animation:breathe 3s ease-in-out infinite}@keyframes breathe{50%{transform:scaleY(1.03)}}
+.zzz{animation:zzz 3s ease-in-out infinite;opacity:0}.zzz.z2{animation-delay:1.5s}
+@keyframes zzz{0%{opacity:0;transform:translateY(8px)}30%{opacity:1}100%{opacity:0;transform:translateY(-16px)}}
+.flow{animation:flow .9s linear infinite}@keyframes flow{to{stroke-dashoffset:-56}}
+.cloud{position:absolute;font-size:min(14vmin,96px);opacity:.95;animation:flyr 60s linear infinite;left:0}.cloud.c1{top:14%;animation-delay:-20s}.cloud.c2{top:26%;animation-duration:80s;animation-delay:-55s;font-size:min(10vmin,70px)}
+.ffly{position:absolute;width:8px;height:8px;border-radius:50%;background:#fef08a;box-shadow:0 0 10px 4px #fde047aa;animation:twinkle 2.4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.15;transform:translate(0,0)}50%{opacity:1;transform:translate(6px,-8px)}}
+.glowwin{animation:glowwin 3s ease-in-out infinite}@keyframes glowwin{50%{fill:#fef9c3}}
+.smoke{transform-origin:50% 100%;animation:smoke 4s ease-in-out infinite}@keyframes smoke{0%{opacity:.2;transform:translateY(10px)}50%{opacity:.8}100%{opacity:0;transform:translateY(-14px)}}
+.hover{animation:hover 4s ease-in-out infinite}.hover.h2{animation-duration:5s;animation-delay:-2s}
+@keyframes hover{0%,100%{transform:translate(0,0)}30%{transform:translate(5vmin,-2vmin)}60%{transform:translate(-3vmin,2vmin)}}
+.aur{animation:aur 6s ease-in-out infinite alternate}@keyframes aur{from{opacity:.55}to{opacity:1}}
+.snowfall{position:absolute;inset:0;background-image:radial-gradient(#fff 2.5px,transparent 3.5px),radial-gradient(#fff 1.8px,transparent 2.8px);background-size:90px 90px,55px 55px;background-position:0 0,25px 35px;animation:snow 14s linear infinite;opacity:.9}
+@keyframes snow{to{background-position:30px 900px,-25px 585px}}
+.twk{animation:aur 1.5s ease-in-out infinite alternate}
+.waddle{animation:waddle 6s ease-in-out infinite}.waddle.w2{animation-duration:7.5s;animation-delay:-3s}
+@keyframes waddle{0%,100%{transform:translateX(0) rotate(-6deg)}25%{transform:translateX(4vmin) rotate(6deg)}50%{transform:translateX(8vmin) rotate(-6deg)}75%{transform:translateX(4vmin) rotate(6deg)}}
+.sun{position:absolute;right:3%;top:11%;width:min(22vmin,150px)}.sun svg{width:100%;display:block}
+.rays{transform-origin:50% 50%;animation:spin 30s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.hiss{transform-origin:50% 100%;animation:sway 1.6s ease-in-out infinite alternate}
+.fox{animation:hop 4s ease-in-out infinite}
+.floaty{font-size:min(9vmin,60px);animation:hover 5s ease-in-out infinite}
+.spaceship .eq,.spaceship .clue{color:#3b2a5a}
+.scene~.topbar .ttl{text-shadow:0 0 6px #fff,0 0 3px #fff,0 0 2px #fff}
+.spaceship .scene~.topbar .ttl{text-shadow:0 2px 4px #000}
 </style>
 </head>
 <body>
@@ -2184,6 +2238,156 @@ function goodnight(){
 try{ if('serviceWorker' in navigator && /github\.io$/.test(location.hostname)) navigator.serviceWorker.register('sw.js'); }catch(e){}
 
 
+/* =================== Story 4 backdrops =================== */
+// Repeating strips (sky edge, far layer, near ground) are SVG data URIs tiled across the width;
+// corner props are inline SVG anchored to the edges so the middle stays calm for the games.
+const SV=(w,h,body)=>`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${body}</svg>`;
+const dURL=s=>`url('data:image/svg+xml,${encodeURIComponent(s)}')`;
+const strip=(pos,svg,h,extra,cls)=>`<div class="sk sk-${pos} ${cls||''}" style="background-image:${dURL(svg)};height:${h};${extra||''}"></div>`;
+const prop=(side,w,svg,extra)=>`<div class="prop p${side}" style="width:${w};${extra||''}">${svg}</div>`;
+const ETXT=(e,x,y,s,cls)=>`<text x="${x}" y="${y}" font-size="${s}" text-anchor="middle" class="${cls||''}">${e}</text>`;
+function blades(w,h,top,n,amp,col,seed){ let d=`M0 ${h}V${top}`; const st=w/n; for(let i=0;i<n;i++){ const x=i*st, a=amp*(0.55+0.45*Math.abs(Math.sin((i+1)*(seed||1.7)))); d+=` L${(x+st*0.5).toFixed(1)} ${(top-a).toFixed(1)} L${(x+st).toFixed(1)} ${top}`; } return `<path fill="${col}" d="${d}V${h}Z"/>`; }
+function bumps(w,h,top,n,amp,col){ let d=`M0 ${h}V${top}`; const st=w/n; for(let i=0;i<n;i++){ const x=i*st; d+=` Q${(x+st/2).toFixed(1)} ${top-amp} ${(x+st).toFixed(1)} ${top}`; } return `<path fill="${col}" d="${d}V${h}Z"/>`; }
+const leafE=(x,y,a,c,s)=>`<ellipse cx="${x}" cy="${y}" rx="${10*(s||1)}" ry="${4.5*(s||1)}" fill="${c}" transform="rotate(${a} ${x} ${y})"/>`;
+function flowerHead(cx,cy,n,rx,ry,pc,cc,cr){ let s=''; for(let i=0;i<n;i++) s+=`<ellipse cx="${cx}" cy="${cy-ry}" rx="${rx}" ry="${ry}" fill="${pc}" transform="rotate(${(360/n*i).toFixed(1)} ${cx} ${cy})"/>`; return s+`<circle cx="${cx}" cy="${cy}" r="${cr}" fill="${cc}"/>`; }
+
+/* ---- Magic Jungle ---- */
+function sceneJungle(){
+  const top=SV(320,170,`<path fill="#166534" d="M0 0H320V22Q290 38 260 20Q230 40 200 22Q170 38 140 20Q110 40 80 22Q50 38 20 20Q10 26 0 22Z"/><path fill="#15803d" d="M0 0H320V10Q280 22 240 10Q200 24 160 10Q120 24 80 10Q40 24 0 10Z"/>
+<g fill="none" stroke="#3f6212" stroke-width="3.5" stroke-linecap="round"><path d="M45 22Q35 75 50 130"/><path d="M165 24Q178 60 168 95"/><path d="M262 22Q250 90 268 160"/></g>
+${[[40,45,35],[38,70,-35],[42,95,35],[48,118,-35],[170,45,-35],[174,70,35],[256,45,35],[252,75,-35],[256,105,35],[262,135,-35]].map((p,i)=>leafE(p[0],p[1],p[2],i%2?'#22c55e':'#4ade80',1.2)).join('')}
+<circle cx="50" cy="133" r="6" fill="#f472b6"/><circle cx="268" cy="163" r="6" fill="#fb923c"/><circle cx="168" cy="98" r="5" fill="#facc15"/>`);
+  const far=SV(400,220,`<path fill="#4ade80" d="M0 220V90Q25 50 55 80Q80 40 115 75Q140 35 175 70Q205 30 240 72Q265 45 295 78Q325 38 360 74Q385 55 400 90V220Z"/>
+<path fill="#22c55e" d="M0 220V130Q30 100 60 125Q95 95 130 122Q165 92 200 120Q235 95 270 124Q305 98 340 126Q372 104 400 130V220Z"/>
+<path fill="#16a34a" d="M0 220V170Q40 150 80 167Q120 145 160 165Q200 147 240 167Q280 149 320 169Q360 151 400 170V220Z"/>`);
+  const near=SV(260,90,blades(260,90,52,13,44,'#166534',2.3)+`<path fill="#15803d" d="M0 90V70Q32 58 65 70Q97 56 130 70Q162 58 195 70Q227 56 260 70V90Z"/><circle cx="60" cy="64" r="6" fill="#f43f5e"/><circle cx="66" cy="60" r="3" fill="#fde047"/><circle cx="190" cy="62" r="6" fill="#f59e0b"/>`);
+  const tree=`<svg viewBox="0 0 320 480"><g fill="#15803d"><circle cx="40" cy="70" r="72"/><circle cx="135" cy="48" r="56"/><circle cx="205" cy="92" r="44"/></g><g fill="#22c55e"><circle cx="60" cy="58" r="46"/><circle cx="145" cy="66" r="34"/><circle cx="212" cy="100" r="26"/></g>
+<path fill="#78350f" d="M0 480V100Q30 112 62 100Q54 300 78 480Z"/><path stroke="#5b2a0a" stroke-width="3" fill="none" stroke-linecap="round" d="M20 150Q30 200 22 260M45 300Q52 360 46 420M30 330Q36 370 30 400"/>
+<path fill="#78350f" d="M50 205Q160 182 310 194L310 212Q160 206 56 238Z"/>
+<path fill="none" stroke="#3f6212" stroke-width="3" d="M120 196Q112 240 124 290M290 198Q300 240 292 270"/>${leafE(118,240,40,'#4ade80',1.3)}${leafE(126,272,-40,'#22c55e',1.3)}${leafE(296,236,-40,'#4ade80',1.2)}
+<g class="tigerbreath"><path d="M128 186Q98 200 104 240Q107 262 92 272" fill="none" stroke="#f97316" stroke-width="10" stroke-linecap="round"/><path d="M128 186Q98 200 104 240Q107 262 92 272" fill="none" stroke="#1c1917" stroke-width="10" stroke-dasharray="5 13"/>
+<ellipse cx="160" cy="210" rx="9" ry="16" fill="#f97316"/><ellipse cx="190" cy="172" rx="64" ry="25" fill="#f97316"/><ellipse cx="194" cy="186" rx="48" ry="9" fill="#fed7aa"/>
+<g stroke="#1c1917" stroke-width="5" stroke-linecap="round" fill="none"><path d="M150 155q4 9 0 18M168 149q5 10 0 21M188 148q5 10 0 21M208 149q5 10 0 21M226 155q3 8 0 15"/></g>
+<ellipse cx="234" cy="208" rx="9" ry="15" fill="#f97316"/><ellipse cx="250" cy="206" rx="9" ry="14" fill="#f97316"/>
+<circle cx="241" cy="136" r="10" fill="#f97316"/><circle cx="279" cy="136" r="10" fill="#f97316"/><circle cx="241" cy="137" r="5" fill="#fda4af"/><circle cx="279" cy="137" r="5" fill="#fda4af"/>
+<circle cx="260" cy="160" r="28" fill="#f97316"/><ellipse cx="260" cy="174" rx="15" ry="11" fill="#fff"/><ellipse cx="248" cy="165" rx="7" ry="5" fill="#fff"/><ellipse cx="272" cy="165" rx="7" ry="5" fill="#fff"/>
+<path d="M254 167h12l-6 7z" fill="#f472b6"/><g stroke="#1c1917" stroke-width="3" fill="none" stroke-linecap="round"><path d="M244 156q5 4 10 0M266 156q5 4 10 0M260 134v9M251 137l3 7M269 137l-3 7M233 162l7 1M287 162l-7 1"/><path d="M255 178q5 4 10 0"/></g></g>
+<text x="300" y="125" font-size="20" font-weight="800" fill="#fff" class="zzz">z</text><text x="312" y="105" font-size="15" font-weight="800" fill="#fff" class="zzz z2">z</text></svg>`;
+  const fall=`<svg viewBox="0 0 260 480"><path fill="#57534e" d="M260 480V60Q200 40 150 70Q130 140 150 210Q130 300 150 380Q140 430 160 480Z"/><path fill="#78716c" d="M260 480V110Q215 100 185 120Q170 200 190 260Q175 340 195 420L200 480Z"/>
+<rect x="98" y="72" width="56" height="390" fill="#7dd3fc"/><g class="flow" stroke="#e0f2fe" stroke-width="5" stroke-linecap="round" stroke-dasharray="30 26"><path d="M110 76V455"/><path d="M126 90V455"/><path d="M142 80V455"/></g>
+<path fill="#4d7c0f" d="M92 76Q170 40 260 56V82Q205 66 150 92Q120 80 92 86Z"/>${leafE(200,70,20,'#65a30d',1.6)}${leafE(240,64,-10,'#84cc16',1.4)}
+<ellipse cx="125" cy="458" rx="135" ry="26" fill="#38bdf8"/><ellipse cx="126" cy="450" rx="44" ry="9" fill="#fff" opacity=".85"/><ellipse cx="30" cy="468" rx="34" ry="16" fill="#78716c"/><ellipse cx="230" cy="470" rx="40" ry="16" fill="#57534e"/>
+${ETXT('🦜',215,52,44,'bob')}</svg>`;
+  return strip('top',top,'min(24vh,170px)')+strip('far',far,'42%')+strip('near',near,'13%')+prop('L','min(40vmin,330px)',tree,'bottom:6%')+prop('R','min(30vmin,240px)',fall)
+    +`<div class="crit swing" style="left:74%"><i class="vine"></i><span>🐒</span></div><div class="crit flyl" style="top:24%;animation-duration:20s">🦜</div><div class="crit flutter" style="left:70%;top:58%">🦋</div>`;
+}
+
+/* ---- Flower Meadow ---- */
+function sceneMeadow(){
+  let dots=''; for(let i=0;i<26;i++){ const x=(i*23.7)%600, y=170+((i*37)%55); dots+=`<circle cx="${x.toFixed(0)}" cy="${y}" r="${3+i%3}" fill="${['#f472b6','#fff','#facc15','#c084fc'][i%4]}"/>`; }
+  const far=SV(600,240,`<path fill="#bbf7d0" d="M0 240V110Q150 40 300 100Q450 160 600 110V240Z"/><rect x="88" y="66" width="6" height="22" fill="#92400e"/><circle cx="91" cy="60" r="15" fill="#4ade80"/><rect x="438" y="104" width="6" height="22" fill="#92400e"/><circle cx="441" cy="98" r="13" fill="#4ade80"/>
+<path fill="#86efac" d="M0 240V160Q120 110 260 150Q420 200 600 160V240Z"/>${dots}`);
+  let nf=''; [[30,'#f472b6'],[110,'#fff'],[180,'#facc15']].forEach(([x,c])=>{ nf+=`<path d="M${x} 80V40" stroke="#15803d" stroke-width="3"/>${flowerHead(x,36,6,4,6,c,'#f59e0b',3)}`; });
+  const near=SV(220,80,blades(220,80,46,16,22,'#4ade80',1.3)+`<path fill="#22c55e" d="M0 80V60Q55 50 110 60Q165 50 220 60V80Z"/>`+nf);
+  let sun=''; for(let i=0;i<16;i++) sun+=`<ellipse cx="80" cy="112" rx="11" ry="28" fill="${i%2?'#fbbf24':'#facc15'}" transform="rotate(${i*22.5} 80 150)"/>`;
+  const flowers=`<svg viewBox="0 0 260 460"><g class="sway"><path d="M78 460Q62 300 80 170" fill="none" stroke="#16a34a" stroke-width="10"/>${leafE(56,300,-30,'#22c55e',3)}<g>${leafE(118,330,-20,'#4ade80',4)}
+<g class="inch">${[0,1,2,3,4].map(i=>`<circle cx="${92+i*10}" cy="${324-i*3.5}" r="8" fill="${i%2?'#a3e635':'#84cc16'}"/>`).join('')}<circle cx="146" cy="306" r="10" fill="#65a30d"/><circle cx="143" cy="303" r="2.4" fill="#1c1917"/><circle cx="150" cy="303" r="2.4" fill="#1c1917"/><path d="M143 310q4 3 8 0" stroke="#1c1917" stroke-width="1.6" fill="none"/><path d="M142 297l-4-9M150 297l3-9" stroke="#365314" stroke-width="2"/><circle cx="138" cy="287" r="2.5" fill="#f472b6"/><circle cx="153" cy="287" r="2.5" fill="#f472b6"/></g></g>
+${sun}<circle cx="80" cy="150" r="26" fill="#92400e"/><g fill="#78350f">${[[-8,-8],[6,-10],[10,4],[-4,8],[-12,4],[2,-2]].map(p=>`<circle cx="${80+p[0]}" cy="${150+p[1]}" r="3"/>`).join('')}</g></g>
+<g class="sway s2"><path d="M180 460Q192 340 170 250" fill="none" stroke="#16a34a" stroke-width="7"/>${leafE(196,380,30,'#22c55e',2.4)}${flowerHead(170,236,12,8,20,'#fff','#fbbf24',13)}</g>
+<g class="sway s3"><path d="M235 460Q228 400 238 350" fill="none" stroke="#16a34a" stroke-width="6"/><path d="M220 352Q238 300 256 352Q238 365 220 352Z" fill="#ec4899"/><path d="M228 350Q238 318 248 350Z" fill="#f472b6"/></g></svg>`;
+  const fence=`<svg viewBox="0 0 300 300"><g fill="#d97706" stroke="#92400e" stroke-width="3">${[30,110,190,270].map(x=>`<path d="M${x-14} 300V170L${x} 150L${x+14} 170V300Z"/>`).join('')}<rect x="0" y="195" width="300" height="20" rx="6"/><rect x="0" y="245" width="300" height="20" rx="6"/></g>
+<g class="sway s2"><path d="M70 300V230" stroke="#16a34a" stroke-width="5"/><path d="M58 236Q70 200 82 236Q70 244 58 236Z" fill="#f43f5e"/></g><g class="sway"><path d="M232 300V220" stroke="#16a34a" stroke-width="5"/><path d="M220 226Q232 190 244 226Q232 234 220 226Z" fill="#a855f7"/></g>
+${ETXT('🐰',150,292,64,'hop')}${ETXT('🐞',110,192,24)}</svg>`;
+  return `<div class="cloud c1">☁️</div><div class="cloud c2">☁️</div>`+strip('far',far,'40%')+strip('near',near,'12%')+prop('L','min(34vmin,280px)',flowers)+prop('R','min(32vmin,270px)',fence)
+    +`<div class="crit flutter" style="left:18%;top:30%">🦋</div><div class="crit flutter f2" style="left:76%;top:26%">🦋</div><div class="crit flyr" style="top:44%;animation-duration:24s;font-size:min(5vmin,30px)">🐝</div>`;
+}
+
+/* ---- Fairy Glen ---- */
+function sceneGlen(){
+  const far=SV(420,260,`<g fill="#3f6212"><rect x="40" y="90" width="18" height="170"/><rect x="190" y="70" width="22" height="190"/><rect x="330" y="100" width="16" height="160"/></g><g fill="#15803d" opacity=".9"><circle cx="49" cy="80" r="45"/><circle cx="201" cy="62" r="55"/><circle cx="338" cy="92" r="40"/></g>
+<path fill="#4d7c0f" d="M0 260V190Q50 170 105 188Q160 206 210 186Q265 166 320 188Q370 206 420 190V260Z"/><path d="M118 186V174" stroke="#fef3c7" stroke-width="4"/><path d="M110 176Q118 164 126 176Z" fill="#ef4444"/><path d="M286 180V168" stroke="#fef3c7" stroke-width="4"/><path d="M278 170Q286 158 294 170Z" fill="#f59e0b"/>`);
+  const near=SV(240,90,`<path fill="#65a30d" d="M0 90V50Q30 30 60 50Q90 34 120 50Q150 30 180 50Q210 34 240 50V90Z"/><rect x="66" y="40" width="8" height="14" rx="3" fill="#fef3c7"/><path d="M58 43Q70 24 82 43Z" fill="#ef4444"/><circle cx="66" cy="36" r="2" fill="#fff"/><circle cx="74" cy="38" r="2" fill="#fff"/>
+<rect x="186" y="42" width="7" height="12" rx="3" fill="#fef3c7"/><path d="M180 44Q190 30 200 44Z" fill="#a855f7"/><g fill="#84cc16"><circle cx="136" cy="46" r="5"/><circle cx="144" cy="46" r="5"/><circle cx="140" cy="40" r="5"/></g>`);
+  const house=`<svg viewBox="0 0 300 360"><path d="M42 360V200Q42 172 72 172H228Q258 172 258 200V360Z" fill="#d6b88a" stroke="#92400e" stroke-width="4"/><g fill="#a8a29e">${[[60,330,10],[90,345,8],[230,335,11],[240,300,7],[58,290,7]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="${p[2]}"/>`).join('')}</g>
+<rect x="200" y="56" width="26" height="60" rx="5" fill="#78716c"/><g class="smoke" fill="#fff" opacity=".7"><circle cx="213" cy="44" r="9"/><circle cx="222" cy="26" r="7"/><circle cx="214" cy="10" r="5"/></g>
+<path d="M18 208Q8 122 90 96Q150 40 216 96Q296 122 282 208Q150 230 18 208Z" fill="#4d7c0f"/><g fill="#65a30d"><circle cx="80" cy="130" r="26"/><circle cx="150" cy="90" r="30"/><circle cx="222" cy="128" r="24"/><circle cx="120" cy="170" r="22"/><circle cx="190" cy="172" r="20"/></g>
+<g>${[[70,150,'#f472b6'],[160,120,'#fff'],[235,160,'#facc15'],[110,110,'#fff'],[200,98,'#f472b6']].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="5" fill="${p[2]}"/>`).join('')}</g>
+<rect x="142" y="54" width="8" height="16" rx="3" fill="#fef3c7"/><path d="M134 58Q146 40 158 58Z" fill="#ef4444"/><circle cx="142" cy="52" r="2" fill="#fff"/><circle cx="151" cy="53" r="2" fill="#fff"/>
+<path d="M124 360V292Q150 252 176 292V360Z" fill="#92400e"/><path d="M150 262V360" stroke="#78350f" stroke-width="3"/><circle cx="166" cy="320" r="5" fill="#fbbf24"/>
+${[85,215].map(x=>`<circle cx="${x}" cy="262" r="22" fill="#fde68a" stroke="#78350f" stroke-width="5" class="glowwin"/><path d="M${x-20} 262H${x+20}M${x} 242V282" stroke="#78350f" stroke-width="3"/>`).join('')}
+<circle cx="268" cy="344" r="14" fill="#ef4444"/><path d="M254 344H282" stroke="#fff" stroke-width="5"/><g stroke="#fff" stroke-width="2"><rect x="12" y="330" width="22" height="22" fill="#60a5fa"/><rect x="22" y="308" width="22" height="22" fill="#facc15"/><rect x="34" y="330" width="22" height="22" fill="#f472b6"/></g>${ETXT('🧸',100,358,36)}</svg>`;
+  const shrooms=`<svg viewBox="0 0 260 400"><path d="M150 400Q140 270 160 176H192Q206 270 200 400Z" fill="#fef3c7"/><path d="M96 180Q172 64 252 180Q172 204 96 180Z" fill="#ef4444"/><g fill="#fff">${[[130,150,10],[172,120,13],[214,152,9],[176,168,7],[150,128,6]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="${p[2]}"/>`).join('')}</g>
+<path d="M58 400Q52 330 64 290H84Q92 330 88 400Z" fill="#fef3c7"/><path d="M26 296Q74 220 122 296Q74 310 26 296Z" fill="#a855f7"/><g fill="#f5d0fe"><circle cx="58" cy="272" r="6"/><circle cx="86" cy="266" r="7"/><circle cx="72" cy="286" r="4"/></g>
+<ellipse cx="160" cy="388" rx="70" ry="13" fill="#22c55e"/><path d="M160 388L226 382" stroke="#4d7c0f" stroke-width="3"/>${ETXT('🐸',150,386,46,'hop')}</svg>`;
+  const df=`<svg viewBox="0 0 60 44"><g fill="#a5f3fc" opacity=".85" stroke="#0891b2" stroke-width="1"><ellipse cx="16" cy="14" rx="15" ry="5" transform="rotate(-12 16 14)"/><ellipse cx="44" cy="14" rx="15" ry="5" transform="rotate(12 44 14)"/><ellipse cx="17" cy="23" rx="13" ry="4.5" transform="rotate(10 17 23)"/><ellipse cx="43" cy="23" rx="13" ry="4.5" transform="rotate(-10 43 23)"/></g><rect x="28" y="8" width="4" height="34" rx="2" fill="#2563eb"/><circle cx="30" cy="8" r="5" fill="#1d4ed8"/></svg>`;
+  let ff=''; [[12,30],[24,60],[82,22],[90,55],[50,18],[64,68],[8,48],[94,38]].forEach((p,i)=>ff+=`<i class="ffly" style="left:${p[0]}%;top:${p[1]}%;animation-delay:${i*0.4}s"></i>`);
+  return strip('far',far,'46%')+strip('near',near,'12%')+prop('L','min(36vmin,300px)',house)+prop('R','min(30vmin,250px)',shrooms)+ff
+    +`<div class="crit hover" style="left:20%;top:34%;width:min(9vmin,60px)">${df}</div><div class="crit hover h2" style="left:72%;top:46%;width:min(7vmin,48px)">${df}</div>`;
+}
+
+/* ---- Ice Castle ---- */
+function sceneIce(){
+  const aur=SV(600,180,`<path d="M0 60Q150 10 300 60T600 60" stroke="#86efac" stroke-width="42" fill="none" opacity=".45"/><path d="M0 104Q150 54 300 104T600 104" stroke="#f9a8d4" stroke-width="26" fill="none" opacity=".35"/><path d="M0 34Q150 74 300 34T600 34" stroke="#a5b4fc" stroke-width="18" fill="none" opacity=".35"/>`);
+  const far=SV(520,240,`<path fill="#c7d2fe" d="M0 240V140L70 70L130 130L200 50L280 140L350 80L430 150L480 100L520 140V240Z"/><g fill="#fff"><path d="M70 70L54 86L66 82L76 90L86 80Z"/><path d="M200 50L182 70L196 64L206 72L218 66Z"/><path d="M350 80L336 94L348 90L358 96L366 90Z"/><path d="M480 100L468 112L480 108L490 112Z"/></g>
+<path fill="#e0f2fe" d="M0 240V185Q130 165 260 185Q390 205 520 185V240Z"/>`);
+  const near=SV(300,80,`<path fill="#fff" d="M0 80V40Q40 20 80 40Q120 24 160 40Q200 18 240 40Q270 28 300 40V80Z"/><path fill="#dbeafe" d="M0 80V62Q75 52 150 62Q225 52 300 62V80Z"/>`);
+  const castle=`<svg viewBox="0 0 330 450"><defs><linearGradient id="icg4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0f9ff"/><stop offset="1" stop-color="#93c5fd"/></linearGradient></defs>
+<g fill="url(#icg4)" stroke="#93c5fd" stroke-width="3"><rect x="62" y="226" width="216" height="224"/><rect x="30" y="152" width="62" height="298"/><rect x="248" y="152" width="62" height="298"/><rect x="134" y="96" width="72" height="160"/>
+${[0,1,2,3,4,5].map(i=>`<rect x="${70+i*36}" y="210" width="20" height="18"/>`).join('')}</g>
+<g fill="#c4b5fd" stroke="#a78bfa" stroke-width="3"><path d="M22 154L61 66L100 154Z"/><path d="M240 154L279 66L318 154Z"/><path d="M126 98L170 8L214 98Z"/></g>
+<g stroke="#64748b" stroke-width="2"><path d="M61 66V44M279 66V44M170 8V-12"/></g><g fill="#f472b6"><path d="M61 44l18 6l-18 6Z"/><path d="M279 44l18 6l-18 6Z"/></g>
+<g fill="#bae6fd" stroke="#60a5fa" stroke-width="3">${[[61,200],[279,200],[170,150],[61,300],[279,300]].map(p=>`<path d="M${p[0]-11} ${p[1]+22}V${p[1]}Q${p[0]} ${p[1]-14} ${p[0]+11} ${p[1]}V${p[1]+22}Z"/>`).join('')}<path d="M144 450V384Q170 344 196 384V450Z" fill="#60a5fa"/></g>
+<g stroke="#fff" stroke-width="3" opacity=".8" stroke-linecap="round"><path d="M40 180l14-14M258 182l14-14M144 120l14-14M80 260l20-20M230 270l20-20"/></g>
+<g class="twk" fill="#fff"><path d="M120 60l3 8l8 3l-8 3l-3 8l-3-8l-8-3l8-3Z"/><path d="M226 30l2 6l6 2l-6 2l-2 6l-2-6l-6-2l6-2Z"/></g></svg>`;
+  const pond=`<svg viewBox="0 0 330 270"><ellipse cx="225" cy="245" rx="100" ry="22" fill="#bae6fd" stroke="#93c5fd" stroke-width="3"/><path d="M170 240q20-6 40 0M240 250q20-6 40 0" stroke="#fff" stroke-width="3" fill="none"/>
+<circle cx="80" cy="222" r="44" fill="#fff" stroke="#bfdbfe" stroke-width="3"/><circle cx="80" cy="154" r="32" fill="#fff" stroke="#bfdbfe" stroke-width="3"/><circle cx="80" cy="102" r="25" fill="#fff" stroke="#bfdbfe" stroke-width="3"/>
+<path d="M58 128h44v10H58Z" fill="#f472b6"/><path d="M90 134l10 22l8-4l-8-18Z" fill="#ec4899"/><circle cx="71" cy="97" r="3" fill="#1e293b"/><circle cx="89" cy="97" r="3" fill="#1e293b"/><path d="M80 103l16 4l-16 3Z" fill="#f97316"/><g fill="#1e293b"><circle cx="70" cy="113" r="1.8"/><circle cx="76" cy="116" r="1.8"/><circle cx="84" cy="116" r="1.8"/><circle cx="90" cy="113" r="1.8"/><circle cx="80" cy="150" r="3"/><circle cx="80" cy="166" r="3"/></g>
+<path d="M60 74L64 60L72 70L80 56L88 70L96 60L100 74Z" fill="#facc15" stroke="#ca8a04" stroke-width="2"/><circle cx="80" cy="66" r="3" fill="#ec4899"/><path d="M50 150L18 128M110 150L140 124" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+${ETXT('🦭',210,246,48)}${ETXT('🐻‍❄️',290,226,62)}</svg>`;
+  return strip('top',aur,'min(26vh,190px)','','aur')+strip('far',far,'44%')+strip('near',near,'11%')+prop('R','min(40vmin,330px)',castle)+prop('L','min(40vmin,330px)',pond)
+    +`<div class="snowfall"></div><div class="crit waddle" style="left:36%;bottom:3%">🐧</div><div class="crit waddle w2" style="left:58%;bottom:2%">🐧</div>`;
+}
+
+/* ---- Sunny Desert ---- */
+function sceneDesert(){
+  const far=SV(600,240,`<path fill="#fb923c" opacity=".55" d="M0 240V150H60L82 106H168L190 150H360L382 118H458L480 150H600V240Z"/><path fill="#fcd34d" d="M0 240V180Q150 140 300 180Q450 220 600 180V240Z"/>`);
+  const near=SV(300,90,`<path fill="#f59e0b" d="M0 90V44Q75 20 150 44Q225 68 300 44V90Z"/><g stroke="#d97706" stroke-width="3" fill="none" opacity=".6" stroke-linecap="round"><path d="M30 64q20-6 40 0M130 70q20-6 40 0M220 60q20-6 40 0"/></g>`);
+  let rays=''; for(let i=0;i<12;i++) rays+=`<path d="M100 14l7 22h-14Z" fill="#fbbf24" transform="rotate(${i*30} 100 100)"/>`;
+  const sun=`<svg viewBox="0 0 200 200"><g class="rays">${rays}</g><circle cx="100" cy="100" r="54" fill="#fde047" stroke="#fbbf24" stroke-width="6"/><circle cx="82" cy="94" r="5" fill="#92400e"/><circle cx="118" cy="94" r="5" fill="#92400e"/><path d="M84 114q16 14 32 0" stroke="#92400e" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="72" cy="110" r="7" fill="#fb923c" opacity=".5"/><circle cx="128" cy="110" r="7" fill="#fb923c" opacity=".5"/></svg>`;
+  const cactus=`<svg viewBox="0 0 240 430"><g fill="#16a34a"><rect x="82" y="90" width="52" height="340" rx="26"/><rect x="30" y="170" width="32" height="130" rx="16"/><rect x="40" y="262" width="60" height="30" rx="15"/><rect x="154" y="140" width="30" height="110" rx="15"/><rect x="118" y="214" width="56" height="28" rx="14"/></g>
+<g stroke="#15803d" stroke-width="4" stroke-linecap="round"><path d="M100 110V420M116 110V420M46 186V290M169 156V236"/></g><g fill="#f472b6">${flowerHead(108,90,6,5,8,'#f472b6','#facc15',5)}</g>
+<ellipse cx="190" cy="410" rx="48" ry="22" fill="#b45309"/><ellipse cx="180" cy="402" rx="24" ry="8" fill="#d97706"/>${ETXT('🐍',192,400,40,'hiss')}</svg>`;
+  const palm=(x,lean,s)=>`<g transform="translate(${x} 0) scale(${s})"><path d="M0 330Q${lean} 200 ${lean*1.6} 90" fill="none" stroke="#a16207" stroke-width="16" stroke-linecap="round"/><path d="M0 330Q${lean} 200 ${lean*1.6} 90" fill="none" stroke="#854d0e" stroke-width="16" stroke-dasharray="3 14"/>
+<g class="sway s3" fill="#16a34a">${[[-70,20],[-40,-10],[0,-24],[40,-10],[70,20],[-20,40],[30,40]].map(p=>`<path d="M${lean*1.6} 90Q${lean*1.6+p[0]*0.5} ${90+p[1]-30} ${lean*1.6+p[0]} ${90+p[1]+10}Q${lean*1.6+p[0]*0.5} ${90+p[1]-10} ${lean*1.6} 92Z"/>`).join('')}</g><circle cx="${lean*1.6-6}" cy="98" r="7" fill="#78350f"/><circle cx="${lean*1.6+6}" cy="100" r="7" fill="#78350f"/></g>`;
+  const oasis=`<svg viewBox="0 0 320 380">${palm(110,-24,1)}${palm(230,18,0.85)}<ellipse cx="170" cy="346" rx="150" ry="30" fill="#65a30d"/><ellipse cx="170" cy="344" rx="128" ry="22" fill="#38bdf8"/><path d="M110 340q20-5 40 0M190 348q20-5 40 0" stroke="#e0f2fe" stroke-width="3" fill="none"/>
+${ETXT('🐪',280,330,54)}</svg>`;
+  return `<div class="sun">${sun}</div>`+strip('far',far,'44%')+strip('near',near,'12%')+prop('L','min(32vmin,260px)',cactus)+prop('R','min(38vmin,320px)',oasis)
+    +`<div class="crit fox" style="left:26%;bottom:13%">🦊</div><div class="crit flyl" style="top:60%;animation-duration:30s;font-size:min(5vmin,32px);opacity:.8">🦎</div>`;
+}
+
+/* ---- Spaceship ---- */
+function sceneShip(){
+  const ceil=SV(240,110,`<rect width="240" height="70" fill="#334155"/><rect y="62" width="240" height="10" fill="#475569"/><g fill="#1e293b">${[30,90,150,210].map(x=>`<circle cx="${x}" cy="30" r="5"/>`).join('')}</g>
+<g><rect x="50" y="72" width="40" height="12" rx="6" fill="#67e8f9"><animate attributeName="opacity" values="1;.5;1" dur="2s" repeatCount="indefinite"/></rect><rect x="160" y="72" width="40" height="12" rx="6" fill="#67e8f9"><animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/></rect></g>`);
+  const lights=(xs)=>xs.map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="6" fill="${p[2]}"><animate attributeName="opacity" values="1;.25;1" dur="${(0.8+i*0.37)%1.9+0.6}s" repeatCount="indefinite"/></circle>`).join('');
+  const far=SV(360,200,`<path fill="#475569" d="M0 200V90L360 90V200Z"/><path fill="#64748b" d="M0 90L30 50H330L360 90Z"/><rect x="40" y="56" width="90" height="28" rx="6" fill="#0ea5e9"/><path d="M48 76l14-10l12 8l14-12l14 10l14-6" stroke="#e0f2fe" stroke-width="3" fill="none"/>
+<rect x="230" y="56" width="90" height="28" rx="6" fill="#22c55e" opacity=".85"/><circle cx="275" cy="70" r="9" fill="none" stroke="#dcfce7" stroke-width="3"><animate attributeName="r" values="3;12;3" dur="2.4s" repeatCount="indefinite"/></circle>
+${lights([[160,64,'#f43f5e'],[180,64,'#facc15'],[200,64,'#4ade80'],[160,80,'#60a5fa'],[180,80,'#f472b6'],[200,80,'#fb923c']])}<rect x="0" y="120" width="360" height="6" fill="#334155"/><g fill="#334155">${[60,180,300].map(x=>`<rect x="${x-24}" y="140" width="48" height="40" rx="6"/>`).join('')}</g>`);
+  const near=SV(160,70,`<rect width="160" height="70" fill="#1e293b"/><path d="M0 2H160M80 0V70" stroke="#475569" stroke-width="3"/><circle cx="40" cy="36" r="4" fill="#475569"/><circle cx="120" cy="36" r="4" fill="#475569"/>`);
+  const port=(planet)=>`<svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="94" fill="#94a3b8"/><circle cx="100" cy="100" r="80" fill="#0f172a" stroke="#cbd5e1" stroke-width="6"/><g fill="#fff">${[[60,60,2],[140,50,1.5],[130,140,2],[70,150,1.5],[100,40,1.2],[150,100,1.4],[50,110,1.2]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="${p[2]}"><animate attributeName="opacity" values="1;.3;1" dur="${1.5+p[2]}s" repeatCount="indefinite"/></circle>`).join('')}</g>${planet}
+<path d="M48 70Q60 44 90 34" stroke="#fff" stroke-width="5" fill="none" opacity=".35" stroke-linecap="round"/>${[0,1,2,3,4,5,6,7].map(i=>`<circle cx="${100+87*Math.cos(i*Math.PI/4)}" cy="${100+87*Math.sin(i*Math.PI/4)}" r="4" fill="#64748b"/>`).join('')}</svg>`;
+  const saturn=`<circle cx="104" cy="104" r="30" fill="#f59e0b"/><path d="M80 96h48M78 110h52" stroke="#d97706" stroke-width="5"/><ellipse cx="104" cy="104" rx="56" ry="13" fill="none" stroke="#fde68a" stroke-width="5" transform="rotate(-18 104 104)"/>`;
+  const blue=`<circle cx="96" cy="100" r="34" fill="#3b82f6"/><path d="M76 84q14-8 22 4q10 10-4 18q-14 2-18-22ZM104 112q14-6 18 8q-8 12-18 4Z" fill="#4ade80"/><circle cx="148" cy="64" r="9" fill="#e2e8f0"/>`;
+  const dome=`<svg viewBox="0 0 160 190"><rect x="20" y="160" width="120" height="30" rx="8" fill="#64748b"/><rect x="30" y="150" width="100" height="16" rx="6" fill="#94a3b8"/><g transform="translate(40 70) scale(.8)">${unicornStuffySVG()}</g>
+<path d="M28 152V90Q28 22 80 22Q132 22 132 90V152Z" fill="#a5f3fc" opacity=".3" stroke="#e0f2fe" stroke-width="4"/><path d="M48 70Q54 44 76 36" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/></svg>`;
+  return strip('top',ceil,'min(15vh,110px)')+strip('far',far,'34%')+strip('near',near,'9%')
+    +prop('TL','min(26vmin,190px)',port(saturn),'top:18%;left:2%')+prop('TR','min(24vmin,170px)',port(blue),'top:22%;right:2%')+prop('R','min(22vmin,160px)',dome,'bottom:9%;right:3%')
+    +`<div class="crit floaty" style="left:12%;bottom:12%">🛸</div>`;
+}
+
+const A_SCENES={jungle:sceneJungle,fmeadow:sceneMeadow,glen:sceneGlen,icecastle:sceneIce,desertw:sceneDesert,spaceship:sceneShip};
+function aScene(cls){ const f=A_SCENES[cls]; return f?`<div class="scene">${f()}</div>`:''; }
+
 /* =================== Story 4: The World-Hopping Aliens =================== */
 // Difficulty that adjusts itself: each game remembers a level 1-3 per device.
 function lvl(k){ return (S.lvl&&S.lvl[k])||1; }
@@ -2554,8 +2758,8 @@ const A_WORLDS=[
 function aLevel(w,only){
   const W=A_WORLDS[w];
   const el=shell(W.cls,only?A_TITLES[only]:W.name); const st=el.querySelector('.stage');
-  const spots=[[3,12],[88,10],[2,78],[90,74],[6,45],[92,42]];
-  st.innerHTML=`<div class="adecor">${W.decor.map((d,i)=>`<span style="left:${spots[i][0]}%;top:${spots[i][1]}%;animation-delay:${i*0.35}s">${d}</span>`).join('')}</div><div class="area"></div>`;
+  el.insertAdjacentHTML('afterbegin',aScene(W.cls));
+  st.innerHTML=`<div class="area"></div>`;
   show(el);
   const area=st.querySelector('.area'), seq=only?[only]:W.games; let k=0;
   const run=()=>{ const g=seq[k++]; A_GAMES[g](area,()=>{ if(k<seq.length) say('Alice says: Great job! I have one more game here.',()=>T(run,300)); else T(()=>complete(w),300); }); };
