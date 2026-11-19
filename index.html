@@ -868,6 +868,167 @@ svg{display:block}
   .map .bag{transform:scale(.72);transform-origin:0 100%}
 }
 
+/* ===== Secret story: The Secret Witch School ===== */
+.s-secretstar{position:absolute;top:min(3vmin,18px);left:min(14vmin,100px);font-size:min(7vmin,44px);line-height:1;color:#fde047;background:none;text-shadow:0 0 12px #fde047,0 0 24px #f472b6;animation:twinkle 2.4s ease-in-out infinite;z-index:3;padding:1vmin}
+.s-secretstar.tw{animation:s-ping .45s ease-out}.s-secretstar.burst{animation:s-burst 1.2s ease-out forwards}
+@keyframes s-ping{0%{transform:scale(1)}50%{transform:scale(1.8) rotate(30deg)}100%{transform:scale(1)}}
+@keyframes s-burst{0%{transform:scale(1);opacity:1}60%{transform:scale(6) rotate(180deg);opacity:.9}100%{transform:scale(9) rotate(260deg);opacity:0}}
+.secretc .cart{background:radial-gradient(circle at 30% 20%,#fef3c7 0 6%,#a855f7 7%,#3b0764 75%);position:relative;overflow:hidden}
+.cover.s-magic{box-shadow:0 0 0 3px #fde047,0 0 26px #c084fc,0 8px 0 #0002;animation:s-shimmer 3s ease-in-out infinite}
+@keyframes s-shimmer{0%,100%{box-shadow:0 0 0 3px #fde047,0 0 18px #c084fc,0 8px 0 #0002}50%{box-shadow:0 0 0 3px #fff,0 0 34px #f472b6,0 8px 0 #0002}}
+.cover.s-appear{animation:s-appear 1.4s cubic-bezier(.2,1.6,.4,1) both,s-shimmer 3s ease-in-out 1.4s infinite}
+@keyframes s-appear{0%{transform:scale(0) rotate(-30deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}
+.s-cvlu{width:58%}.s-cvfam{width:34%;margin-left:-8%}.cover .cart .s-cvlu svg,.cover .cart .s-cvfam svg{height:auto;width:100%}
+.map.s-map{background:#0b1033}.map.s-map .ttl{color:#fff;text-shadow:0 2px 4px #000}
+.map.s-map .path polyline{stroke:#fde68a;opacity:.9}
+.map.s-map .orb{border-color:#fde68a;box-shadow:0 0 0 4px #fde68a55,0 0 26px #f9a8d4}
+.flyer .s-flyer{width:min(20vmin,140px);animation:bob 2.4s ease-in-out infinite}
+/* intro */
+.sintro .stage{position:relative;z-index:1}
+.s-letter{background:linear-gradient(#fffbeb,#fde68a);color:#4c1d95;border-radius:10px;padding:3vmin 5vmin;display:flex;flex-direction:column;align-items:center;gap:1vmin;box-shadow:0 0 50px #fde047aa,0 10px 30px #0006;transform:rotate(-3deg);animation:s-floatin 1.6s ease-out both;position:relative;max-width:80vw}
+.s-letter b{font-size:min(7vmin,44px)}.s-letter span{font-size:min(4.6vmin,28px);text-align:center;font-weight:800}.s-letter i{font-size:min(4vmin,24px)}
+.s-seal{position:absolute;top:-3vmin;width:min(9vmin,60px);height:min(9vmin,60px);border-radius:50%;background:#7c3aed;color:#fde047;display:flex;align-items:center;justify-content:center;font-size:min(5vmin,30px);box-shadow:0 0 16px #a855f7}
+@keyframes s-floatin{0%{transform:translate(-40vw,-30vh) rotate(-40deg) scale(.3);opacity:0}100%{transform:rotate(-3deg);opacity:1}}
+.s-pets{display:flex;gap:3vmin;flex-wrap:wrap;justify-content:center}
+.s-pet{display:flex;flex-direction:column;align-items:center;background:#ffffffd9;border-radius:24px;padding:1.5vmin 2vmin;box-shadow:0 6px 0 #0003,0 0 30px #c084fc88;animation:bob 2.4s ease-in-out infinite}
+.s-pet:nth-child(2){animation-delay:-.6s}.s-pet:nth-child(3){animation-delay:-1.2s}.s-pet:nth-child(4){animation-delay:-1.8s}
+.s-pet div{width:min(18vmin,130px)}.s-pet b{color:#4c1d95;font-size:clamp(14px,3vmin,22px)}
+.s-ready{display:flex;align-items:flex-end;gap:1vmin}.s-rlu{width:min(28vmin,200px)}.s-rfam{width:min(14vmin,100px);animation:bob 2s infinite}
+/* finale */
+.sfin{background:#050a24}.sfin .stage{position:relative;z-index:1}
+.s-grad{position:relative;width:min(26vmin,190px)}.s-gstar{position:absolute;top:-2vmin;right:8%;font-size:min(10vmin,64px);animation:twinkle 1.6s infinite;filter:drop-shadow(0 0 12px #fde047)}
+.s-parade{position:absolute;left:0;right:0;top:min(3vmin,20px);height:min(15vmin,110px);overflow:hidden;z-index:2;pointer-events:none}
+.s-ptrack{display:flex;gap:2vmin;height:100%;width:max-content;animation:s-march 60s linear infinite}
+.s-pp{height:100%;animation:bob 1s ease-in-out infinite}.s-pp:nth-child(odd){animation-delay:-.5s}.s-pp svg{height:100%;width:auto;display:block}
+@keyframes s-march{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sfin .stage{padding-top:min(16vmin,120px)}
+
+/* 1 broom flying */
+.s-need{display:flex;align-items:center;gap:2vmin;flex-wrap:wrap;justify-content:center}
+.s-need>span{font-weight:800;font-size:min(5vmin,30px)}
+.s-nn{min-width:1.6em;text-align:center;background:#fde047;color:#4c1d95;border-radius:16px;font-size:min(8vmin,50px);padding:0 1.5vmin;box-shadow:0 0 20px #fde047}
+.s-row{display:flex;gap:.8vmin;flex-wrap:wrap}.s-row i{font-style:normal;min-width:min(5.6vmin,36px);height:min(5.6vmin,36px);border-radius:999px;border:2px dashed #ffffff88;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:min(3.2vmin,20px);color:#ffffffaa;padding:0 .6vmin}
+.s-row i.on{background:#fde047;color:#4c1d95;border:2px solid #fff;box-shadow:0 0 12px #fde047}
+.s-skybox{position:relative;width:min(92vw,980px);height:min(56vh,62vmin,520px);border-radius:26px;overflow:hidden;background:linear-gradient(#312e81,#7c3aed 55%,#f472b6);touch-action:none;box-shadow:inset 0 0 40px #0005}
+.s-clouds{position:absolute;inset:0;background:radial-gradient(ellipse 12% 9% at 20% 30%,#fff9 60%,transparent 62%),radial-gradient(ellipse 16% 10% at 70% 70%,#fff7 60%,transparent 62%),radial-gradient(ellipse 10% 7% at 50% 15%,#fff6 60%,transparent 62%),radial-gradient(ellipse 14% 8% at 90% 40%,#fff7 60%,transparent 62%);background-size:100% 100%;animation:s-cloudmove 14s linear infinite}
+@keyframes s-cloudmove{from{background-position:0 0}to{background-position:-100% 0}}
+.s-rider{position:absolute;left:3%;top:0;width:min(26%,200px);will-change:transform;z-index:2}.s-rider svg{width:100%;display:block;filter:drop-shadow(0 6px 10px #0005)}
+.s-rider.loop svg{animation:s-loop 1.2s ease-in-out 2}@keyframes s-loop{to{transform:rotate(360deg)}}
+.s-star{position:absolute;left:0;top:0;width:min(17vmin,84px);aspect-ratio:1;will-change:transform;display:flex;align-items:center;justify-content:center}
+.s-star svg{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 0 10px #fde047)}.s-star svg path{fill:#fde047;stroke:#fff;stroke-width:2.5}
+.s-star b{position:relative;color:#4c1d95;font-size:min(5vmin,30px);margin-top:6%}
+.s-star.glow svg{filter:drop-shadow(0 0 18px #fff) drop-shadow(0 0 30px #f472b6)}
+.s-star.got{transition:opacity .4s,scale .4s;opacity:0;scale:2}.s-star.bonk{transition:translate .6s ease-in,opacity .6s;translate:10vmin -30vmin;opacity:0}
+/* 2 star pictures */
+.s-cons{position:relative;width:min(62vmin,460px);aspect-ratio:1;background:radial-gradient(#1e1b4b,#0b1033);border-radius:28px;box-shadow:inset 0 0 40px #000a,0 0 30px #a78bfa55}
+.s-cons svg{width:100%;height:100%;display:block}
+.s-cons .s-fill{fill:#fde68a;opacity:0;transition:opacity 1s}.s-cons svg.done .s-fill{opacity:.28}
+.s-lines line{stroke:#fde68a;stroke-width:1.4;stroke-linecap:round;filter:drop-shadow(0 0 2px #fde047)}
+.s-dot .hit{fill:transparent;cursor:pointer}.s-dot .d{fill:#fff;filter:drop-shadow(0 0 2px #fff)}
+.s-dot text{fill:#e0e7ff;font-size:5.4px;font-weight:800;text-anchor:middle;dominant-baseline:middle;pointer-events:none}
+.s-dot.on .d{fill:#fde047;r:3.2}.s-dot.hint .d{animation:s-blink .5s infinite alternate;r:4.5}
+@keyframes s-blink{to{fill:#f472b6}}
+.s-reveal{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:min(22vmin,160px);opacity:0;transform:scale(.3);transition:all .9s cubic-bezier(.2,1.6,.4,1);pointer-events:none}
+.s-cons.done .s-reveal{opacity:.95;transform:scale(1)}
+/* 3 color potions */
+.s-labrow{display:flex;align-items:flex-end;gap:5vmin}
+.s-teach{width:min(22vmin,160px)}.s-teach.poof{animation:s-poof .8s}@keyframes s-poof{0%{transform:scale(1)}30%{transform:scale(1.25) rotate(-6deg);filter:brightness(2)}100%{transform:scale(1)}}
+.s-mixcol{display:flex;flex-direction:column;align-items:center;gap:2vmin}
+.s-goal{display:flex;align-items:center;gap:1.5vmin;background:#fff;color:#3b0764;border-radius:999px;padding:.6vmin 2.4vmin .6vmin .8vmin;box-shadow:0 4px 0 #0003}
+.s-goal b{font-size:min(6vmin,38px);text-transform:capitalize}.s-swatch{width:min(8vmin,50px);height:min(8vmin,50px);border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px #0002}
+.s-pot{position:relative;width:min(34vmin,240px);height:min(24vmin,170px)}
+.s-potbody{position:absolute;inset:0;border-radius:12% 12% 48% 48%/12% 12% 50% 50%;background:#1c1917;box-shadow:inset 0 -12px 0 #0006}
+.s-liquid{position:absolute;left:6%;right:6%;top:3%;height:22%;border-radius:50%;background:transparent;z-index:1;transition:background .4s;box-shadow:0 0 0 6px #292524}
+.s-liquid.on{box-shadow:0 0 0 6px #292524,0 0 40px currentColor}
+.s-pot.stir .s-liquid{animation:s-swirl .5s linear 2}@keyframes s-swirl{50%{transform:scaleX(.85)}}
+.s-pot.yes::after{content:'✨';position:absolute;left:50%;top:-20%;transform:translateX(-50%);font-size:min(12vmin,80px);animation:popin .5s}
+.s-drop{position:absolute;left:50%;top:-40%;width:min(3vmin,20px);height:min(4vmin,26px);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;z-index:2;animation:s-drip .55s ease-in forwards;border:2px solid #fff8}
+@keyframes s-drip{from{transform:translate(-50%,0)}to{transform:translate(-50%,min(14vmin,100px));opacity:.2}}
+.s-puff{position:absolute;inset:-20% -10%;border-radius:50%;background:radial-gradient(#d6d3d1,#78716c00 70%);opacity:0;transform:scale(.4);transition:all .5s;z-index:3;pointer-events:none}.s-puff.on{opacity:.95;transform:scale(1.1)}
+.s-bottles{display:flex;gap:2.4vmin;align-items:flex-end;flex-wrap:wrap;justify-content:center}
+.s-bot{display:flex;flex-direction:column;align-items:center;background:none;transition:transform .3s}.s-bot svg{width:min(11vmin,72px);height:auto;filter:drop-shadow(0 4px 6px #0005)}
+.s-bot small{font-weight:800;color:#fff;font-size:clamp(12px,2.4vmin,18px);text-transform:capitalize;text-shadow:0 1px 3px #000}
+.s-bot.tip{transform:rotate(-35deg) translateY(-1vmin)}
+.s-potbtns{display:flex;flex-direction:column;gap:1.2vmin;margin-left:2vmin}
+.s-stir{background:linear-gradient(#a855f7,#7c3aed);color:#fff;font-weight:800;border-radius:999px;padding:1.2vmin 4vmin;font-size:min(5.4vmin,32px);box-shadow:0 5px 0 #4c1d95}
+.s-empty{background:#fff;color:#4c1d95;font-weight:800;border-radius:999px;padding:.8vmin 3vmin;font-size:min(3.6vmin,22px);box-shadow:0 4px 0 #0003}
+/* 4 bubble pop */
+.s-eq{display:flex;align-items:center;gap:1.6vmin;background:#fff;color:#3b0764;border-radius:20px;padding:.4vmin 3vmin;font-size:min(9vmin,58px);font-weight:800;box-shadow:0 5px 0 #0003}
+.s-eq b.q{display:inline-block;min-width:1.2em;text-align:center;border:3px dashed #a855f7;border-radius:12px;color:#a855f7}
+.s-bpot{display:flex;flex-direction:column;align-items:center}
+.s-bubs{display:flex;flex-wrap:wrap;gap:1.6vmin;justify-content:center;max-width:min(76vmin,560px);margin-bottom:-1vmin;position:relative;z-index:1}
+.s-bub{width:min(11vmin,74px);height:min(11vmin,74px);border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff 0 14%,transparent 15%),radial-gradient(circle,transparent 45%,var(--c) 100%);border:2px solid #ffffffcc;box-shadow:0 0 18px var(--c);animation:bob 2.2s ease-in-out infinite;transition:transform .25s,opacity .25s}
+.s-bub.popped{transform:scale(1.7);opacity:0;pointer-events:none}
+.s-bcaul{width:min(42vmin,300px);height:min(12vmin,80px);background:#1c1917;border-radius:0 0 50% 50%/0 0 100% 100%;border-top:10px solid #a3e635;box-shadow:0 0 40px #a3e63588}
+/* 5 wand writing */
+.s-twrap{position:relative}
+.board.s-board{background:radial-gradient(#312e81,#1e1b4b);border:4px solid #fde68a;box-shadow:0 0 40px #a855f799}
+.board.s-board .guide .g1{stroke:#ffffff33}.board.s-board .guide .g2{stroke:#ffffff88}
+.s-fx{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;font-size:min(30vmin,220px);opacity:0}
+.s-fx.on{opacity:1}.s-fx.on span{filter:drop-shadow(0 0 30px #fde047)}
+.s-fx.fx0 span{animation:s-fx0 2.4s ease-out both}.s-fx.fx1 span{animation:s-fx1 2.4s ease-out both}.s-fx.fx2 span{animation:s-fx2 2.4s ease-out both}
+@keyframes s-fx0{0%{transform:scale(0) rotate(-180deg)}40%{transform:scale(1.2) rotate(10deg)}60%{transform:scale(1) rotate(0)}100%{transform:scale(1) translateY(-4vmin)}}
+@keyframes s-fx1{0%{transform:translateY(40vmin) scale(.4)}50%{transform:translateY(-6vmin) scale(1.15)}100%{transform:translateY(0) scale(1)}}
+@keyframes s-fx2{0%{transform:translateX(-50vw) scale(.6)}60%{transform:translateX(4vmin) scale(1.1)}100%{transform:translateX(0) scale(1)}}
+/* 6 zingo */
+.s-zrow{display:flex;align-items:center;gap:3vmin}
+.s-zl{font-weight:800;text-align:center;margin-bottom:.6vmin;display:flex;align-items:center;justify-content:center;gap:1vmin;font-size:clamp(14px,2.8vmin,22px)}
+.s-dmini{width:min(6vmin,38px);display:inline-block}.s-dmini svg{width:100%;display:block}
+.s-card{display:grid;gap:1vmin;background:#fff;border-radius:18px;padding:1.2vmin;box-shadow:0 6px 0 #0003}
+.s-card.c6{grid-template-columns:repeat(3,1fr)}.s-card.c9{grid-template-columns:repeat(3,1fr)}
+.s-card.mine{border:5px solid #f472b6}.s-card.hers{border:5px solid #84cc16;transform:scale(.72);transform-origin:top center;margin-bottom:-8vmin}
+.s-cell{width:min(12vmin,80px);height:min(12vmin,80px);border-radius:12px;background:#f5f3ff;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;color:#3b0764}
+.s-card.c9 .s-cell{width:min(10vmin,68px);height:min(10vmin,68px)}
+.s-cell span{font-size:min(6vmin,40px);line-height:1}.s-cell small{font-weight:800;font-size:clamp(11px,2.2vmin,16px)}
+.s-cell.got{background:#fde68a}.s-cell.got::after{content:'';position:absolute;inset:8%;border-radius:50%;border:5px solid #ec4899;opacity:.8;animation:popin .3s}
+.s-card.hers .s-cell.got{background:#d9f99d}.s-card.hers .s-cell.got::after{border-color:#65a30d}
+.s-disp{display:flex;flex-direction:column;align-items:center;gap:2vmin}
+.s-zmach{width:min(30vmin,210px);min-height:min(18vmin,120px);background:linear-gradient(#a855f7,#6d28d9);border-radius:24px 24px 14px 14px;padding:1.5vmin;box-shadow:0 6px 0 #4c1d95,inset 0 0 0 4px #c4b5fd;display:flex;align-items:center;justify-content:center}
+.s-tiles{display:flex;gap:1.5vmin}
+.s-tile{width:min(12vmin,82px);min-height:min(12vmin,82px);border-radius:14px;background:#fffbeb;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 0 #0003;animation:s-slidein .35s ease-out;color:#3b0764;transition:transform .45s,opacity .45s}
+.s-tile span{font-size:min(6vmin,40px);line-height:1}.s-tile b{font-size:min(4.6vmin,30px);letter-spacing:.04em}
+@keyframes s-slidein{from{transform:translateY(-8vmin);opacity:0}}
+.s-tile.toMe{transform:translateX(-30vmin) scale(.4);opacity:0}.s-tile.toHer{transform:translateX(30vmin) scale(.4);opacity:0}
+.s-lever{background:linear-gradient(#fde68a,#f59e0b);color:#4c1d95;font-weight:800;border-radius:999px;padding:1vmin 3.6vmin;font-size:min(4.4vmin,26px);box-shadow:0 5px 0 #b45309}
+/* 7 guess who */
+.s-gq{display:flex;gap:1.4vmin;flex-wrap:wrap;justify-content:center}
+.s-q{display:flex;align-items:center;gap:.6vmin;background:#fff;border-radius:16px;padding:.6vmin 1.4vmin;box-shadow:0 4px 0 #0003;color:#3b0764}
+.s-q svg{width:min(8vmin,50px);height:min(6vmin,38px)}.s-q b{font-size:min(5vmin,30px)}
+.s-q.yes{background:#dcfce7}.s-q.yes b{color:#16a34a}.s-q.no{background:#fee2e2}.s-q.no b{color:#dc2626}
+.s-qsw{width:min(6vmin,38px);height:min(6vmin,38px);border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px #0002}
+.s-ggrid{display:grid;gap:1.4vmin;grid-template-columns:repeat(3,1fr)}
+.s-ggrid.n9{grid-template-columns:repeat(3,1fr)}.s-ggrid.n12{grid-template-columns:repeat(4,1fr)}
+@media (orientation:landscape){.s-ggrid.n6{grid-template-columns:repeat(6,1fr)}.s-ggrid.n9{grid-template-columns:repeat(5,1fr)}.s-ggrid.n12{grid-template-columns:repeat(6,1fr)}}
+.s-gc{width:min(14vmin,104px);height:min(15vmin,110px);perspective:400px;background:none;padding:0}
+.s-gin{width:100%;height:100%;border-radius:16px;background:linear-gradient(#ffffff,#f5f3ff);box-shadow:0 5px 0 #0003;padding:.6vmin;transition:transform .45s;transform-origin:50% 100%}
+.s-gin svg{width:100%;height:100%}
+.s-gc.down .s-gin{transform:rotateX(78deg);background:#7c3aed;filter:brightness(.7)}
+.s-gc.hint .s-gin{box-shadow:0 0 0 4px #fde047,0 0 20px #fde047}
+.s-gc.win .s-gin{animation:dance .8s ease-in-out infinite;box-shadow:0 0 0 5px #fde047,0 0 40px #fde047}
+/* 8 castle */
+.s-build{display:flex;align-items:flex-end;gap:5vmin}
+@media (orientation:portrait){.s-build{flex-direction:column;align-items:center}}
+.s-plan{position:relative;transition:filter .6s}
+.s-slot{position:absolute;padding:0;background:none}.s-slot svg{width:100%;height:100%;display:block}
+.s-slot.snap{animation:popin .3s}.s-slot.hint svg{filter:drop-shadow(0 0 10px #fde047)}
+.s-plan.lit{filter:drop-shadow(0 0 20px #fff) drop-shadow(0 0 40px #c084fc);animation:s-glowpulse 1.4s ease-in-out infinite alternate}
+@keyframes s-glowpulse{to{filter:drop-shadow(0 0 30px #fff) drop-shadow(0 0 60px #f472b6)}}
+.s-tray{display:flex;flex-wrap:wrap;gap:1.4vmin;max-width:min(40vw,360px);justify-content:center;align-items:flex-end}
+@media (orientation:portrait){.s-tray{max-width:86vw}}
+.s-tile2{padding:0;background:none;touch-action:none;transition:transform .2s,opacity .2s}.s-tile2 svg{width:100%;height:100%;display:block;filter:drop-shadow(0 3px 4px #0005)}
+.s-tile2.sel{transform:scale(1.15) translateY(-1vmin)}.s-tile2.sel svg{filter:drop-shadow(0 0 10px #fde047)}.s-tile2.lifted{opacity:.25}
+.s-ghost{position:fixed;z-index:50;pointer-events:none;filter:drop-shadow(0 10px 14px #0006)}.s-ghost svg{width:100%;height:100%}
+/* 9 grand spell */
+.s-fwbox{position:relative;width:min(92vw,1000px);height:min(62vh,68vmin,600px);border-radius:28px;overflow:hidden;background:radial-gradient(ellipse at 50% 120%,#4c1d95,#0a0828 70%);touch-action:none;box-shadow:0 0 40px #a855f766}
+.s-fwbox canvas{width:100%;height:100%;display:block}
+.s-fwn{position:absolute;top:2vmin;right:2vmin;display:flex;gap:1vmin}.s-fwn i{width:min(4vmin,26px);height:min(4vmin,26px);border-radius:50%;border:2px solid #fde68a}.s-fwn i.on{background:#fde68a;box-shadow:0 0 12px #fde047}
+.s-fly-area,.s-fireworks-area{padding:1.4vmin 1.6vmin!important}
+@media (orientation:landscape) and (max-height:520px){
+  .s-skybox{height:58vh}.s-fwbox{height:66vh}.s-cons{width:56vmin}
+  .s-card.hers{transform:scale(.6)}
+  .s-gc{width:12vmin;height:13vmin}
+}
+
 </style>
 </head>
 <body>
@@ -4020,6 +4181,639 @@ STORIES.witch={ title:'The Green Witch', short:'🧹 Green Witch',
     :"Horsie will carry you to the Magic Playground first. Tap it to start!" };
 GAMES.witch=W_WORLDS.flatMap((W,w)=>W.games.filter(k=>k!=='tea').map(key=>({n:W_TITLES[key],e:W_EMO[key],go:()=>wLevel(w,key)})));
 STICKERS.witch=[{n:'Chickie',a:chickieSVG},{n:'Taz',a:tazSVG},{n:'Horsie',a:horsieSVG},{n:'Spence',a:spenceSVG},{n:'Denadu',a:()=>denaduSVG(true)},{n:'Isaline',a:isalineSVG}];
+
+
+/* =================== Secret story: The Secret Witch School — characters =================== */
+// Lucia as a little witch: starry hat, midnight cape, purple tutu, striped tights, pink slippers, star wand.
+function luciaWitchSVG(noWand){ const sk='#e9bf9b', hc='#4a2c18';
+  const st=(x,y,r,c)=>`<path d="M${x} ${y-r} L${x+r*0.3} ${y-r*0.3} L${x+r} ${y} L${x+r*0.3} ${y+r*0.3} L${x} ${y+r} L${x-r*0.3} ${y+r*0.3} L${x-r} ${y} L${x-r*0.3} ${y-r*0.3}Z" fill="${c||'#fde68a'}"/>`;
+  return `<svg viewBox="0 -30 100 180">
+<path d="M38 62 Q22 92 18 120 Q50 128 82 120 Q78 92 62 62Z" fill="#312e81"/>${st(26,108,3)}${st(72,100,2.5)}${st(30,84,2)}${st(70,80,2.2)}${st(50,118,2)}
+<path d="M44 104 L42 132 M56 104 L58 132" stroke="#f5f3ff" stroke-width="6" stroke-linecap="round"/><path d="M44 108 L43.6 113 M43.4 118 L43 123 M42.8 127 L42.5 131 M56 108 L56.4 113 M56.6 118 L57 123 M57.2 127 L57.5 131" stroke="#8b5cf6" stroke-width="6"/>
+<path d="M34 134 Q36 130 42 130 L46 132 Q47 136 44 138 L34 138Z" fill="#f472b6"/><path d="M54 132 L58 130 Q64 130 66 134 L66 138 L56 138 Q53 136 54 132Z" fill="#f472b6"/><path d="M38 133 q3 -3 6 0 M58 133 q3 -3 6 0" stroke="#fff" stroke-width="1" fill="none"/>
+<path d="M41 70 Q31 80 28 94" stroke="#7c3aed" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M59 70 Q69 78 72 90" stroke="#7c3aed" stroke-width="7" fill="none" stroke-linecap="round"/>
+<circle cx="28" cy="96" r="3.6" fill="${sk}"/><circle cx="72" cy="92" r="3.6" fill="${sk}"/>
+${noWand?'':`<path d="M72 92 L88 64" stroke="#7c4a24" stroke-width="3" stroke-linecap="round"/><circle cx="89" cy="62" r="9" fill="#fde68a" opacity=".45"/>${st(89,62,6.5,'#facc15')}`}
+<path d="M40 64 Q50 60 60 64 L62 88 L38 88Z" fill="#7c3aed"/><path d="M44 66 L50 76 L56 66" stroke="#c4b5fd" stroke-width="1.6" fill="none"/>
+<path d="M18 98 Q24 86 50 86 Q76 86 82 98 Q74 106 66 101 Q58 109 50 103 Q42 109 34 101 Q26 106 18 98Z" fill="#c4b5fd" stroke="#a78bfa" stroke-width="2"/>
+<path d="M22 96 Q36 90 50 92 Q64 90 78 96" stroke="#ede9fe" stroke-width="3" fill="none"/>${st(34,96,2,'#fff')}${st(50,99,2,'#fff')}${st(66,96,2,'#fff')}
+<rect x="38" y="84" width="24" height="4" rx="2" fill="#f472b6"/>
+<path d="M36 64 Q50 70 64 64 L62 60 Q50 64 38 60Z" fill="#4c1d95"/><circle cx="50" cy="66" r="2.2" fill="#facc15"/>
+<rect x="46" y="53" width="8" height="10" fill="${sk}"/><circle cx="50" cy="40" r="18" fill="${sk}"/>
+<path d="M32 41 Q29 20 50 21 Q71 20 68 41 Q64 28 50 28 Q36 28 32 41Z" fill="${hc}"/><path d="M32 40 Q28 54 33 62 Q35 50 36 42Z M68 40 Q72 54 67 62 Q65 50 64 42Z" fill="${hc}"/>
+<ellipse cx="50" cy="24" rx="34" ry="7" fill="#4c1d95"/><path d="M28 24 Q36 -6 58 -24 Q60 -16 66 -14 Q60 -8 64 4 L72 24Z" fill="#5b21b6"/>
+<path d="M30 20 Q50 14 70 20 L71 25 Q50 19 29 25Z" fill="#f472b6"/>${st(46,6,4)}${st(58,-8,3)}${st(62,12,2.4)}${st(40,16,2)}
+<circle cx="43" cy="42" r="2.7" fill="#3a2a3a"/><circle cx="57" cy="42" r="2.7" fill="#3a2a3a"/><circle cx="44" cy="41" r=".9" fill="#fff"/><circle cx="58" cy="41" r=".9" fill="#fff"/>
+<circle cx="38.5" cy="48" r="3" fill="#ffadc8" opacity=".8"/><circle cx="61.5" cy="48" r="3" fill="#ffadc8" opacity=".8"/>
+<path d="M45 50 Q50 55 55 50" stroke="#c24a7a" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>`; }
+
+function witchHatSVG(){ return `<svg viewBox="0 0 100 90"><ellipse cx="50" cy="76" rx="46" ry="11" fill="#4c1d95"/><path d="M20 76 Q30 34 58 4 Q60 14 68 16 Q60 24 64 40 L80 76Z" fill="#5b21b6"/><path d="M22 70 Q50 62 78 70 L80 77 Q50 69 20 77Z" fill="#f472b6"/><circle cx="46" cy="50" r="4" fill="#fde68a"/><circle cx="58" cy="30" r="3" fill="#fde68a"/><circle cx="38" cy="62" r="2" fill="#fde68a"/></svg>`; }
+
+/* ---- familiars ---- */
+function kittenSVG(){ return `<svg viewBox="0 0 100 100">
+<path d="M70 86 Q94 84 90 60 Q88 52 82 54 Q88 62 84 72 Q78 80 66 80Z" fill="#1f1b2e"/>
+<ellipse cx="50" cy="74" rx="24" ry="20" fill="#1f1b2e"/><ellipse cx="50" cy="80" rx="12" ry="12" fill="#2e2942"/>
+<ellipse cx="40" cy="92" rx="8" ry="5" fill="#1f1b2e"/><ellipse cx="60" cy="92" rx="8" ry="5" fill="#1f1b2e"/>
+<path d="M26 30 L22 6 L42 20Z M74 30 L78 6 L58 20Z" fill="#1f1b2e"/><path d="M28 24 L26 12 L36 20Z M72 24 L74 12 L64 20Z" fill="#f9a8d4"/>
+<ellipse cx="50" cy="38" rx="27" ry="23" fill="#1f1b2e"/>
+<ellipse cx="39" cy="38" rx="7.5" ry="8.5" fill="#a3e635"/><ellipse cx="61" cy="38" rx="7.5" ry="8.5" fill="#a3e635"/><ellipse cx="39" cy="39" rx="3" ry="6" fill="#111"/><ellipse cx="61" cy="39" rx="3" ry="6" fill="#111"/><circle cx="41" cy="35" r="2" fill="#fff"/><circle cx="63" cy="35" r="2" fill="#fff"/>
+<path d="M47 48 L53 48 L50 51Z" fill="#f9a8d4"/><path d="M50 51 Q46 55 43 53 M50 51 Q54 55 57 53" stroke="#9ca3af" stroke-width="1.4" fill="none"/>
+<path d="M30 48 H16 M30 51 L17 55 M70 48 H84 M70 51 L83 55" stroke="#9ca3af" stroke-width="1"/>
+<path d="M38 60 l-9 -6 v12z M62 60 l9 -6 v12z" fill="#a855f7"/><circle cx="50" cy="60" r="4.5" fill="#c084fc"/><path d="M38 60 H62" stroke="#a855f7" stroke-width="4"/>
+</svg>`; }
+function owlSVG(){ return `<svg viewBox="0 0 100 100">
+<path d="M24 36 L20 14 L38 26Z M76 36 L80 14 L62 26Z" fill="#e5e7eb"/>
+<ellipse cx="50" cy="58" rx="32" ry="36" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+<path d="M18 56 Q10 76 26 90 Q24 72 30 60Z M82 56 Q90 76 74 90 Q76 72 70 60Z" fill="#e2e8f0"/>
+${[[40,74],[50,80],[60,74],[45,86],[55,86],[36,62],[64,62]].map(p=>`<path d="M${p[0]-3} ${p[1]} q3 3 6 0" stroke="#94a3b8" stroke-width="1.6" fill="none"/>`).join('')}
+<circle cx="37" cy="44" r="13" fill="#fff" stroke="#e2e8f0" stroke-width="2"/><circle cx="63" cy="44" r="13" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+<circle cx="37" cy="44" r="8.5" fill="#facc15"/><circle cx="63" cy="44" r="8.5" fill="#facc15"/><circle cx="37" cy="44" r="5" fill="#111"/><circle cx="63" cy="44" r="5" fill="#111"/><circle cx="39" cy="42" r="1.8" fill="#fff"/><circle cx="65" cy="42" r="1.8" fill="#fff"/>
+<path d="M45 54 L55 54 L50 63Z" fill="#f59e0b"/><path d="M40 96 l-3 4 M44 96 l0 4 M56 96 l0 4 M60 96 l3 4" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+</svg>`; }
+function dragonSVG(){ const g='#6ee7b7', gd='#34d399', b='#fbcfe8'; return `<svg viewBox="0 0 100 100">
+<path d="M70 84 Q96 86 92 62 Q98 58 96 52 L88 56 Q90 70 72 76Z" fill="${gd}"/>
+<path d="M22 54 Q4 40 8 22 Q18 34 30 34 Q24 44 30 52Z M78 54 Q96 40 92 22 Q82 34 70 34 Q76 44 70 52Z" fill="#c4b5fd" stroke="#a78bfa" stroke-width="2"/>
+<ellipse cx="50" cy="72" rx="24" ry="22" fill="${g}"/><ellipse cx="50" cy="76" rx="14" ry="16" fill="${b}"/><path d="M40 70 h20 M39 78 h22 M41 86 h18" stroke="#f9a8d4" stroke-width="2"/>
+<ellipse cx="38" cy="93" rx="8" ry="5" fill="${gd}"/><ellipse cx="62" cy="93" rx="8" ry="5" fill="${gd}"/>
+<path d="M34 22 L30 6 L42 18Z M66 22 L70 6 L58 18Z" fill="#fde68a"/>
+<ellipse cx="50" cy="38" rx="26" ry="22" fill="${g}"/><ellipse cx="50" cy="48" rx="15" ry="9" fill="#a7f3d0"/><circle cx="44" cy="47" r="1.6" fill="#065f46"/><circle cx="56" cy="47" r="1.6" fill="#065f46"/>
+<circle cx="39" cy="34" r="7" fill="#fff"/><circle cx="61" cy="34" r="7" fill="#fff"/><circle cx="40" cy="35" r="4.4" fill="#111"/><circle cx="62" cy="35" r="4.4" fill="#111"/><circle cx="41.5" cy="33" r="1.6" fill="#fff"/><circle cx="63.5" cy="33" r="1.6" fill="#fff"/>
+<path d="M44 53 Q50 57 56 53" stroke="#065f46" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="31" cy="44" r="3.4" fill="#f9a8d4" opacity=".8"/><circle cx="69" cy="44" r="3.4" fill="#f9a8d4" opacity=".8"/>
+<path d="M50 16 l3 -6 l3 6 M44 18 l2 -5 l3 5" fill="#fde68a"/>
+</svg>`; }
+function bunnySVG(){ return `<svg viewBox="0 0 100 100">
+<path d="M34 34 Q22 2 32 0 Q44 4 44 32Z M66 34 Q78 2 68 0 Q56 4 56 32Z" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="2"/><path d="M36 30 Q30 8 33 5 Q39 8 40 30Z M64 30 Q70 8 67 5 Q61 8 60 30Z" fill="#fbcfe8"/>
+<ellipse cx="50" cy="74" rx="25" ry="21" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="2"/><circle cx="76" cy="80" r="7" fill="#fff"/>
+<ellipse cx="38" cy="93" rx="9" ry="5" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/><ellipse cx="62" cy="93" rx="9" ry="5" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<ellipse cx="50" cy="44" rx="23" ry="20" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="2"/>
+<circle cx="41" cy="42" r="4.4" fill="#312e81"/><circle cx="59" cy="42" r="4.4" fill="#312e81"/><circle cx="42.5" cy="40.5" r="1.6" fill="#fff"/><circle cx="60.5" cy="40.5" r="1.6" fill="#fff"/>
+<path d="M47 50 L53 50 L50 53Z" fill="#f472b6"/><path d="M50 53 V56 M50 56 Q46 59 44 57 M50 56 Q54 59 56 57" stroke="#a78bfa" stroke-width="1.4" fill="none"/>
+<circle cx="35" cy="50" r="3.4" fill="#fbcfe8"/><circle cx="65" cy="50" r="3.4" fill="#fbcfe8"/>
+</svg>`; }
+const FAMS={kitten:{n:'kitten',a:kittenSVG,snd:'Meow!'},owl:{n:'owl',a:owlSVG,snd:'Hoo hoo!'},dragon:{n:'baby dragon',a:dragonSVG,snd:'Rawr! A tiny friendly rawr!'},bunny:{n:'bunny',a:bunnySVG,snd:'Boing boing!'}};
+const fam=()=>FAMS[S.fam]||FAMS.kitten;
+const famSVG=()=>fam().a();
+
+/* ---- garden creatures for Guess Who ---- */
+function creatureSVG(c){ const col={pink:['#f9a8d4','#ec4899','#fce7f3'],blue:['#93c5fd','#3b82f6','#dbeafe'],green:['#86efac','#22c55e','#dcfce7'],purple:['#c4b5fd','#8b5cf6','#ede9fe'],orange:['#fdba74','#f97316','#ffedd5']}[c.c];
+  const eyes=c.eyes===1?[[50,44,9]]:c.eyes===3?[[36,46,6],[50,38,6],[64,46,6]]:[[40,44,7],[60,44,7]];
+  return `<svg viewBox="0 0 100 100">
+${c.wings?`<path d="M24 56 Q2 34 8 18 Q22 30 32 44Z M76 56 Q98 34 92 18 Q78 30 68 44Z" fill="#e0f2fe" opacity=".9" stroke="#bae6fd" stroke-width="2"/>`:''}
+${c.horns?`<path d="M32 30 Q24 10 34 6 Q36 18 42 26Z M68 30 Q76 10 66 6 Q64 18 58 26Z" fill="#fde68a" stroke="#f59e0b" stroke-width="1.5"/>`:''}
+<path d="M18 70 Q14 26 50 24 Q86 26 82 70 Q82 92 50 92 Q18 92 18 70Z" fill="${col[0]}" stroke="${col[1]}" stroke-width="2.5"/>
+<ellipse cx="50" cy="72" rx="20" ry="15" fill="${col[2]}"/>
+${c.spots?[[28,52,5],[72,56,6],[30,78,4],[70,80,4],[58,30,4]].map(s=>`<circle cx="${s[0]}" cy="${s[1]}" r="${s[2]}" fill="${col[1]}" opacity=".55"/>`).join(''):''}
+${eyes.map(e=>`<circle cx="${e[0]}" cy="${e[1]}" r="${e[2]}" fill="#fff" stroke="${col[1]}" stroke-width="1.2"/><circle cx="${e[0]}" cy="${e[1]+1}" r="${e[2]*0.55}" fill="#1e1b4b"/><circle cx="${e[0]+e[2]*0.25}" cy="${e[1]-e[2]*0.15}" r="${e[2]*0.22}" fill="#fff"/>`).join('')}
+<path d="M40 60 Q50 68 60 60" stroke="#1e1b4b" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M46 62 v4 h3 v-3" fill="#fff"/>
+<ellipse cx="36" cy="93" rx="8" ry="4" fill="${col[1]}"/><ellipse cx="64" cy="93" rx="8" ry="4" fill="${col[1]}"/>
+</svg>`; }
+
+function bottleSVG(c,lbl){ return `<svg viewBox="0 0 60 90"><rect x="23" y="4" width="14" height="12" rx="3" fill="#a16207"/><path d="M25 16 h10 v12 Q52 36 52 58 Q52 84 30 84 Q8 84 8 58 Q8 36 25 28Z" fill="#ffffff55" stroke="#e5e7eb" stroke-width="2.5"/>
+<path d="M11 56 Q11 80 30 80 Q49 80 49 56 Q40 52 30 56 Q20 60 11 56Z" fill="${c}"/><path d="M16 40 Q12 50 14 60" stroke="#fff" stroke-width="3" fill="none" opacity=".7"/>${lbl?`<text x="30" y="72" text-anchor="middle" font-size="12" font-weight="800" fill="${c==='#ffffff'?'#64748b':'#fff'}" font-family="system-ui,sans-serif">${lbl}</text>`:''}</svg>`; }
+
+function denaduTint(c,d){ return denaduSVG(true).split('#8bd450').join(c).split('#6aa83a').join(d||c); }
+
+// Lucia flying on her broom with her familiar on the back
+function broomRiderSVG(){
+  const lu=luciaWitchSVG(true).replace('<svg viewBox="0 -30 100 180">','<svg x="40" y="-4" width="74" height="134" viewBox="0 -30 100 180">');
+  const fm=famSVG().replace('<svg viewBox="0 0 100 100">','<svg x="104" y="70" width="36" height="36" viewBox="0 0 100 100">');
+  return `<svg viewBox="0 0 170 140"><path d="M8 118 L160 104" stroke="#7c4a24" stroke-width="7" stroke-linecap="round"/><path d="M2 104 L26 112 L28 126 L0 132Z" fill="#d97706"/><path d="M4 110 L24 116 M2 120 L26 120 M4 128 L26 124" stroke="#92400e" stroke-width="2"/><path d="M24 110 V128" stroke="#7c2d12" stroke-width="5"/>${lu}${fm}<circle cx="160" cy="104" r="5" fill="#fde68a"/></svg>`; }
+
+
+/* =================== Secret Witch School — painted scenes =================== */
+function sCloud(x,y,s,c,op){ return `<g transform="translate(${x} ${y}) scale(${s})" opacity="${op||1}"><g fill="${c||'#fff'}"><circle cx="0" cy="0" r="40"/><circle cx="44" cy="-14" r="52"/><circle cx="96" cy="0" r="42"/><circle cx="-36" cy="12" r="30"/><circle cx="132" cy="14" r="30"/><rect x="-60" y="10" width="220" height="36" rx="18"/></g></g>`; }
+function sIsland(x,y,s,id,extra){ return `<g transform="translate(${x} ${y}) scale(${s})"><path d="M-110 0 Q-60 150 0 210 Q50 150 110 0Z" fill="#6b4f7a"/><path d="M-110 0 Q-60 150 0 210 Q-20 120 -40 0Z" fill="#584066"/><path d="M-80 60 Q-50 120 -20 150" stroke="#7c5c8c" stroke-width="5" fill="none"/>
+<ellipse cx="0" cy="0" rx="118" ry="24" fill="#4ade80"/><ellipse cx="0" cy="-4" rx="110" ry="18" fill="#86efac"/>${[[-70,-6],[-30,-12],[40,-10],[80,-4]].map(([a,b],i)=>`<circle cx="${a}" cy="${b}" r="6" fill="${['#f9a8d4','#fde68a','#c4b5fd','#fff'][i]}"/>`).join('')}
+<path d="M-6 220 q-4 20 4 40 M10 200 q8 30 -2 60" stroke="#86efac" stroke-width="3" fill="none" opacity=".7"/>${extra||''}</g>`; }
+function sTreeTop(x,y,s,c){ return `<g transform="translate(${x} ${y}) scale(${s})"><path d="M0 0 V-50" stroke="#5b3a1e" stroke-width="10"/><g fill="${c}"><circle cx="0" cy="-70" r="32"/><circle cx="-26" cy="-50" r="22"/><circle cx="26" cy="-50" r="24"/></g></g>`; }
+function sLantern(x,y,id){ return `<g class="w-float" style="animation-delay:-${(x%9)/3}s"><circle cx="${x}" cy="${y}" r="34" fill="#fdba74" opacity=".4" filter="url(#${id}b)"/><path d="M${x-12} ${y-14} h24 l4 26 h-32z" fill="#fb923c"/><path d="M${x-12} ${y-14} h24 l4 26 h-32z" fill="#fde68a" opacity=".55"/><rect x="${x-8}" y="${y-18}" width="16" height="5" rx="2" fill="#9a3412"/></g>`; }
+
+/* 1. Flying field in the clouds */
+function sSceneSky(){ const id='ss';
+  const castle=`<g transform="translate(800 300)" opacity=".85"><g fill="#4c3a7a">${[[-120,60,40,150],[-70,20,50,190],[-10,-20,60,230],[60,30,46,180],[110,70,36,140]].map(([x,y,w,hh])=>`<rect x="${x}" y="${y}" width="${w}" height="${hh}"/><path d="M${x-6} ${y} L${x+w/2} ${y-50} L${x+w+6} ${y}Z"/>`).join('')}</g>
+${[[-104,100],[-48,70],[12,40],[30,100],[76,80],[122,110],[-48,130],[12,150]].map(([x,y])=>`<rect x="${x}" y="${y}" width="9" height="14" rx="4" fill="#fde68a"/><rect x="${x-6}" y="${y-6}" width="21" height="26" rx="8" fill="#fde68a" opacity=".3" filter="url(#${id}b)"/>`).join('')}<path d="M20 -70 V-110 l20 8 l-20 8" stroke="#c4b5fd" stroke-width="3" fill="#f472b6"/></g>`;
+  const body=`<defs><linearGradient id="${id}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e1b4b"/><stop offset=".35" stop-color="#5b21b6"/><stop offset=".62" stop-color="#db2777"/><stop offset=".82" stop-color="#fb923c"/><stop offset="1" stop-color="#fde68a"/></linearGradient>${wMoonDef(id)}${wGlow(id+'b',10)}${wGlow(id+'c',18)}</defs>
+<rect width="1600" height="1000" fill="url(#${id}s)"/>${wStars(41,70,320)}${wMoon(1280,140,40,id)}
+${sCloud(200,420,1.6,'#f9a8d4',.55)}${sCloud(1150,380,1.8,'#fbcfe8',.5)}${castle}
+${sCloud(560,520,1.3,'#fff',.35)}
+${sIsland(240,560,1,id,sTreeTop(-40,-14,.9,'#22c55e')+sTreeTop(40,-10,.7,'#16a34a'))}${sIsland(1370,500,.9,id,sTreeTop(0,-12,1,'#a78bfa'))}
+${sLantern(420,300,id)}${sLantern(1120,250,id)}${sLantern(700,180,id)}${sLantern(1460,330,id)}${sLantern(140,240,id)}
+<g opacity=".97">${sCloud(-40,880,2.4,'#fff')}${sCloud(380,920,2.2,'#fdf2f8')}${sCloud(820,890,2.5,'#fff')}${sCloud(1260,920,2.3,'#fdf2f8')}${sCloud(1600,880,2.2,'#fff')}</g>
+<path d="M0 960 H1600 V1000 H0Z" fill="#fff"/>`;
+  return WBG(id,body)+wMotes(10,'#fde68a');
+}
+
+/* 2. Potion classroom in the tower */
+function sSceneLab(){ const id='sl';
+  let st=''; for(let r=0;r<10;r++) for(let c=0;c<9;c++) st+=`<rect x="${c*180+(r%2?-90:0)}" y="${r*80}" width="176" height="76" rx="10" fill="${(r+c)%3?'#3b2f55':'#43365f'}"/>`;
+  const shelf=(x,y,w)=>`<rect x="${x}" y="${y}" width="${w}" height="14" rx="3" fill="#7c4a24"/>${[...Array(Math.floor(w/44))].map((_,i)=>{ const c=['#f472b6','#60a5fa','#a3e635','#facc15','#c084fc','#2dd4bf'][(i+x)%6], hh=30+(i*13)%26; return `<rect x="${x+10+i*44}" y="${y-hh}" width="28" height="${hh}" rx="8" fill="${c}" opacity=".85"/><rect x="${x+16+i*44}" y="${y-hh-8}" width="16" height="9" rx="2" fill="#a16207"/><circle cx="${x+24+i*44}" cy="${y-hh/2}" r="20" fill="${c}" opacity=".25" filter="url(#${id}b)"/>`; }).join('')}`;
+  const caul=(x,y,s,c)=>`<g transform="translate(${x} ${y}) scale(${s})"><circle cx="0" cy="-60" r="110" fill="${c}" opacity=".25" filter="url(#${id}c)"/><g class="sc-steam" fill="${c}" opacity=".7"><circle cx="-20" cy="-70" r="16"/><circle cx="16" cy="-100" r="12"/><circle cx="30" cy="-60" r="10"/></g><path d="M-90 -20 Q-100 80 0 80 Q100 80 90 -20Z" fill="#1c1917"/><ellipse cx="0" cy="-20" rx="92" ry="20" fill="${c}"/><ellipse cx="0" cy="-20" rx="92" ry="20" fill="none" stroke="#292524" stroke-width="10"/><circle cx="-24" cy="-24" r="7" fill="#fff" opacity=".7"/><circle cx="20" cy="-18" r="5" fill="#fff" opacity=".7"/><path d="M-50 80 l-14 16 M50 80 l14 16" stroke="#1c1917" stroke-width="10" stroke-linecap="round"/><g class="sc-flick"><path d="M-40 94 q10 -30 20 0 q10 -26 20 0 q10 -30 20 0 q10 -26 20 0Z" fill="#f97316"/></g></g>`;
+  const book=(x,y,c,r)=>`<g class="w-float" style="animation-delay:-${(x%7)/2}s"><g transform="translate(${x} ${y}) rotate(${r})"><path d="M0 0 L40 -8 L40 36 L0 44Z" fill="${c}"/><path d="M0 0 L-40 -8 L-40 36 L0 44Z" fill="${c}" opacity=".85"/><path d="M0 4 L34 -2 L34 32 L0 38Z M0 4 L-34 -2 L-34 32 L0 38Z" fill="#fef9c3"/><path d="M6 10 h22 M6 18 h22 M-6 10 h-22 M-6 18 h-22" stroke="#d6d3d1" stroke-width="2"/></g></g>`;
+  const body=`<defs><linearGradient id="${id}w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1033"/><stop offset=".6" stop-color="#3b1d6b"/><stop offset="1" stop-color="#be185d"/></linearGradient>${wMoonDef(id)}${wGlow(id+'b',10)}${wGlow(id+'c',28)}</defs>
+<rect width="1600" height="1000" fill="#2e2445"/>${st}
+<g><path d="M560 560 V200 Q800 -20 1040 200 V560Z" fill="#1c1530"/><path d="M590 540 V210 Q800 20 1010 210 V540Z" fill="url(#${id}w)"/>${wStars(51,30,300).replace(/cx="(\d+)"/g,(m,x)=>`cx="${600+(+x)%400}"`).replace(/cy="(\d+)"/g,(m,y)=>`cy="${110+(+y)}"`)}${wMoon(900,200,30,id)}${sCloud(640,470,.7,'#f9a8d4',.6)}${sCloud(820,500,.8,'#fbcfe8',.5)}<path d="M800 40 V540 M590 330 H1010" stroke="#1c1530" stroke-width="12"/></g>
+${shelf(60,260,420)}${shelf(60,420,420)}${shelf(1120,260,420)}${shelf(1120,420,420)}
+<g stroke="#4d7c0f" stroke-width="3">${[200,260,320,1240,1300,1380].map((x,i)=>`<path d="M${x} 0 V${80+i%3*20}"/><g fill="${i%2?'#65a30d':'#84cc16'}"><ellipse cx="${x-8}" cy="${90+i%3*20}" rx="8" ry="14"/><ellipse cx="${x+8}" cy="${96+i%3*20}" rx="8" ry="14"/></g>`).join('')}</g>
+<rect x="0" y="760" width="1600" height="240" fill="#5b3a24"/>${[...Array(16)].map((_,i)=>`<path d="M${i*100} 760 V1000" stroke="#4a2f1d" stroke-width="4"/>`).join('')}<rect x="0" y="752" width="1600" height="14" fill="#3f2818"/>
+<rect x="420" y="640" width="760" height="40" rx="10" fill="#7c4a24"/><path d="M450 680 V820 M1150 680 V820" stroke="#5b3a24" stroke-width="22"/>
+${caul(240,740,1,'#a3e635')}${caul(1380,760,.9,'#f472b6')}
+${book(480,180,'#7c3aed',-12)}${book(1150,140,'#0ea5e9',10)}${book(330,560,'#db2777',8)}`;
+  return WBG(id,body)+wMotes(10,'#a3e635');
+}
+
+/* 3. Spell class in the library */
+function sSceneLib(){ const id='sb';
+  const shelfCol=(x,w)=>{ let s=`<rect x="${x}" y="40" width="${w}" height="760" fill="#3f2818"/>`; for(let r=0;r<7;r++){ const y=80+r*104; s+=`<rect x="${x}" y="${y+86}" width="${w}" height="14" fill="#5b3a24"/>`; let bx=x+12; let k=0; while(bx<x+w-24){ const bw=16+((r*7+k*5)%14), bh=58+((r*3+k*11)%28), c=['#b91c1c','#1d4ed8','#15803d','#a16207','#7c3aed','#be185d','#0f766e','#c2410c'][(r+k)%8]; s+=`<rect x="${bx}" y="${y+86-bh}" width="${bw}" height="${bh}" rx="2" fill="${c}"/><rect x="${bx+3}" y="${y+86-bh+10}" width="${bw-6}" height="3" fill="#fde68a" opacity=".7"/>`; bx+=bw+3; k++; } } return s; };
+  const candle=(x,y)=>`<g class="w-float" style="animation-delay:-${(x%11)/3}s"><circle cx="${x}" cy="${y-16}" r="24" fill="#fde68a" opacity=".45" filter="url(#${id}b)"/><rect x="${x-6}" y="${y}" width="12" height="36" rx="3" fill="#f5f5f4"/><path d="M${x} ${y-2} q-7 -10 0 -20 q7 10 0 20z" fill="#fbbf24"/></g>`;
+  const body=`<defs><radialGradient id="${id}r" cx=".5" cy=".5"><stop offset="0" stop-color="#312e81"/><stop offset="1" stop-color="#0b1033"/></radialGradient>${wMoonDef(id)}${wGlow(id+'b',9)}<radialGradient id="${id}glow"><stop offset="0" stop-color="#fde68a" stop-opacity=".35"/><stop offset="1" stop-color="#fde68a" stop-opacity="0"/></radialGradient></defs>
+<rect width="1600" height="1000" fill="#2a1d14"/>
+<circle cx="800" cy="300" r="250" fill="#1c1209"/><circle cx="800" cy="300" r="226" fill="url(#${id}r)"/>${wStars(61,40,440).replace(/cx="(\d+)"/g,(m,x)=>`cx="${590+(+x)%420}"`).replace(/cy="(\d+)"/g,(m,y)=>`cy="${90+(+y)%420}"`)}${wMoon(880,230,40,id)}
+<path d="M800 74 V526 M574 300 H1026" stroke="#1c1209" stroke-width="12"/><circle cx="800" cy="300" r="120" fill="none" stroke="#1c1209" stroke-width="8"/>
+${shelfCol(0,420)}${shelfCol(1180,420)}
+<circle cx="800" cy="700" r="520" fill="url(#${id}glow)"/>
+<rect x="0" y="800" width="1600" height="200" fill="#4a2f1d"/><ellipse cx="800" cy="900" rx="520" ry="70" fill="#7c2d12"/><ellipse cx="800" cy="900" rx="460" ry="56" fill="#9a3412"/><ellipse cx="800" cy="900" rx="380" ry="40" fill="none" stroke="#fde68a" stroke-width="4" stroke-dasharray="14 10" opacity=".7"/>
+<g transform="translate(1110 380) rotate(8)"><path d="M0 0 L40 420 M80 0 L120 420" stroke="#7c4a24" stroke-width="10"/>${[...Array(9)].map((_,i)=>`<path d="M${4+i*4} ${40+i*44} H${84+i*4}" stroke="#7c4a24" stroke-width="7"/>`).join('')}</g>
+${candle(520,180)}${candle(660,120)}${candle(980,110)}${candle(1110,190)}${candle(460,420)}${candle(1160,430)}${candle(800,60)}`;
+  return WBG(id,body)+wMotes(10,'#fde68a');
+}
+
+/* 4. Creature garden on a cloud island */
+function sSceneGarden(){ const id='sg';
+  const mush=(x,y,s,c)=>`<g transform="translate(${x} ${y}) scale(${s})"><path d="M-30 0 V-60 H30 V0Z" fill="#fef3c7"/><path d="M-14 0 V-30 Q0 -44 14 -30 V0Z" fill="#7c4a24"/><circle cx="18" cy="-44" r="7" fill="#fde68a"/><circle cx="18" cy="-44" r="16" fill="#fde68a" opacity=".4" filter="url(#${id}b)"/><path d="M-70 -50 Q0 -150 70 -50Z" fill="${c}"/><circle cx="-30" cy="-80" r="9" fill="#fff" opacity=".85"/><circle cx="10" cy="-100" r="7" fill="#fff" opacity=".85"/><circle cx="36" cy="-70" r="8" fill="#fff" opacity=".85"/></g>`;
+  const flower=(x,y,c)=>`<g><path d="M${x} ${y} V${y-40}" stroke="#16a34a" stroke-width="4"/><circle cx="${x}" cy="${y-46}" r="18" fill="${c}" opacity=".45" filter="url(#${id}b)"/>${[0,72,144,216,288].map(a=>`<circle cx="${(x+9*Math.cos(a*Math.PI/180)).toFixed(1)}" cy="${(y-46+9*Math.sin(a*Math.PI/180)).toFixed(1)}" r="7" fill="${c}"/>`).join('')}<circle cx="${x}" cy="${y-46}" r="5" fill="#fef9c3"/></g>`;
+  const hutch=(x,y)=>`<g transform="translate(${x} ${y})"><path d="M-60 0 V-80 L0 -130 L60 -80 V0Z" fill="#c084fc"/><path d="M-70 -76 L0 -140 L70 -76" stroke="#7c3aed" stroke-width="14" fill="none" stroke-linecap="round"/><circle cx="0" cy="-50" r="26" fill="#2e1065"/><circle cx="-8" cy="-54" r="4" fill="#fde68a"/><circle cx="8" cy="-54" r="4" fill="#fde68a"/></g>`;
+  const lights=wCurve(260,250,1340,250,90,16);
+  const body=`<defs><linearGradient id="${id}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1033"/><stop offset=".55" stop-color="#3b1d6b"/><stop offset="1" stop-color="#7e3a8f"/></linearGradient>${wMoonDef(id)}${wGlow(id+'b',9)}</defs>
+<rect width="1600" height="1000" fill="url(#${id}s)"/>${wStars(71,90,500)}${wMoon(240,150,56,id)}
+${sCloud(1000,520,1.6,'#c4b5fd',.35)}${sCloud(100,560,1.4,'#f9a8d4',.3)}
+<path d="M-40 700 Q300 610 800 640 Q1300 610 1640 690 L1640 1000 H-40Z" fill="#2f6b4f"/><path d="M-40 760 Q400 700 800 720 Q1200 700 1640 760 V1000 H-40Z" fill="#245a41"/>
+${sTreeTop(240,700,2.6,'#166534')}${sTreeTop(1360,690,2.8,'#4c1d95')}
+${wBulbs(lights.d,lights.pts,['#fde68a','#f9a8d4','#a5f3fc','#c4b5fd'],id+'b')}
+${mush(130,840,1.3,'#ec4899')}${mush(1480,850,1.1,'#8b5cf6')}${hutch(1180,760)}${hutch(420,770)}
+<ellipse cx="800" cy="900" rx="220" ry="40" fill="#1e3a5f"/><ellipse cx="800" cy="890" rx="40" ry="8" fill="#fff8dc" opacity=".5" filter="url(#${id}b)"/>
+${[[280,960,'#f472b6'],[350,980,'#fde68a'],[560,950,'#a5f3fc'],[1030,960,'#f472b6'],[1100,985,'#c4b5fd'],[1250,955,'#fde68a'],[640,990,'#c4b5fd'],[960,995,'#a5f3fc']].map(([x,y,c])=>flower(x,y,c)).join('')}
+${sCloud(-60,990,2.2,'#e9d5ff',.9)}${sCloud(1460,1000,2,'#e9d5ff',.9)}`;
+  return WBG(id,body)+wFlies(14)+wMotes(8,'#f9a8d4');
+}
+
+/* 5. Crystal castle under the aurora */
+function sSceneCastle(){ const id='sc';
+  const C=['#f472b6','#60a5fa','#facc15','#4ade80','#a78bfa','#fb923c'];
+  const sq=(x,y,s,i)=>`<rect x="${x}" y="${y}" width="${s}" height="${s}" fill="${C[i%6]}" opacity=".55" stroke="#fff" stroke-width="4"/><rect x="${x+8}" y="${y+8}" width="${s-16}" height="${s-16}" fill="none" stroke="#fff" stroke-width="1.5" opacity=".6"/>`;
+  const tri=(x,y,s,i)=>`<path d="M${x} ${y+s} L${x+s/2} ${y} L${x+s} ${y+s}Z" fill="${C[i%6]}" opacity=".6" stroke="#fff" stroke-width="4"/>`;
+  let castle=''; const s=70, bx=590, by=760; let k=0;
+  for(let r=0;r<3;r++) for(let c=0;c<6;c++) castle+=sq(bx+c*s,by-(r+1)*s,s,k++);
+  for(const tx of [0,5]) { for(let r=3;r<5;r++) castle+=sq(bx+tx*s,by-(r+1)*s,s,k++); castle+=tri(bx+tx*s,by-6*s,s,k++); }
+  for(let r=3;r<6;r++) castle+=sq(bx+2.5*s,by-(r+1)*s,s,k++); castle+=tri(bx+2.5*s,by-7*s,s,k++);
+  castle+=tri(bx+1*s,by-4*s,s,k++)+tri(bx+4*s,by-4*s,s,k++);
+  const body=`<defs><linearGradient id="${id}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050a24"/><stop offset=".6" stop-color="#1e1b4b"/><stop offset="1" stop-color="#4c1d95"/></linearGradient>${wMoonDef(id)}${wGlow(id+'b',10)}${wGlow(id+'a',40)}${wGlow(id+'c',22)}</defs>
+<rect width="1600" height="1000" fill="url(#${id}s)"/>${wStars(81,120,600)}
+<g filter="url(#${id}a)" opacity=".75" class="s-aurora"><path d="M-100 260 Q300 120 700 240 Q1100 360 1700 180 L1700 300 Q1100 470 700 340 Q300 220 -100 380Z" fill="#34d399"/><path d="M-100 180 Q400 60 800 170 Q1200 280 1700 100 L1700 170 Q1200 360 800 250 Q400 140 -100 260Z" fill="#c084fc"/><path d="M200 330 Q600 260 1000 340 Q1300 400 1600 300 L1600 360 Q1300 470 1000 410 Q600 330 200 400Z" fill="#f472b6" opacity=".7"/></g>
+${wMoon(1340,130,34,id)}
+<ellipse cx="800" cy="560" rx="380" ry="300" fill="#c4b5fd" opacity=".25" filter="url(#${id}c)"/>
+${castle}
+<g opacity=".97">${sCloud(-60,860,2.6,'#fff')}${sCloud(400,900,2.4,'#fdf2f8')}${sCloud(860,880,2.6,'#fff')}${sCloud(1300,900,2.4,'#fdf2f8')}</g><rect y="950" width="1600" height="50" fill="#fff"/>`;
+  return WBG(id,body)+wMotes(14,'#c4b5fd');
+}
+
+/* map: islands in the sky */
+function sMapBG(){ const id='sm';
+  const body=`<defs><linearGradient id="${id}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1033"/><stop offset=".45" stop-color="#4c1d95"/><stop offset=".8" stop-color="#db2777"/><stop offset="1" stop-color="#fb923c"/></linearGradient>${wMoonDef(id)}${wGlow(id+'b',10)}</defs>
+<rect width="1600" height="1000" fill="url(#${id}s)"/>${wStars(91,100,420)}${wMoon(200,120,46,id)}
+${sCloud(1100,300,1.3,'#f9a8d4',.4)}${sCloud(300,480,1.2,'#fbcfe8',.35)}
+${sIsland(260,720,.8,id)}${sIsland(1320,700,.7,id)}${sIsland(780,560,.6,id)}
+<g opacity=".97">${sCloud(-40,930,2.2,'#fff')}${sCloud(420,960,2,'#fdf2f8')}${sCloud(860,930,2.3,'#fff')}${sCloud(1300,960,2.1,'#fdf2f8')}</g>`;
+  return WBG(id,body);
+}
+Object.assign(A_SCENES,{'s-sky':sSceneSky,'s-lab':sSceneLab,'s-lib':sSceneLib,'s-garden':sSceneGarden,'s-castle':sSceneCastle});
+
+
+/* =================== Secret Witch School — games =================== */
+// extra letters for wand writing
+Object.assign(LETTERS,{
+  T:[[[24,15],[76,15]],[[50,15],[50,85]]],
+  N:[[[30,85],[30,15],[70,85],[70,15]]],
+  M:[[[22,85],[22,15],[50,58],[78,15],[78,85]]],
+  W:[[[18,15],[34,85],[50,42],[66,85],[82,15]]],
+  X:[[[28,15],[72,85]],[[72,15],[28,85]]],
+  Y:[[[26,15],[50,48]],[[74,15],[50,48],[50,85]]],
+  S:[arcPts(50,32.5,19,17.5,-Math.PI/6,-1.5*Math.PI,16).concat(arcPts(50,67.5,19,17.5,-Math.PI/2,5*Math.PI/6,16).slice(1))],
+  P:[[[32,85],[32,15]],[[32,15],[52,15]].concat(arcPts(52,33,17,18,-Math.PI/2,Math.PI/2,12).slice(1)).concat([[32,51]])],
+  R:[[[32,85],[32,15]],[[32,15],[52,15]].concat(arcPts(52,33,17,18,-Math.PI/2,Math.PI/2,12).slice(1)).concat([[32,51]]),[[48,51],[70,85]]],
+  D:[[[32,15],[32,85]],[[32,15],[46,15]].concat(arcPts(46,50,24,35,-Math.PI/2,Math.PI/2,18).slice(1)).concat([[32,85]])]
+});
+const sdots=(n,r)=>`<div class="prog">${[...Array(n)].map((_,i)=>`<span class="pdot ${i<r?'on':''}"></span>`).join('')}</div>`;
+function boom(vol){ const a=ac(); if(!a) return; try{ const len=Math.floor(a.sampleRate*0.5), b=a.createBuffer(1,len,a.sampleRate), d=b.getChannelData(0); for(let i=0;i<len;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3); const s=a.createBufferSource(); s.buffer=b; const g=a.createGain(); g.gain.value=vol||0.12; s.connect(g); g.connect(a.destination); s.start(); }catch(e){} }
+function whoosh(){ tone(300,0.25,0,'sine',0.05); tone(600,0.2,0.08,'sine',0.04); }
+const STAR_P='M30 3 L37 21 L57 22 L41 34 L47 54 L30 43 L13 54 L19 34 L3 22 L23 21Z';
+
+/* ---------- 1. Broom flying: catch the stars in counting order ---------- */
+function sFly(area,done){
+  const L=lvl('fly'); let miss=0, k=0, fin=false;
+  const seq=L===1?[1,2,3,4,5]:L===2?[1,2,3,4,5,6,7,8,9,10]:[10,20,30,40,50,60,70,80,90,100];
+  area.innerHTML=`<div class="s-need"><span>Catch</span><b class="s-nn">${seq[0]}</b><div class="s-row">${seq.map(n=>`<i>${n}</i>`).join('')}</div></div><div class="s-skybox"><div class="s-clouds"></div><div class="s-rider">${broomRiderSVG()}</div></div>`;
+  const box=area.querySelector('.s-skybox'), rider=area.querySelector('.s-rider'), nn=area.querySelector('.s-nn'), row=[...area.querySelectorAll('.s-row i')];
+  let W=1,H=1; const measure=()=>{ const r=box.getBoundingClientRect(); W=r.width||1; H=r.height||1; }; measure(); window.onresize=measure;
+  let y=0.5, ty=0.5, spawnT=0.8, last=performance.now(), cool=0; const stars=[];
+  const setTY=e=>{ const r=box.getBoundingClientRect(); ty=Math.min(0.88,Math.max(0.12,(e.clientY-r.top)/r.height)); };
+  box.addEventListener('pointerdown',e=>{ e.preventDefault(); setTY(e); try{ box.setPointerCapture(e.pointerId); }catch(_){} });
+  box.addEventListener('pointermove',e=>{ if(e.buttons||e.pointerType!=='mouse') setTY(e); });
+  const speed=L===1?0.17:L===2?0.2:0.22;
+  function spawn(){ const need=seq[k], nxt=seq[k+1], lanes=shuffle([0.2,0.42,0.64,0.84]);
+    const others=shuffle(seq.filter(n=>n!==need&&n!==nxt)).slice(0,1), items=shuffle([need,...(nxt!==undefined?[nxt]:[]),...others]);
+    items.forEach((n,i)=>{ const el=h(`<div class="s-star"><svg viewBox="0 0 60 60"><path d="${STAR_P}"/></svg><b>${n}</b></div>`); box.appendChild(el);
+      stars.push({el,n,x:1.06+i*0.1,y:lanes[i],dead:false}); }); }
+  function frame(t){
+    if(!box.isConnected||fin) return;
+    const dt=Math.min(0.05,(t-last)/1000); last=t; cool-=dt;
+    y+=(ty-y)*Math.min(1,dt*5);
+    const rh=rider.offsetHeight||H*0.3;
+    rider.style.transform=`translate(0,${(y*H-rh/2).toFixed(1)}px) rotate(${((ty-y)*-40).toFixed(1)}deg)`;
+    spawnT-=dt; if(spawnT<=0){ spawn(); spawnT=L===1?2.8:2.3; }
+    const sz=Math.min(H*0.17,84);
+    for(const s of stars){ if(s.dead) continue; s.x-=speed*dt;
+      s.el.style.transform=`translate(${(s.x*W-sz/2).toFixed(1)}px,${(s.y*H-sz/2).toFixed(1)}px)`;
+      if(s.x<-0.15){ s.dead=true; s.el.remove(); continue; }
+      const dx=(s.x-0.15)*W, dy=(s.y-y)*H;
+      if(Math.hypot(dx,dy)<Math.max(sz*0.75,H*0.11)){
+        if(s.n===seq[k]){ s.dead=true; s.el.classList.add('got'); T(()=>s.el.remove(),500); row[k].classList.add('on'); sfx.note(k); tone(1200+k*60,0.15,0.05,'sine',0.06); k++;
+          stars.forEach(o=>{ if(!o.dead&&o.n===s.n){ o.dead=true; o.el.remove(); } });
+          if(k>=seq.length){ fin=true; rider.classList.add('loop'); sfx.yay(); confetti(); say(L===3?'Ten, twenty, thirty... all the way to one hundred! You are a flying star!':'You caught them all, in counting order! What a flyer!',()=>T(()=>{ adapt('fly',miss); done(); },400)); return; }
+          nn.textContent=seq[k]; say(String(s.n)); if(!stars.some(o=>!o.dead&&o.n===seq[k])) spawnT=Math.min(spawnT,0.3); }
+        else if(cool<=0){ s.dead=true; s.el.classList.add('bonk'); T(()=>s.el.remove(),600); miss++; cool=1.2; sfx.oops(); say(`Boing! That's ${s.n}. Catch ${seq[k]}!`); }
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+  instruct(L===1?"Flying class! Move your finger up and down to fly your broom. Catch the stars in counting order: one, two, three, four, five!":L===2?"Catch the stars in counting order, from one all the way to ten!":"Big kid flying! Catch the stars counting by tens: ten, twenty, thirty, all the way to one hundred!",
+);
+  spawnT=2.2; last=performance.now(); requestAnimationFrame(frame);
+  currentHint=()=>{ stars.forEach(s=>s.el.classList.toggle('glow',!s.dead&&s.n===seq[k])); say(`Look for the glowing star with ${seq[k]}. Move your finger up or down to fly to it.`); };
+}
+
+/* ---------- 2. Star pictures: connect the dots ---------- */
+const CONS={house:{e:'🏠',n:'house',p:[[20,90],[20,45],[50,15],[80,45],[80,90]]},crown:{e:'👑',n:'crown',p:[[14,80],[14,32],[32,54],[50,22],[68,54],[86,32],[86,80]]},
+  cat:{e:'🐱',n:'cat',p:[[22,88],[16,50],[20,12],[40,30],[60,30],[80,12],[84,50],[78,88],[50,94]]},fish:{e:'🐟',n:'fish',p:[[10,50],[28,32],[52,26],[74,38],[94,28],[94,72],[74,62],[52,74],[28,68]]},
+  rocket:{e:'🚀',n:'rocket ship',p:[[50,8],[64,30],[64,64],[80,82],[62,78],[56,92],[44,92],[38,78],[20,82],[36,64],[36,30]]},
+  star:{e:'⭐',n:'star',p:[...Array(10)].map((_,i)=>{ const a=(-90+i*36)*Math.PI/180, r=i%2?19:42; return [+(50+r*Math.cos(a)).toFixed(1),+(54+r*Math.sin(a)).toFixed(1)]; })},
+  heart:{e:'💖',n:'heart',p:heartPts().filter((_,i)=>i%4===0&&i<48)},
+  butterfly:{e:'🦋',n:'butterfly',p:[[50,28],[68,10],[90,20],[86,46],[64,52],[82,70],[72,90],[50,70],[28,90],[18,70],[36,52],[14,46],[10,20],[32,10]]}};
+function sStars(area,done){
+  const L=lvl('stars'); let miss=0, r=0; const N=2;
+  const picks=shuffle(L===1?['house','crown','cat','fish']:['rocket','star','heart','butterfly']).slice(0,N);
+  function round(){
+    const C=CONS[picks[r]], pts=C.p, step=L===3?(picks[r]==='star'?5:2):1, labs=pts.map((_,i)=>(i+1)*step);
+    const cx=pts.reduce((a,p)=>a+p[0],0)/pts.length, cy=pts.reduce((a,p)=>a+p[1],0)/pts.length;
+    const off=p=>{ const dx=p[0]-cx, dy=p[1]-cy, d=Math.hypot(dx,dy)||1; return [p[0]+dx/d*7,p[1]+dy/d*7+2]; };
+    area.innerHTML=`${sdots(N,r)}<div class="s-cons"><svg viewBox="-6 -6 112 112"><polygon class="s-fill" points="${pts.map(p=>p.join(',')).join(' ')}"/><g class="s-lines"></g>
+${pts.map((p,i)=>{ const o=off(p); return `<g class="s-dot" data-i="${i}"><circle class="hit" cx="${p[0]}" cy="${p[1]}" r="7"/><circle class="d" cx="${p[0]}" cy="${p[1]}" r="2.4"/><text x="${o[0]}" y="${o[1]}">${labs[i]}</text></g>`; }).join('')}</svg><div class="s-reveal">${C.e}</div></div>`;
+    const svg=area.querySelector('.s-cons svg'), lines=area.querySelector('.s-lines'), dots=[...area.querySelectorAll('.s-dot')]; let nx=0, fin=false;
+    const line=(a,b)=>lines.insertAdjacentHTML('beforeend',`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}"/>`);
+    dots.forEach((g,i)=>g.addEventListener('pointerdown',e=>{ e.preventDefault(); if(fin) return;
+      if(i!==nx){ miss++; sfx.oops(); say(`That's ${labs[i]}. Find ${labs[nx]}.`); return; }
+      g.classList.add('on'); if(nx>0) line(pts[nx-1],pts[nx]); sfx.note(nx); nx++;
+      if(nx<pts.length){ say(String(labs[i])); dots.forEach(d=>d.classList.remove('hint')); return; }
+      fin=true; line(pts[nx-1],pts[0]); T(()=>{ svg.classList.add('done'); area.querySelector('.s-cons').classList.add('done'); sfx.sparkle(); T(()=>sfx.yay(),300); r++;
+        say(`The stars made a ${C.n}!`,()=>T(r<N?round:()=>{ adapt('stars',miss); done(); },700)); },350); }));
+    instruct((r===0?"Star class! The stars in the sky make magic pictures. ":'')+(step===1?`Tap the stars in order, starting with 1.`:`Count by ${step===5?'fives':'twos'}! Tap ${labs[0]}, then ${labs[1]}, then ${labs[2]}, and keep going.`));
+    currentHint=()=>{ dots.forEach(d=>d.classList.remove('hint')); if(dots[nx]){ dots[nx].classList.add('hint'); say(`Find ${labs[nx]}. It's glowing!`); } };
+  }
+  round();
+}
+
+/* ---------- 3. Potion colors: mix colors, Denadu drinks and changes color ---------- */
+const PBOT={red:'#ef4444',yellow:'#facc15',blue:'#3b82f6',white:'#ffffff'};
+const PMIX={'red':['red','#ef4444'],'yellow':['yellow','#facc15'],'blue':['blue','#3b82f6'],'white':['white','#f8fafc'],'blue+red':['purple','#8b5cf6'],'red+yellow':['orange','#f97316'],'blue+yellow':['green','#22c55e'],
+  'red+white':['pink','#f9a8d4'],'blue+white':['light blue','#93c5fd'],'white+yellow':['light yellow','#fef08a'],'blue+red+yellow':['brown','#92400e'],'blue+red+white':['lavender','#c4b5fd'],'red+white+yellow':['peach','#fdba74'],'blue+white+yellow':['mint green','#86efac'],'blue+red+white+yellow':['muddy tan','#a8a29e']};
+const PREC={'blue+red':'red and blue','red+yellow':'red and yellow','blue+yellow':'blue and yellow','red+white':'red and white','blue+white':'blue and white','blue+red+yellow':'red, yellow, and blue','blue+red+white':'red, blue, and white','red+white+yellow':'red, yellow, and white','blue+white+yellow':'blue, yellow, and white'};
+function sColors(area,done){
+  const L=lvl('colors'); let miss=0, r=0;
+  const tg=L===1?shuffle(['blue+red','red+yellow','blue+yellow']):L===2?[shuffle(['blue+red','red+yellow','blue+yellow'])[0],...shuffle(['red+white','blue+white'])]:shuffle(['blue+red+yellow','blue+red+white','red+white+yellow','blue+white+yellow']).slice(0,3);
+  let dn=denaduSVG(true);
+  function round(){
+    const T0=tg[r], [tn,tc]=PMIX[T0]; let set=new Set(), busy=false;
+    area.innerHTML=`${sdots(tg.length,r)}<div class="s-labrow"><div class="s-teach">${dn}</div><div class="s-mixcol"><div class="s-goal"><span class="s-swatch" style="background:${tc}"></span><b>${tn}</b></div>
+<div class="s-pot"><div class="s-liquid"></div><div class="s-potbody"></div><div class="s-puff"></div></div></div></div>
+<div class="s-bottles">${Object.keys(PBOT).map(k=>`<button class="s-bot" data-k="${k}">${bottleSVG(PBOT[k])}<small>${k}</small></button>`).join('')}<div class="s-potbtns"><button class="s-stir">Stir!</button><button class="s-empty">Empty</button></div></div>`;
+    const liq=area.querySelector('.s-liquid'), pot=area.querySelector('.s-pot'), teach=area.querySelector('.s-teach');
+    const paint=()=>{ const key=[...set].sort().join('+'); liq.style.background=set.size?PMIX[key][1]:'transparent'; liq.classList.toggle('on',set.size>0); };
+    paint();
+    area.querySelectorAll('.s-bot').forEach(b=>b.onclick=()=>{ if(busy) return; const k=b.dataset.k; set.add(k); tone(700+rnd(300),0.1,0,'sine',0.08); tone(400,0.12,0.06,'sine',0.06);
+      const drop=h(`<i class="s-drop" style="background:${PBOT[k]}"></i>`); pot.appendChild(drop); T(()=>drop.remove(),600); b.classList.add('tip'); T(()=>b.classList.remove('tip'),400); paint(); });
+    area.querySelector('.s-empty').onclick=()=>{ if(busy) return; sfx.tap(); set=new Set(); paint(); };
+    area.querySelector('.s-stir').onclick=()=>{ if(busy) return; if(!set.size){ say('Add some colors first! Tap the bottles.'); return; }
+      const key=[...set].sort().join('+'), [mn,mc]=PMIX[key]; busy=true; pot.classList.add('stir');
+      if(key===T0){ T(()=>{ sfx.sparkle(); pot.classList.add('yes'); },500);
+        T(()=>{ dn=denaduTint(tc); teach.innerHTML=dn; teach.classList.add('poof'); sfx.yay(); r++;
+          say(`You made ${tn}! Denadu takes a sip... Poof! Now she's a ${tn} witch! Hee hee hee!`,()=>T(r<tg.length?round:()=>{ adapt('colors',miss); done(); },500)); },1300); }
+      else { miss++; T(()=>{ area.querySelector('.s-puff').classList.add('on'); sfx.oops(); say(`Oops! That made ${mn}. We need ${tn}. Let's try again!`,()=>{ set=new Set(); paint(); pot.classList.remove('stir'); area.querySelector('.s-puff').classList.remove('on'); busy=false; }); },600); } };
+    instruct((r===0?"Potion class! Denadu says: Mix colors to make a new color, then tap Stir. I'll taste it! ":'')+`Make a ${tn} potion!`);
+    currentHint=()=>say(`${capi(tn)} is made with ${PREC[T0]}. Tap Empty to start over.`);
+  }
+  round();
+}
+
+/* ---------- 4. Bubble Pop: take away ---------- */
+function sBubbles(area,done){
+  const L=lvl('bubbles2'); let miss=0, r=0; const N=4;
+  function round(){
+    const n=L===1?randInt(3,5):L===2?randInt(5,10):randInt(10,15), k=L===1?randInt(1,2):L===2?randInt(1,Math.min(5,n-1)):randInt(3,Math.min(9,n-2)), left=n-k;
+    const cols=['#f9a8d4','#a5f3fc','#c4b5fd','#bbf7d0','#fde68a'];
+    area.innerHTML=`${sdots(N,r)}<div class="s-eq"><b>${n}</b><span>−</span><b>${k}</b><span>=</span><b class="q">?</b></div>
+<div class="s-bpot"><div class="s-bubs">${[...Array(n)].map((_,i)=>`<button class="s-bub" style="--c:${cols[i%5]};animation-delay:-${(i*0.31).toFixed(2)}s"></button>`).join('')}</div><div class="s-bcaul"></div></div><div class="answers"></div>`;
+    let popped=0, phase='pop';
+    const ans=area.querySelector('.answers'), q=area.querySelector('.q');
+    area.querySelectorAll('.s-bub').forEach(b=>b.onclick=()=>{ if(phase!=='pop'||b.classList.contains('popped')) return; b.classList.add('popped'); sfx.pop(); popped++;
+      if(popped<k){ say(String(popped)); return; }
+      phase='ask'; say(`${popped}! Now, how many bubbles are left?`);
+      const opts=new Set([left]); while(opts.size<3){ const d=left+(rnd(2)?1:-1)*randInt(1,2); if(d>=0) opts.add(d); }
+      ans.innerHTML=choiceBtns(shuffle([...opts]));
+      ans.querySelectorAll('.num').forEach(btn=>btn.onclick=()=>{ const v=+btn.dataset.v;
+        if(v===left){ sfx.chime(); btn.classList.add('right'); q.textContent=left; q.classList.remove('q'); ans.style.pointerEvents='none'; r++;
+          say(`${n} take away ${k} is ${left}!`,()=>T(r<N?round:()=>{ sfx.yay(); adapt('bubbles2',miss); done(); },500)); }
+        else { miss++; sfx.oops(); wiggle(btn); say('Count the bubbles that are still floating.'); } }); });
+    instruct((r===0?"Bubble class! The cauldron is making bubbles. ":'')+`There are ${n} bubbles. Pop ${k}!`);
+    currentHint=()=>say(phase==='pop'?`Tap ${k-popped} more bubble${k-popped===1?'':'s'} to pop ${k-popped===1?'it':'them'}.`:`Count the bubbles that are left. Touch each one as you count.`);
+  }
+  round();
+}
+
+/* ---------- 5. Wand writing: trace a magic word, the spell comes to life ---------- */
+const WAND_WORDS={1:[['CAT','🐈‍⬛','a black cat'],['HAT','🎩','a top hat'],['OWL','🦉','an owl'],['SUN','☀️','the sun'],['FOX','🦊','a fox']],
+  2:[['MOON','🌙','the moon'],['STAR','🌟','a shooting star'],['WAND','🪄','a magic wand'],['FISH','🐠','a fish']],
+  3:[['WITCH','🧙‍♀️','a little witch'],['SPELL','✨','sparkles everywhere'],['FAIRY','🧚','a fairy']]};
+function sTrace(area,done){
+  const L=lvl('trace'); let wi=0; const words=shuffle(WAND_WORDS[L]).slice(0,2);
+  area.innerHTML=`<div class="name"></div><div class="s-twrap">${boardHTML('s-board')}<div class="s-fx"></div></div>`;
+  const nameEl=area.querySelector('.name'), tr=makeTracer(area.querySelector('.board')), fx=area.querySelector('.s-fx');
+  window.onresize=()=>tr.resize();
+  function word(){
+    const [Wd,em,thing]=words[wi]; let li=0; fx.className='s-fx'; fx.innerHTML='';
+    nameEl.className='name'; nameEl.innerHTML=Wd.split('').map(c=>`<span>${c}</span>`).join('');
+    function letter(){ [...nameEl.children].forEach((s,k)=>s.classList.toggle('cur',k===li));
+      instruct((li===0?`Spell class! Let's write a magic word: ${Wd.split('').join(', ')}. `:'')+`Trace the letter ${Wd[li]} with your wand.`);
+      tr.load(LETTERS[Wd[li]],()=>{ sfx.chime(); nameEl.children[li].classList.add('got'); nameEl.children[li].classList.remove('cur'); li++;
+        if(li<Wd.length) T(letter,500);
+        else { nameEl.classList.add('done'); T(()=>{ boom(0.08); sfx.sparkle(); fx.innerHTML=`<span>${em}</span>`; fx.classList.add('on','fx'+(wi%3)); wi++;
+          say(`${Wd.split('').join(', ')}. ${capi(Wd.toLowerCase())}! Your spell made ${thing}!`,()=>T(wi<words.length?word:()=>{ adapt('trace',0); done(); },900)); },400); } });
+      tr.setColor('#a855f7'); }
+    letter();
+  }
+  currentHint=()=>{ tr.hint(); say('Put your finger on the green dot with number one, and follow the line, nice and slow.'); };
+  word();
+}
+
+/* ---------- 6. Word Zingo vs Denadu ---------- */
+const ZW=[['CAT','🐱'],['HAT','🎩'],['SUN','☀️'],['BUG','🐞'],['FOX','🦊'],['PIG','🐷'],['BAT','🦇'],['OWL','🦉'],['WEB','🕸️'],['HEN','🐔'],['DOG','🐶'],['BUS','🚌'],['BEE','🐝'],['COW','🐮'],['EGG','🥚'],['KEY','🔑'],['BOX','📦'],['ANT','🐜'],['CUP','🥤']];
+function sZingo(area,done){
+  const L=lvl('zingo'); let miss=0; const n=L===3?9:6;
+  function round(){
+    const pool=shuffle(ZW), mine=pool.slice(0,n), half=Math.floor(n/2), hers=shuffle([...mine.slice(0,half),...pool.slice(n,n+n-half)]);
+    const deckBase=[...new Map([...mine,...hers,...pool.slice(n+n-half,n+n-half+3)].map(w=>[w[0],w])).values()];
+    let deck=shuffle(deckBase), shown=[], gen=0, fin=false; const gotM=new Set(), gotH=new Set();
+    const cardHTML=(ws,cls,pics)=>`<div class="s-card ${cls} c${n}">${ws.map(w=>`<div class="s-cell" data-w="${w[0]}"><span>${w[1]}</span>${pics?`<small>${w[0]}</small>`:''}</div>`).join('')}</div>`;
+    area.innerHTML=`<div class="s-zrow"><div class="s-zme"><div class="s-zl">Lucia</div>${cardHTML(mine,'mine',true)}</div>
+<div class="s-disp"><div class="s-zmach"><div class="s-tiles"></div></div><button class="s-lever">Slide!</button></div>
+<div class="s-zher"><div class="s-zl"><span class="s-dmini">${denaduSVG(true)}</span>Denadu</div>${cardHTML(hers,'hers',false)}</div></div>`;
+    const tilesEl=area.querySelector('.s-tiles'), lever=area.querySelector('.s-lever');
+    const inMine=w=>mine.some(x=>x[0]===w), inHers=w=>hers.some(x=>x[0]===w);
+    const claim=(w,who)=>{ const set=who==='me'?gotM:gotH; set.add(w); const cell=area.querySelector(`.s-card.${who==='me'?'mine':'hers'} .s-cell[data-w="${w}"]`); if(cell) cell.classList.add('got');
+      shown=shown.filter(x=>x[0]!==w); const t=tilesEl.querySelector(`[data-w="${w}"]`); if(t){ t.classList.add(who==='me'?'toMe':'toHer'); T(()=>t.remove(),450); } };
+    function slide(){ if(fin) return; gen++; const g=gen; deck.push(...shown); shown=[];
+      while(shown.length<2&&deck.length){ const w=deck.shift(); if(gotM.has(w[0])||gotH.has(w[0])) continue; if((inMine(w[0])&&!gotM.has(w[0]))||(inHers(w[0])&&!gotH.has(w[0]))||rnd(3)===0) shown.push(w); }
+      if(!shown.length){ deck=shuffle(deckBase.filter(w=>!gotM.has(w[0])&&!gotH.has(w[0]))); return slide(); }
+      tilesEl.innerHTML=shown.map(w=>`<button class="s-tile" data-w="${w[0]}">${L===1?`<span>${w[1]}</span>`:''}<b>${w[0]}</b></button>`).join(''); tone(500,0.08,0,'square',0.04); tone(650,0.08,0.08,'square',0.04);
+      tilesEl.querySelectorAll('.s-tile').forEach(b=>b.onclick=()=>tapTile(b.dataset.w));
+      if(L===1) say(shown.map(w=>w[0].toLowerCase()).join(', and '));
+      const dly=(L===1?5600:L===2?4800:4000)+rnd(900);
+      T(()=>{ if(g!==gen||fin) return; const pick=shown.find(w=>inHers(w[0])&&!gotH.has(w[0]));
+        if(pick&&rnd(4)>0){ claim(pick[0],'her'); tone(300,0.15,0,'triangle',0.08); say(`Denadu says: ${pick[0].toLowerCase()}! That's mine!`); if(gotH.size===n){ lose(); return; } }
+        T(()=>{ if(g===gen&&!fin) slide(); },shown.length?1600:700); },dly); }
+    function tapTile(w){ if(fin) return;
+      if(inMine(w)&&!gotM.has(w)){ claim(w,'me'); sfx.chime(); say(w.toLowerCase()+'!');
+        if(gotM.size===n){ win(); return; } if(!shown.length){ gen++; T(slide,600); } }
+      else { miss++; sfx.oops(); const t=tilesEl.querySelector(`[data-w="${w}"]`); if(t) wiggle(t); say(`${w.toLowerCase()} is not on your card.`); } }
+    function win(){ fin=true; gen++; confetti(); sfx.yay(); say('Zingo! You filled your card first! Denadu says: Hee hee, you are a super reader!',()=>T(()=>{ adapt('zingo',miss); done(); },500)); }
+    function lose(){ fin=true; gen++; sfx.oops(); miss+=2; say('Denadu says: Zingo! Hee hee, I won this time! Let\'s play again.',()=>T(round,600)); }
+    lever.onclick=()=>{ sfx.tap(); gen++; slide(); };
+    instruct(L===1?"Zingo! Look at the two tiles. If one is on your card, tap it fast, before Denadu gets it! Fill your whole card to win.":"Reader Zingo! The tiles only have words. Read them, and tap one if it's on your card. Beat Denadu!"); T(slide,3200);
+    currentHint=()=>say('The tiles say: '+shown.map(w=>w[0].toLowerCase()).join(', and ')+'. Is one of them on your card?');
+  }
+  round();
+}
+
+/* ---------- 7. Guess Who: who ate the moon cake? ---------- */
+const GQ_ICON={wings:`<svg viewBox="0 0 40 30"><path d="M20 26 Q4 20 2 4 Q14 8 20 18 Q26 8 38 4 Q36 20 20 26Z" fill="#bae6fd" stroke="#0ea5e9" stroke-width="2"/></svg>`,
+  horns:`<svg viewBox="0 0 40 30"><path d="M8 28 Q2 8 12 2 Q14 14 18 24Z M32 28 Q38 8 28 2 Q26 14 22 24Z" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/></svg>`,
+  spots:`<svg viewBox="0 0 40 30"><circle cx="20" cy="15" r="13" fill="#e2e8f0"/><circle cx="14" cy="11" r="3.5" fill="#64748b"/><circle cx="25" cy="18" r="4" fill="#64748b"/><circle cx="23" cy="8" r="2.4" fill="#64748b"/></svg>`,
+  eye1:`<svg viewBox="0 0 40 30"><circle cx="20" cy="15" r="11" fill="#fff" stroke="#64748b" stroke-width="2"/><circle cx="20" cy="16" r="6" fill="#1e1b4b"/></svg>`,
+  eye3:`<svg viewBox="0 0 40 30">${[8,20,32].map(x=>`<circle cx="${x}" cy="15" r="6" fill="#fff" stroke="#64748b" stroke-width="1.6"/><circle cx="${x}" cy="16" r="3" fill="#1e1b4b"/>`).join('')}</svg>`};
+const GCC={pink:'#f9a8d4',blue:'#93c5fd',green:'#86efac',purple:'#c4b5fd'};
+function sGuess(area,done){
+  const L=lvl('guess'); let miss=0, r=0; const N=L===3?1:2;
+  function round(){
+    const cols=L===1?['pink','blue']:L===2?['pink','blue','green']:['pink','blue','green','purple'];
+    const all=[]; cols.forEach(c=>[0,1].forEach(w=>[0,1].forEach(ho=>(L>1?[0,1]:[0]).forEach(sp=>(L===3?[1,2,3]:[2]).forEach(ey=>all.push({c,wings:!!w,horns:!!ho,spots:!!sp,eyes:ey}))))));
+    const cr=shuffle(all).slice(0,L===1?6:L===2?9:12), secret=cr[rnd(cr.length)];
+    const Q=[...cols.filter(c=>cr.some(x=>x.c===c)).map(c=>({k:'c'+c,ic:`<span class="s-qsw" style="background:${GCC[c]}"></span>`,t:`Is it ${c}?`,f:x=>x.c===c,yes:`Yes! It is ${c}.`,no:`No, it is not ${c}.`})),
+      {k:'wings',ic:GQ_ICON.wings,t:'Does it have wings?',f:x=>x.wings,yes:'Yes! It has wings.',no:'No wings!'},
+      {k:'horns',ic:GQ_ICON.horns,t:'Does it have horns?',f:x=>x.horns,yes:'Yes! It has horns.',no:'No horns!'},
+      ...(L>1?[{k:'spots',ic:GQ_ICON.spots,t:'Does it have spots?',f:x=>x.spots,yes:'Yes! It has spots.',no:'No spots!'}]:[]),
+      ...(L===3?[{k:'e1',ic:GQ_ICON.eye1,t:'Does it have one eye?',f:x=>x.eyes===1,yes:'Yes! Just one eye.',no:'No, not one eye.'},{k:'e3',ic:GQ_ICON.eye3,t:'Does it have three eyes?',f:x=>x.eyes===3,yes:'Yes! Three eyes.',no:'No, not three eyes.'}]:[])];
+    const asked=[];
+    area.innerHTML=`${N>1?sdots(N,r):''}<div class="s-gq">${Q.map((q,i)=>`<button class="s-q" data-i="${i}">${q.ic}<b>?</b></button>`).join('')}</div><div class="s-ggrid n${cr.length}">${cr.map((c,i)=>`<button class="s-gc" data-i="${i}"><div class="s-gin">${creatureSVG(c)}</div></button>`).join('')}</div>`;
+    const cards=[...area.querySelectorAll('.s-gc')]; let fin=false;
+    const fits=c=>asked.every(a=>a.q.f(c)===a.ans);
+    area.querySelectorAll('.s-q').forEach(b=>b.onclick=()=>{ if(fin) return; const q=Q[+b.dataset.i]; if(b.disabled) return;
+      const ans=q.f(secret); asked.push({q,ans}); b.disabled=true; b.classList.add(ans?'yes':'no'); b.querySelector('b').textContent=ans?'✔':'✘'; sfx.tap();
+      say(`${q.t} ${ans?q.yes:q.no} Now tap the creatures that ${ans?"don't have that":'do have that'}, to flip them down.`); });
+    cards.forEach((b,i)=>b.onclick=()=>{ if(fin||b.classList.contains('down')) return; const c=cr[i];
+      if(!asked.length){ say('Ask a question first! Tap one of the questions at the top.'); wiggle(area.querySelector('.s-gq')); return; }
+      if(fits(c)){ miss++; wiggle(b); sfx.oops(); say("Hmm! That one matches all the answers so far, so it could still be the moon cake muncher. Ask another question!"); return; }
+      b.classList.add('down'); tone(520,0.1,0,'triangle',0.08); tone(390,0.12,0.07,'triangle',0.08);
+      const up=cards.filter(x=>!x.classList.contains('down'));
+      if(up.length===1){ fin=true; up[0].classList.add('win'); sfx.yay(); confetti(); r++;
+        say(`It's this one! The ${secret.c} creature ate Denadu's moon cake. Look, crumbs! It says sorry, and shares a piece with everyone.`,()=>T(r<N?round:()=>{ adapt('guess',miss); done(); },800)); } });
+    instruct((r===0?"Creature class! Oh no, somebody ate Denadu's moon cake! ":'')+"Tap a question at the top to ask it. Then flip down the creatures that don't match. Find the moon cake muncher!");
+    currentHint=()=>{ const out=cards.filter((b,i)=>!b.classList.contains('down')&&!fits(cr[i]));
+      if(asked.length&&out.length){ out.forEach(b=>{ b.classList.add('hint'); T(()=>b.classList.remove('hint'),1800); }); say("These glowing ones don't match the answers. Tap them to flip them down!"); }
+      else say('Ask another question! Tap one at the top, like: Does it have wings?'); };
+  }
+  round();
+}
+
+/* ---------- 8. Magnetic-tile castle ---------- */
+const MTC=['#ef4444','#f59e0b','#facc15','#22c55e','#3b82f6','#a855f7','#ec4899'];
+const MDIM={sq:[1,1],tri:[1,1],tall:[1,2],wide:[2,1]}, MNAME={sq:'square',tri:'triangle',tall:'tall rectangle',wide:'long rectangle'};
+function mtSVG(sh,c,outline){ const [a,b]=MDIM[sh], w=a*100, hh=b*100;
+  const p=sh==='tri'?'M5 95 L50 6 L95 95Z':`M5 5 H${w-5} V${hh-5} H5Z`, ip=sh==='tri'?'M22 84 L50 30 L78 84Z':`M18 18 H${w-18} V${hh-18} H18Z`;
+  if(outline) return `<svg viewBox="0 0 ${w} ${hh}"><path d="${p}" fill="#ffffff18" stroke="#ffffffdd" stroke-width="5" stroke-dasharray="12 9"/></svg>`;
+  return `<svg viewBox="0 0 ${w} ${hh}"><path d="${p}" fill="${c}" fill-opacity=".6" stroke="${c}" stroke-width="9" stroke-linejoin="round"/><path d="${ip}" fill="none" stroke="#fff" stroke-width="3.5" opacity=".75"/><path d="${sh==='tri'?'M30 80 L50 40':'M14 14 L40 14'}" stroke="#fff" stroke-width="5" opacity=".6" stroke-linecap="round"/></svg>`; }
+const MLAY={1:{c:3,r:2,p:[['sq',0,1],['sq',1,1],['sq',2,1],['tri',0,0],['tri',1,0],['tri',2,0]]},
+  2:{c:4,r:3,p:[['tall',0,1],['tall',3,1],['wide',1,2],['wide',1,1],['tri',0,0],['tri',1,0],['tri',2,0],['tri',3,0]]},
+  3:{c:5,r:5,p:[['tall',2,1],['tri',2,0],['tall',0,3],['tall',4,3],['tri',0,2],['tri',4,2],['wide',1,4],['sq',3,4],['sq',1,3],['wide',2,3]]}};
+function sCastle(area,done){
+  const L=lvl('castle'), LY=MLAY[L]; let miss=0, sel=null, placed=0;
+  area.innerHTML=`<div class="s-build"><div class="s-plan"></div><div class="s-tray"></div></div>`;
+  const plan=area.querySelector('.s-plan'), tray=area.querySelector('.s-tray');
+  const slots=LY.p.map(([sh,x,y])=>({sh,x,y,filled:false,el:null}));
+  const tiles=shuffle(LY.p.map(([sh],i)=>({sh,c:MTC[(i*3+rnd(7))%7],el:null})));
+  let u=60;
+  function layout(){ const land=innerWidth>innerHeight; u=Math.floor(land?Math.min(innerHeight*0.56/LY.r,innerWidth*0.4/LY.c,104):Math.min(innerHeight*0.34/LY.r,innerWidth*0.78/LY.c,104));
+    plan.style.width=LY.c*u+'px'; plan.style.height=LY.r*u+'px';
+    slots.forEach(s=>{ const [a,b]=MDIM[s.sh]; Object.assign(s.el.style,{left:s.x*u+'px',top:s.y*u+'px',width:a*u+'px',height:b*u+'px'}); });
+    tiles.forEach(t=>{ if(!t.el) return; const [a,b]=MDIM[t.sh]; Object.assign(t.el.style,{width:a*u*0.72+'px',height:b*u*0.72+'px'}); }); }
+  slots.forEach(s=>{ s.el=h(`<button class="s-slot">${mtSVG(s.sh,'',true)}</button>`); plan.appendChild(s.el);
+    s.el.onclick=()=>{ if(s.filled) return; if(!sel){ say(`Pick a ${MNAME[s.sh]} from the tiles, then put it here.`); return; } tryPlace(sel,s); }; });
+  tiles.forEach(t=>{ t.el=h(`<button class="s-tile2">${mtSVG(t.sh,t.c)}</button>`); tray.appendChild(t.el); attachDrag(t); });
+  layout(); window.onresize=layout;
+  function select(t){ tiles.forEach(x=>x.el&&x.el.classList.toggle('sel',x===t)); sel=t; }
+  function tryPlace(t,s){ if(s.filled) return false;
+    if(s.sh!==t.sh){ miss++; sfx.oops(); wiggle(s.el); say(`That spot needs a ${MNAME[s.sh]}.`); return false; }
+    s.filled=true; s.el.innerHTML=mtSVG(t.sh,t.c); s.el.classList.add('filled','snap'); t.el.remove(); t.el=null; sel=null; placed++; tone(660+placed*40,0.12,0,'triangle',0.12); tone(990,0.1,0.06,'sine',0.06);
+    if(placed===slots.length){ T(()=>{ plan.classList.add('lit'); sfx.sparkle(); T(()=>sfx.yay(),300); confetti(); say('Click, click, click! Your crystal castle is finished, and it is sparkling!',()=>T(()=>{ adapt('castle',miss); done(); },600)); },300); }
+    return true; }
+  function attachDrag(t){ let sx=0, sy=0, ghost=null, moved=false;
+    t.el.addEventListener('pointerdown',e=>{ e.preventDefault(); sx=e.clientX; sy=e.clientY; moved=false; try{ t.el.setPointerCapture(e.pointerId); }catch(_){} t.el.classList.add('hold'); });
+    t.el.addEventListener('pointermove',e=>{ if(!t.el.classList.contains('hold')) return; if(!moved&&Math.hypot(e.clientX-sx,e.clientY-sy)<8) return;
+      if(!moved){ moved=true; const [a,b]=MDIM[t.sh]; ghost=h(`<div class="s-ghost">${mtSVG(t.sh,t.c)}</div>`); ghost.style.width=a*u+'px'; ghost.style.height=b*u+'px'; document.body.appendChild(ghost); t.el.classList.add('lifted'); }
+      ghost.style.left=(e.clientX-ghost.offsetWidth/2)+'px'; ghost.style.top=(e.clientY-ghost.offsetHeight/2)+'px'; });
+    const up=e=>{ if(!t.el||!t.el.classList.contains('hold')) return; t.el.classList.remove('hold');
+      if(!moved){ sfx.tap(); select(t); say(`A ${MNAME[t.sh]}! Now tap where it goes, or drag it there.`); return; }
+      const gx=e.clientX, gy=e.clientY; if(ghost) ghost.remove(); ghost=null; if(t.el) t.el.classList.remove('lifted');
+      const hit=slots.filter(s=>!s.filled).map(s=>{ const r=s.el.getBoundingClientRect(), pad=u*0.35; return {s,ok:gx>r.left-pad&&gx<r.right+pad&&gy>r.top-pad&&gy<r.bottom+pad,d:Math.hypot(gx-(r.left+r.right)/2,gy-(r.top+r.bottom)/2)}; }).filter(o=>o.ok).sort((a,b)=>a.d-b.d);
+      const same=hit.find(o=>o.s.sh===t.sh);
+      if(same) tryPlace(t,same.s); else if(hit.length) tryPlace(t,hit[0].s); };
+    t.el.addEventListener('pointerup',up); t.el.addEventListener('pointercancel',up); }
+  instruct(L===1?"Castle class! Build the crystal castle with magic tiles. Drag each tile to a spot with the same shape.":L===2?"Build a bigger castle! Match the squares, triangles, and rectangles to their spots.":"The biggest castle! Find where every tile goes. Look at the shapes carefully.");
+  currentHint=()=>{ const t=sel||tiles.find(x=>x.el); if(!t) return; const s=slots.find(x=>!x.filled&&x.sh===t.sh); if(!s) return; s.el.classList.add('hint'); T(()=>s.el.classList.remove('hint'),1800); select(t); say(`This ${MNAME[t.sh]} goes in the glowing spot. Tap it, then tap the spot.`); };
+}
+
+/* ---------- 9. The Grand Spell: draw in the sky, fireworks follow ---------- */
+function sFireworks(area,done){
+  area.innerHTML=`<div class="s-fwbox"><canvas></canvas><div class="s-fwn">${[0,1,2].map(()=>'<i></i>').join('')}</div></div>`;
+  const box=area.querySelector('.s-fwbox'), cv=box.querySelector('canvas'), ctx=cv.getContext('2d'), ns=[...box.querySelectorAll('.s-fwn i')];
+  let W=1,H=1, dpr=window.devicePixelRatio||1;
+  const size=()=>{ const r=box.getBoundingClientRect(); W=r.width||1; H=r.height||1; cv.width=Math.round(W*dpr); cv.height=Math.round(H*dpr); ctx.setTransform(dpr,0,0,dpr,0,0); };
+  size(); window.onresize=size;
+  const COLS=['#f472b6','#fde047','#60a5fa','#a3e635','#c084fc','#fb923c','#5eead4','#ffffff'];
+  let path=[], drawing=false, parts=[], trail=[], shows=0, fin=false, alive=true, last=performance.now();
+  const pt=e=>{ const r=box.getBoundingClientRect(); return [e.clientX-r.left,e.clientY-r.top]; };
+  function burst(x,y,c,big){ const n=big?70:42; for(let i=0;i<n;i++){ const a=Math.random()*Math.PI*2, s=(big?150:100)+Math.random()*(big?200:140); parts.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:1,c:Math.random()<0.2?'#fff':c,r:1.8+Math.random()*2.2}); } boom(big?0.16:0.1); tone(1400+Math.random()*900,0.1,0.05,'sine',0.04); }
+  function show(pts,big){ const k=Math.max(1,Math.floor(pts.length/(big?14:9))); const picks=pts.filter((_,i)=>i%k===0).slice(0,big?16:10);
+    picks.forEach((p,i)=>T(()=>burst(p[0],p[1],COLS[(i+shows)%COLS.length],big),i*(big?150:180))); }
+  cv.addEventListener('pointerdown',e=>{ if(fin) return; e.preventDefault(); try{ cv.setPointerCapture(e.pointerId); }catch(_){} drawing=true; path=[pt(e)]; });
+  cv.addEventListener('pointermove',e=>{ if(!drawing) return; e.preventDefault(); const p=pt(e); path.push(p); trail.push({x:p[0],y:p[1],life:1}); if(trail.length%3===0) tone(1500+Math.random()*600,0.05,0,'sine',0.02); });
+  const up=()=>{ if(!drawing) return; drawing=false; let len=0; for(let i=1;i<path.length;i++) len+=Math.hypot(path[i][0]-path[i-1][0],path[i][1]-path[i-1][1]);
+    if(len<Math.min(W,H)*0.6){ say('Make it bigger! Draw a big swirl across the whole sky.'); return; }
+    show(path,false); ns[shows].classList.add('on'); shows++;
+    if(shows<3){ say(['Wow! Draw another one!','Beautiful! One more big swirl!'][shows-1]); }
+    else { fin=true; T(()=>{ for(let i=0;i<14;i++) T(()=>burst(W*(0.1+Math.random()*0.8),H*(0.15+Math.random()*0.5),COLS[i%COLS.length],true),i*220); },900);
+      T(()=>say('The whole sky is sparkling! That was the Grand Spell!',()=>T(()=>{ alive=false; done(); },800)),1200); } };
+  cv.addEventListener('pointerup',up); cv.addEventListener('pointercancel',up);
+  function frame(t){ if(!box.isConnected||!alive) return; const dt=Math.min(0.05,(t-last)/1000); last=t;
+    ctx.fillStyle='rgba(10,8,40,0.28)'; ctx.fillRect(0,0,W,H);
+    trail.forEach(s=>{ s.life-=dt*1.4; ctx.globalAlpha=Math.max(0,s.life); ctx.fillStyle='#fde68a'; ctx.beginPath(); ctx.arc(s.x+(Math.random()-0.5)*4,s.y+(Math.random()-0.5)*4,2.5,0,6.283); ctx.fill(); }); trail=trail.filter(s=>s.life>0);
+    if(drawing&&path.length>1){ ctx.globalAlpha=1; ctx.strokeStyle='#fff7ae'; ctx.lineWidth=4; ctx.shadowColor='#fde047'; ctx.shadowBlur=14; ctx.beginPath(); ctx.moveTo(path[0][0],path[0][1]); path.forEach(p=>ctx.lineTo(p[0],p[1])); ctx.stroke(); ctx.shadowBlur=0; }
+    parts.forEach(p=>{ p.vy+=90*dt; p.vx*=0.985; p.vy*=0.985; p.x+=p.vx*dt; p.y+=p.vy*dt; p.life-=dt*0.7; ctx.globalAlpha=Math.max(0,p.life); ctx.fillStyle=p.c; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.283); ctx.fill(); }); parts=parts.filter(p=>p.life>0);
+    ctx.globalAlpha=1; requestAnimationFrame(frame); }
+  requestAnimationFrame(frame);
+  instruct("The Grand Spell! Use your finger like a magic wand. Draw a great big swirl across the sky, and watch what happens!");
+  currentHint=()=>say('Put your finger down and draw a big loopy swirl, then lift your finger.');
+}
+
+
+/* =================== Secret story: The Secret Witch School =================== */
+const S_GAMES={fly:sFly,stars:sStars,colors:sColors,bubbles2:sBubbles,trace:sTrace,zingo:sZingo,guess:sGuess,castle:sCastle,fireworks:sFireworks};
+const S_TITLES={fly:'Broom Flying',stars:'Star Pictures',colors:'Color Potions',bubbles2:'Bubble Pop',trace:'Wand Writing',zingo:'Word Zingo',guess:'Who Ate the Moon Cake?',castle:'Crystal Castle',fireworks:'The Grand Spell'};
+const S_EMO={fly:'🧹',stars:'⭐',colors:'🧪',bubbles2:'🫧',trace:'🪄',zingo:'🔤',guess:'🐾',castle:'🏰',fireworks:'🎆'};
+const S_WORLDS=[
+  {name:'Flying Class',icon:'🧹',cls:'s-sky',games:['fly','stars'],intro:"Welcome to the Secret Witch School in the Clouds! Your teacher is Denadu. She says: Every little witch has to learn to fly. Hop on your broom!"},
+  {name:'Potion Class',icon:'🧪',cls:'s-lab',games:['colors','bubbles2'],intro:"Potion class is up in the tall tower. Cauldrons bubble, and bottles glow on every shelf. Denadu says: Let's make some potions!"},
+  {name:'Spell Class',icon:'📖',cls:'s-lib',games:['trace','zingo'],intro:"Spell class is in the giant library, where candles float in the air. Denadu says: Words are the strongest magic of all!"},
+  {name:'Creature Class',icon:'🐾',cls:'s-garden',games:['guess'],intro:"Creature class is in the moonlight garden, where Denadu keeps her magic pets. But uh oh. Her moon cake is gone!"},
+  {name:'Crystal Castle',icon:'🏰',cls:'s-castle',games:['castle','fireworks'],intro:"The Crystal Castle, where little witches graduate! First, build the castle. Then cast the Grand Spell!"}
+];
+const S_BETWEEN={stars:'Look up! The stars in the sky are making pictures.',bubbles2:"Denadu says: Now let's make bubbles!",zingo:"Denadu says: Let's play my favorite word game. Zingo!",fireworks:"The castle is ready. Now it's time for the Grand Spell!"};
+function sLevel(w,only){
+  const W=S_WORLDS[w];
+  const el=shell(W.cls+' wsc ssc',only?S_TITLES[only]:W.name); const st=el.querySelector('.stage');
+  st.innerHTML=`<div class="area"></div>`; el.insertAdjacentHTML('afterbegin',aScene(W.cls));
+  show(el);
+  const area=st.querySelector('.area'), seq=only?[only]:W.games; let k=0;
+  const run=()=>{ const g=seq[k++]; area.className='area s-'+g+'-area'; S_GAMES[g](area,()=>{ if(k<seq.length) say(S_BETWEEN[seq[k]]||'One more!',()=>T(run,300)); else T(()=>complete(w),300); }); };
+  if(!only&&!FREE) say(W.intro,()=>T(run,200)); else run();
+}
+function secretIntro(){
+  const el=h(`<div class="screen intro sintro wsc"><div class="scene">${wSceneBedroom()}</div><div class="stage">
+<div class="s-letter"><div class="s-seal">✦</div><b>You're invited!</b><span>The Secret Witch School<br>in the Clouds</span><i>Love, Denadu</i></div>
+<button class="big go">Open the letter</button></div></div>`);
+  FREE=false; show(el);
+  say("Tap, tap, tap. A glowing letter floats in through Lucia's window. It says: Dear Lucia, you are invited to the Secret Witch School in the Clouds! Only the bravest and kindest kids get to come. Love, Denadu.");
+  el.querySelector('.go').onclick=()=>{ sfx.sparkle(); pickPet(el); };
+}
+function pickPet(el){
+  const st=el.querySelector('.stage');
+  st.innerHTML=`<div class="introtxt">Every little witch needs a magic pet!</div><div class="s-pets">${Object.keys(FAMS).map(k=>`<button class="s-pet" data-k="${k}"><div>${FAMS[k].a()}</div><b>${capi(FAMS[k].n)}</b></button>`).join('')}</div>`;
+  instruct('Every little witch needs a magic pet! Pick yours: a kitten, an owl, a baby dragon, or a bunny.');
+  st.querySelectorAll('.s-pet').forEach(b=>b.onclick=()=>{ S.fam=b.dataset.k; save(); sfx.yay(); confetti();
+    st.innerHTML=`<div class="s-ready"><div class="s-rlu">${luciaWitchSVG()}</div><div class="s-rfam">${famSVG()}</div></div><div class="introtxt">Lucia and her ${fam().n}</div><button class="big go">Let's fly!</button>`;
+    say(`${fam().snd} You picked a ${fam().n}! Here's your witch hat, your cape, and your wand. Now let's fly to school!`);
+    st.querySelector('.go').onclick=()=>{ sfx.tap(); P().seenIntro=true; save(); showMap(); }; });
+}
+function secretFinale(){
+  const extra=award(5);
+  finaleScreen('sfin wsc',`<div class="s-grad"><div class="s-glu">${luciaWitchSVG()}</div><div class="s-gstar">⭐</div></div>`,
+    [[famSVG()],[denaduSVG(true),'wide'],[emmeGirlSVG()]],
+    "You graduated from the Secret Witch School! Denadu puts a golden star on your hat. Now you are a real little witch! And look who came to cheer: everybody from all of Lucia's adventures!"+(extra?' And your magic pet gave you a sticker too!':''),'secret');
+  const sc=document.querySelector('.screen.finale'); if(!sc) return;
+  sc.insertAdjacentHTML('afterbegin',`<div class="scene">${sSceneCastle()}</div>`);
+  const who=[abbySVG(),emmySVG(),maddieSVG(),anwarSVG(),fahSVG(false),kidSVG('jj'),kidSVG('grammy'),kidSVG('noah'),kidSVG('elias'),noniNiceSVG(),grumpaTweedSVG(),purrSVG(),kidSVG('jame'),aliceSVG(),francescaUniSVG(),coachSVG(),emilySVG(),tazSVG(),horsieSVG(),spenceSVG(),isalineSVG(),chickieSVG(),spiderSVG('#ec4899',true)];
+  const row=who.map(s=>`<div class="s-pp">${s}</div>`).join('');
+  sc.insertAdjacentHTML('beforeend',`<div class="s-parade"><div class="s-ptrack">${row}${row}</div></div>`);
+}
+STORIES.secret={ title:'The Secret Witch School', short:'🔮 Secret',
+  coverArt:()=>`<div class="s-cvlu">${luciaWitchSVG()}</div><div class="s-cvfam">${famSVG()}</div>`,
+  intro:secretIntro, finale:secretFinale, helperSVG:()=>famSVG(), helperName:'your magic pet', bagSVG:witchHatSVG,
+  flyer:()=>`<div class="fa s-flyer">${broomRiderSVG()}</div>`, mapCls:'s-map', mapTitle:'The Secret Witch School',
+  mapDecor:`<div class="scene wmapbg">${sMapBG()}</div>`,
+  worlds:S_WORLDS.map((W,i)=>({name:W.name,icon:W.icon,pos:[[16,60],[36,37],[57,61],[77,37],[55,12]][i],fly:[['R','-35%'],['L','-85%'],['L','-85%'],['L','-85%'],['R','-50%']][i],go:()=>sLevel(i)})),
+  items:[{n:'Flying Badge',e:'🧹',say:'Denadu pins a shiny Flying Badge on your witch hat!'},{n:'Potion Badge',e:'🧪',say:'A Potion Badge for your hat! It smells like strawberries.'},
+    {n:'Spell Badge',e:'📖',say:'A Spell Badge! Your hat is getting very fancy.'},{n:'Creature Badge',e:'🐾',say:'The creatures give you a Creature Badge, with moon cake crumbs on it!'}],
+  allSay:'You have all four badges! Fly to the Crystal Castle to graduate!', doneBadge:()=>'🎓',
+  lockedLast:'The Crystal Castle opens when you have all four badges!',
+  mapMsg:(p,next,W)=>p.won?'You graduated! You are a real little witch!'
+    :p.items.every(Boolean)?'You have all four badges! Fly to the Crystal Castle to graduate!'
+    :p.items.some(Boolean)?`Great job! Fly to ${W[next].name} next. Tap it!`
+    :`Shh, it's a secret school! Fly to your first class, Flying Class. Tap it to start!` };
+GAMES.secret=S_WORLDS.flatMap((W,w)=>W.games.map(key=>({n:S_TITLES[key],e:S_EMO[key],go:()=>sLevel(w,key)})));
+STICKERS.secret=[{n:'Witch Lucia',a:luciaWitchSVG},{n:'Purple Denadu',a:()=>denaduTint('#8b5cf6')},{n:'Witch Hat',a:witchHatSVG},{n:'Moon Cake Muncher',a:()=>creatureSVG({c:'pink',wings:true,horns:true,spots:true,eyes:3})},{n:'Graduation Star',a:()=>starItemSVG('#facc15')},{n:'Magic Pet',a:()=>famSVG()}];
+TUNES.secret=[659,784,988,880,784,659,0,698,880,1047,988,880,784,0,988,1319];
+
+/* ---- keeping it secret: hidden until the twinkling star on the bookshelf is tapped three times ---- */
+if(S.secretOpen&&!STORY_IDS.includes('secret')) STORY_IDS.push('secret');
+const _showTitleBase=showTitle;
+showTitle=function(){
+  _showTitleBase();
+  const el=document.querySelector('.screen.shelf'); if(!el) return;
+  const cov=el.querySelector('.cover.secretc'); if(cov){ cov.classList.add('s-magic'); if(S.secretNew){ cov.classList.add('s-appear'); S.secretNew=false; save(); } }
+  if(S.secretOpen) return;
+  const star=h(`<button class="s-secretstar" aria-label="A twinkling star">✦</button>`); el.querySelector('.stage').appendChild(star); let n=0;
+  star.onclick=()=>{ ac(); n++; sfx.sparkle(); star.classList.remove('tw'); void star.offsetWidth; star.classList.add('tw');
+    if(n<3) return;
+    star.classList.add('burst'); confetti(); S.secretOpen=true; S.secretNew=true; save(); if(!STORY_IDS.includes('secret')) STORY_IDS.push('secret');
+    tone(523,0.3,0,'triangle',0.12); tone(784,0.3,0.15,'triangle',0.12); tone(1047,0.5,0.3,'triangle',0.12);
+    say("Shhh! You found a secret! A magic book just appeared on your bookshelf.");
+    T(()=>showTitle(),1600); };
+};
+const _grownupsBase=grownups;
+grownups=function(){ _grownupsBase(); const panel=document.querySelector('.overlay .panel'); if(!panel) return;
+  const b=h(`<div><b>Secret story</b><br><small>${S.secretOpen?'The Secret Witch School is on the bookshelf.':'Hidden. Tap the twinkling star on the bookshelf three times to find it.'}</small><br><button class="pill s-sec">${S.secretOpen?'Hide it again':'Show it now'}</button></div>`);
+  panel.insertBefore(b,panel.querySelector('.close'));
+  b.querySelector('.s-sec').onclick=()=>{ S.secretOpen=!S.secretOpen; if(S.secretOpen){ if(!STORY_IDS.includes('secret')) STORY_IDS.push('secret'); } else { const i=STORY_IDS.indexOf('secret'); if(i>=0) STORY_IDS.splice(i,1); if(roomTab==='secret') roomTab='jewel'; } save();
+    b.querySelector('small').textContent=S.secretOpen?'The Secret Witch School is on the bookshelf.':'Hidden. Tap the twinkling star on the bookshelf three times to find it.'; b.querySelector('.s-sec').textContent=S.secretOpen?'Hide it again':'Show it now'; };
+};
 
 
 showTitle();
