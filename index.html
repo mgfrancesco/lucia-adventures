@@ -3343,17 +3343,18 @@ function noniNiceSVG(){ const sk='#f9e0d0', sw='#e7a4b4', swd='#d48a9c';
 ${head}${pearls}</svg>`; }
 
 // Grumpa in a tweed jacket with a plaid scarf.
-function grumpaTweedSVG(){ const sk='#f6d7c3', jk='#22252b';
+function grumpaTweedSVG(){ const sk='#f6d7c3', jk='#4a3123', jh='#6b4a35';
   const g=grumpaSVG(false), head=g.slice(g.indexOf('<rect x="49" y="56" width="12" height="10"'), g.lastIndexOf('</svg>'));
   return `<svg viewBox="0 0 110 160">
-<rect x="38" y="120" width="14" height="30" rx="3" fill="#3f4652"/><rect x="58" y="120" width="14" height="30" rx="3" fill="#3f4652"/><path d="M45 122 V148 M65 122 V148" stroke="#525a68" stroke-width="1"/>
-<ellipse cx="44" cy="151" rx="10" ry="4.5" fill="#111"/><ellipse cx="66" cy="151" rx="10" ry="4.5" fill="#111"/>
+<rect x="38" y="120" width="14" height="30" rx="3" fill="#d6c3a0"/><rect x="58" y="120" width="14" height="30" rx="3" fill="#d6c3a0"/><path d="M45 124 V148 M65 124 V148" stroke="#c2ad88" stroke-width="1"/>
+<path d="M34 151 Q36 146 44 146 Q52 146 53 151Z M57 151 Q58 146 66 146 Q74 146 76 151Z" fill="#5b3a24"/>
 <path d="M30 70 L22 114" stroke="${jk}" stroke-width="12" stroke-linecap="round"/><path d="M80 70 L88 114" stroke="${jk}" stroke-width="12" stroke-linecap="round"/>
-<path d="M18 112 h9 M83 112 h9" stroke="#dbeafe" stroke-width="3"/><circle cx="22" cy="118" r="5.5" fill="${sk}"/><circle cx="88" cy="118" r="5.5" fill="${sk}"/>
-<path d="M30 68 Q55 61 80 68 L82 126 Q55 130 28 126 Z" fill="${jk}"/>
-<path d="M46 66 L55 94 L64 66 Z" fill="#dbeafe"/><path d="M46 66 L51 72 L55 68 L59 72 L64 66" fill="#fff"/><path d="M53 70 L55 94 L57 70Z" fill="#7f1d1d"/>
-<path d="M46 66 L52 92 L42 80 Z M64 66 L58 92 L68 80 Z" fill="#111317"/><circle cx="55" cy="104" r="1.8" fill="#6b7280"/><circle cx="55" cy="114" r="1.8" fill="#6b7280"/>
-<path d="M66 86 h9" stroke="#e5e7eb" stroke-width="2.5"/>
+<path d="M27 76 L21 106 M83 76 L89 106" stroke="${jh}" stroke-width="2" opacity=".7"/><path d="M17 111 h10 M83 111 h10" stroke="#2f1f16" stroke-width="3"/>
+<circle cx="22" cy="118" r="5.5" fill="${sk}"/><circle cx="88" cy="118" r="5.5" fill="${sk}"/>
+<path d="M30 68 Q55 61 80 68 L82 122 Q55 126 28 122 Z" fill="${jk}"/><path d="M28 116 Q55 120 82 116 L82 124 Q55 128 28 124Z" fill="#2f1f16"/>
+<path d="M46 66 Q55 72 64 66 L60 120 L50 120Z" fill="#9db4c9"/><path d="M47 66 Q55 71 63 66" stroke="#7f98ae" stroke-width="2" fill="none"/>
+<path d="M44 62 L40 74 L49 70Z M66 62 L70 74 L61 70Z" fill="${jh}"/><path d="M59 70 V120" stroke="#c9a66b" stroke-width="1.6"/>
+<path d="M34 78 Q40 76 44 80 M76 78 Q70 76 66 80" stroke="${jh}" stroke-width="2" fill="none"/><path d="M36 96 h8 M66 96 h8" stroke="#2f1f16" stroke-width="2"/>
 ${head}</svg>`; }
 
 // Spence in yoga poses: sit, tree, star, butterfly, cat.
