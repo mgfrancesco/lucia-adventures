@@ -1028,6 +1028,26 @@ svg{display:block}
   .s-card.hers{transform:scale(.6)}
   .s-gc{width:12vmin;height:13vmin}
 }
+/* portrait screens (phones and upright iPads): stack Zingo vertically */
+@media (orientation:portrait){
+  .s-zrow{flex-direction:column;gap:2.4vmin}
+  .s-zher{order:1;display:flex;align-items:center;gap:2vmin}
+  .s-zher .s-zl{margin:0;flex-direction:column}
+  .s-card.hers{transform:none;margin:0;padding:.8vmin;gap:.6vmin}
+  .s-card.hers.c6{grid-template-columns:repeat(6,1fr)}.s-card.hers.c9{grid-template-columns:repeat(9,1fr)}
+  .s-card.hers .s-cell{width:min(8vw,46px);height:min(8vw,46px)}.s-card.hers .s-cell span{font-size:min(5vw,28px)}
+  .s-disp{order:2;flex-direction:row;gap:3vw}
+  .s-zmach{width:min(52vw,280px);min-height:min(22vw,120px)}
+  .s-tile{width:min(20vw,96px);min-height:min(20vw,96px)}.s-tile b{font-size:min(6.4vw,32px)}.s-tile span{font-size:min(8vw,40px)}
+  .s-zme{order:3}
+  .s-card.mine .s-cell{width:min(19vw,92px);height:min(19vw,92px)}.s-card.mine.c9 .s-cell{width:min(16vw,80px);height:min(16vw,80px)}
+  .s-card.mine .s-cell span{font-size:min(9vw,44px)}.s-card.mine .s-cell small{font-size:min(3.6vw,17px)}
+  .s-tile.toMe{transform:translateY(30vmin) scale(.4)}.s-tile.toHer{transform:translateY(-30vmin) scale(.4)}
+  .s-cons{width:min(84vw,52vh,480px)}
+  .s-gc{width:min(19vw,104px);height:min(21vw,112px)}
+  .s-pot{width:min(40vw,240px);height:min(28vw,170px)}.s-teach{width:min(24vw,160px)}
+}
+.wsc .area{max-width:98vw}
 
 </style>
 </head>
