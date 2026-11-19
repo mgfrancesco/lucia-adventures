@@ -852,6 +852,21 @@ svg{display:block}
 .w-givebox{display:flex;flex-direction:column;align-items:center;background:none;width:min(22vmin,150px);animation:pulse 1.6s infinite}
 .w-givebox svg{width:100%}.w-givebox small{font-weight:800;color:#fde68a;font-size:clamp(14px,2.6vmin,20px)}
 .w-givebox.given{animation:none;opacity:0;transition:opacity .6s}
+/* short landscape screens (phones turned sideways) */
+@media (orientation:landscape) and (max-height:520px){
+  .wsc .area{padding:1.2vmin 2.4vmin;gap:2vmin}
+  .wsc .area:has(.w-pgrid){display:grid;grid-template-columns:auto auto;column-gap:4vmin;align-items:center}
+  .wsc .area:has(.w-pgrid) .prog{grid-column:1/3;justify-self:center}
+  .wsc .area:has(.w-pgrid) .w-pgrid{grid-row:2/4}
+  .wsc .area:has(.w-pgrid) .w-prgm{max-width:42vw}
+  .wsc .area:has(.w-pgrid) .w-arrows{max-width:40vw}
+  .w-cell{width:calc(56vmin / var(--r,4))}
+  .wsc .area:has(.w-maze){display:grid;grid-template-columns:auto auto;column-gap:4vmin;align-items:center}
+  .wsc .area:has(.w-maze) .w-arrows{max-width:30vw}
+  .w-mc{width:calc(62vmin / var(--n))}
+  .w-tn,.w-tg{width:15vmin}.w-tdn{width:19vmin}.w-givebox{width:16vmin}
+  .map .bag{transform:scale(.72);transform-origin:0 100%}
+}
 
 </style>
 </head>
@@ -3315,29 +3330,31 @@ ${fl(45,70,'#f472b6')}${fl(55,86,'#60a5fa')}${fl(40,92,'#f59e0b')}${fl(60,98,'#f
 </svg>`; }
 
 // Noni in a nice outfit: lavender dress, soft cardigan, pearls (her funny socks stay).
-function noniNiceSVG(){
-  let s=noniSVG();
-  s=s.replace('fill="#6ee7b7"/>','fill="#a78bfa"/>')
-     .split('fill="#fb7185"/>').join('fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>')
-     .split('fill="#fff"/><circle cx="44" cy="96"').join('fill="#a78bfa"/><circle cx="44" cy="96"')
-     .replace('<circle cx="44" cy="96" r="1.6" fill="#fff"/><circle cx="43" cy="108" r="1.6" fill="#fff"/>','<circle cx="44" cy="96" r="1.6" fill="#a78bfa"/><circle cx="43" cy="108" r="1.6" fill="#a78bfa"/>');
-  const pearls=`<g fill="#fffdf5" stroke="#e7e5e4" stroke-width=".5">${[[42,64],[44.5,66.8],[47.2,68.4],[50,69],[52.8,68.4],[55.5,66.8],[58,64]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="1.6"/>`).join('')}</g>`;
-  s=s.replace('<rect x="45" y="52" width="10" height="13"', '<path d="M38 66 Q50 61 62 66 L60 72 Q50 68 40 72Z" fill="#ddd6fe"/><rect x="45" y="52" width="10" height="13"');
-  return s.replace(/<\/svg>$/, pearls+'</svg>');
-}
+function noniNiceSVG(){ const sk='#f9e0d0', sw='#e7a4b4', swd='#d48a9c';
+  const n=noniSVG(), head=n.slice(n.indexOf('<rect x="45" y="52" width="10" height="13"'), n.lastIndexOf('</svg>'));
+  const pearls=`<g fill="#fffdf5" stroke="#e7e5e4" stroke-width=".5">${[[42,64],[44.5,66.8],[47.2,68.4],[50,69],[52.8,68.4],[55.5,66.8],[58,64]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="1.5"/>`).join('')}</g>`;
+  return `<svg viewBox="0 0 100 160">
+<path d="M44 116 L42 147 M56 116 L58 147" stroke="#3b5ba9" stroke-width="10" stroke-linecap="round"/><path d="M44 118 L42.5 145 M56 118 L57.5 145" stroke="#5b7bc9" stroke-width="1.2" opacity=".8"/>
+<ellipse cx="40" cy="150" rx="8" ry="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/><ellipse cx="60" cy="150" rx="8" ry="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<path d="M38 68 Q28 84 27 104" stroke="${sw}" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M62 68 Q72 84 73 104" stroke="${sw}" stroke-width="9" fill="none" stroke-linecap="round"/>
+<path d="M24 101 h7 M69 101 h7" stroke="${swd}" stroke-width="4" stroke-linecap="round"/><circle cx="27" cy="107" r="4" fill="${sk}"/><circle cx="73" cy="107" r="4" fill="${sk}"/>
+<path d="M37 64 Q50 59 63 64 L67 120 Q50 125 33 120 Z" fill="${sw}"/><path d="M34 114 Q50 119 66 114 L67 120 Q50 125 33 120Z" fill="${swd}"/>
+<path d="M44 70 V112 M50 70 V114 M56 70 V112" stroke="${swd}" stroke-width="1.4" stroke-dasharray="3 2" opacity=".7"/><path d="M42 64 Q50 70 58 64" stroke="${swd}" stroke-width="3" fill="none"/>
+${head}${pearls}</svg>`; }
 
 // Grumpa in a tweed jacket with a plaid scarf.
-function grumpaTweedSVG(){
-  let s=grumpaSVG(false);
-  s=s.replace('fill="#3b82f6"/>','fill="#8a6a4f"/>')
-     .replace('stroke="#1d4ed8" stroke-width="3"','stroke="#76583f" stroke-width="2"')
-     .replace('<path d="M40 74 Q55 70 70 74 L74 128 Q55 134 36 128 Z" fill="#fff"/>','<path d="M44 74 Q55 71 66 74 L62 126 Q55 129 48 126 Z" fill="#dbeafe"/><path d="M44 74 L55 104 L66 74" stroke="#6b4f38" stroke-width="2" fill="none"/>')
-     .replace('<path d="M50 98 q5 -5 5 0 q0 -5 5 0 q0 5 -5 9 q-5 -4 -5 -9z" fill="#ef4444"/>',
-       `<g stroke="#a3836a" stroke-width="1" opacity=".35">${[70,78,96,104,120].map(y=>`<path d="M24 ${y} Q55 ${y+5} 86 ${y}"/>`).join('')}${[32,40,70,78].map(x=>`<path d="M${x} 68 V132"/>`).join('')}</g><rect x="68" y="88" width="10" height="3" rx="1" fill="#6b4f38"/>`);
-  const scarf=`<path d="M44 62 Q55 70 66 62 L68 70 Q55 78 42 70Z" fill="#b91c1c"/><path d="M46 68 L42 104 L52 104 L54 70Z" fill="#b91c1c"/><path d="M45 74 L53 74 M44 82 L52 82 M43 90 L52 90 M43 98 L52 98" stroke="#fde68a" stroke-width="1.6"/><path d="M47 64 L49 72 M55 66 V76 M62 64 L60 72" stroke="#14532d" stroke-width="1.4"/><path d="M42 104 l1 5 M45 104 l0 5 M48 104 l0 5 M51 104 l-1 5" stroke="#b91c1c" stroke-width="1.5"/>`;
-  const neck='<rect x="49" y="56" width="12" height="10" fill="#f6d7c3"/>';
-  return s.replace(neck, neck+scarf);
-}
+function grumpaTweedSVG(){ const sk='#f6d7c3', jk='#22252b';
+  const g=grumpaSVG(false), head=g.slice(g.indexOf('<rect x="49" y="56" width="12" height="10"'), g.lastIndexOf('</svg>'));
+  return `<svg viewBox="0 0 110 160">
+<rect x="38" y="120" width="14" height="30" rx="3" fill="#3f4652"/><rect x="58" y="120" width="14" height="30" rx="3" fill="#3f4652"/><path d="M45 122 V148 M65 122 V148" stroke="#525a68" stroke-width="1"/>
+<ellipse cx="44" cy="151" rx="10" ry="4.5" fill="#111"/><ellipse cx="66" cy="151" rx="10" ry="4.5" fill="#111"/>
+<path d="M30 70 L22 114" stroke="${jk}" stroke-width="12" stroke-linecap="round"/><path d="M80 70 L88 114" stroke="${jk}" stroke-width="12" stroke-linecap="round"/>
+<path d="M18 112 h9 M83 112 h9" stroke="#dbeafe" stroke-width="3"/><circle cx="22" cy="118" r="5.5" fill="${sk}"/><circle cx="88" cy="118" r="5.5" fill="${sk}"/>
+<path d="M30 68 Q55 61 80 68 L82 126 Q55 130 28 126 Z" fill="${jk}"/>
+<path d="M46 66 L55 94 L64 66 Z" fill="#dbeafe"/><path d="M46 66 L51 72 L55 68 L59 72 L64 66" fill="#fff"/><path d="M53 70 L55 94 L57 70Z" fill="#7f1d1d"/>
+<path d="M46 66 L52 92 L42 80 Z M64 66 L58 92 L68 80 Z" fill="#111317"/><circle cx="55" cy="104" r="1.8" fill="#6b7280"/><circle cx="55" cy="114" r="1.8" fill="#6b7280"/>
+<path d="M66 86 h9" stroke="#e5e7eb" stroke-width="2.5"/>
+${head}</svg>`; }
 
 // Spence in yoga poses: sit, tree, star, butterfly, cat.
 function spencePose(k){ const f='#e3cfa8', d='#c9ae80', l='#f4e8d0';
@@ -3655,11 +3672,11 @@ function gBreathe(area,done){
     T(()=>{ if(phase==='in'){ lab.textContent='Let go'; sfx.chime(); } },2800); };
   const up=()=>{ if(phase!=='in') return;
     if(Date.now()-t0<2600){ phase='ready'; btn.classList.remove('in'); sp.classList.remove('in'); lab.textContent='Hold'; say('A little longer! Hold the bubble until it is big.'); return; }
-    phase='out'; btn.classList.remove('in'); btn.classList.add('out'); sp.classList.remove('in'); lab.textContent='Out...'; say('And breathe out... ahhhh.');
+    phase='out'; btn.classList.remove('in'); btn.classList.add('out'); sp.classList.remove('in'); lab.textContent='Out...'; say('And breathe out, slowly. Whooosh.');
     [0,1,2].forEach(i=>T(()=>tone(588-i*98,0.5,0,'sine',0.07),i*900));
     T(()=>{ bd[n].classList.add('on'); n++; btn.classList.remove('out');
       if(n<N){ phase='ready'; lab.textContent='Hold'; say(n===1?'Good! Spence says: Again. Hold the bubble.':'One more big breath.'); }
-      else { phase='done'; sfx.sparkle(); area.querySelector('.w-brow').classList.add('calm'); say('Ahhh. Everyone feels calm now. Look! The real path is glowing!',()=>T(done,500)); } },3000); };
+      else { phase='done'; sfx.sparkle(); area.querySelector('.w-brow').classList.add('calm'); say('Everyone feels calm now. Look! The path is glowing!',()=>T(done,500)); } },3000); };
   btn.addEventListener('pointerdown',down); btn.addEventListener('pointerup',up); btn.addEventListener('pointercancel',up); btn.addEventListener('lostpointercapture',up);
   instruct("Spence the yoga bear says: When I feel wobbly, I take big, slow breaths. Press and hold the bubble to breathe in. When it gets big, let go and breathe out.");
   currentHint=()=>say(phase==='in'?'Keep holding... then let go when the bubble is big.':'Press and hold the bubble with your finger.');
